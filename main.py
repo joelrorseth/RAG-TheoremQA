@@ -4,11 +4,11 @@ import argparse
 from datetime import datetime
 from tqdm import tqdm
 from openai import OpenAI
-from run_alpaca import run_alpaca
+from run_tinyllama import run_TinyLlama
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--model", default='alpaca', type=str) # Default later change to None
+parser.add_argument("--model", default='tinyllama', type=str) # Default later change to None
 
 args = parser.parse_args()
 
@@ -38,17 +38,15 @@ def run_gpt3_prompt(prompt: str):
 
 
 if __name__ == "__main__":
-    device = 'cpu'
     
     # Read Question-Answer Dataset
-    with open("theoremqa_test.json", 'r') as file:
+    with open("./datasets/theoremqa_test.json", 'r') as file:
         test_set = json.load(file)
 
     print("Test QA set: {} enteries".format(len(test_set)))
 
     if args.model:
-        run_alpaca(test_set)
-        
+        run_TinyLlama(test_set)
 
         
 

@@ -10,22 +10,21 @@ from llama_index.core import (
     StorageContext,
 )
 from llama_index.vector_stores.faiss import FaissVectorStore
-from config import OPENSTAX_INDEX_PATH
+from llama_index.embeddings.huggingface import HuggingFaceEmbedding
+from config import HF_EMBEDDING_MODEL_DIM, HF_EMBEDDING_MODEL_NAME, OPENSTAX_INDEX_PATH
 from src.retrieval.parsing import load_openstax_subsections
 
 logging.basicConfig(stream=sys.stdout, level=logging.INFO)
 logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
 
 
-# TODO
-# Settings.embed_model = HuggingFaceEmbedding(
-#     model_name="BAAI/bge-small-en-v1.5"
-# )
+logging.info("Configuring HuggingFaceEmbedding")
+Settings.embed_model = HuggingFaceEmbedding(
+    model_name=HF_EMBEDDING_MODEL_NAME
+)
 
-
-logging.info("Initializing faiss index")
-d = 1536 # dimensions of text-ada-embedding-002
-faiss_index = faiss.IndexFlatL2(d)
+logging.info("Initializing IndexFlatL2")
+faiss_index = faiss.IndexFlatL2(HF_EMBEDDING_MODEL_DIM)
 
 # Load documents
 logging.info("Loading OpenStax into LlamaIndex documents")

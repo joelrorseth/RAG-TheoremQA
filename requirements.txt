@@ -1,0 +1,9 @@
+llama-index
+requests
+beautifulsoup4
+pandas
+requests
+faiss-cpu
+transformers
+llama-index-vector-stores-faiss
+llama-index-embeddings-huggingface

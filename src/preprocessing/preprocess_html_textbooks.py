@@ -1,33 +1,23 @@
-# NOTE: Most of this file is borrowed from the following repository:
+# NOTE: Most of this file is adapted from the following repository:
 # https://github.com/DigitalHarborFoundation/llm-math-education
 
 import logging
 import re
-import time
 import bs4
 import pandas as pd
-import requests
-from pydantic import BaseModel
-from typing import List
-from pathlib import Path
-from config import OPENSTAX_DOWNLOAD_PATH, OPENSTAX_URL
-from src.preprocessing.text import strip_excessive_whitespace
-
-RETRIEVAL_DELAY_S = 0.25
+from typing import Any, Dict, List
+from config import REFERENCE_HTML_TEXTBOOKS, TextbookIdentifier
+from src.downloading.download_html_textbooks import load_openstax_textbook
+from src.preprocessing.textbook import PreprocessedTextbook, PreprocessedTextbookSubsection
+from src.utils.text import strip_excessive_whitespace
 
 
-class OpenStaxSubsectionChunk(BaseModel):
-    title: str
-    content: str
-    chapter: int
-    section: int
-    index: int
+def _get_openstax_subsections(
+    textbook_identifier: TextbookIdentifier, textbook_data: List[Dict[str, Any]]
+) -> PreprocessedTextbook:
+    textbook_data = _parse_all_openstax_sections(textbook_data)
 
-
-def get_openstax_subsections(textbook_data: list[dict]) -> List[OpenStaxSubsectionChunk]:
-    textbook_data = parse_all_textbook_sections(textbook_data)
-
-    ds: List[OpenStaxSubsectionChunk] = []
+    ds: List[PreprocessedTextbookSubsection] = []
     for chapter_section in textbook_data:
         if "subsections" not in chapter_section:
             continue
@@ -40,84 +30,23 @@ def get_openstax_subsections(textbook_data: list[dict]) -> List[OpenStaxSubsecti
             del subsection["subsections"]
             subsection["chapter"] = chapter_section["chapter"]
             subsection["section"] = chapter_section["section"]
-            ds.append(OpenStaxSubsectionChunk(**subsection))
+            ds.append(PreprocessedTextbookSubsection(**subsection))
 
-    return ds
+    return PreprocessedTextbook(identifier=textbook_identifier, subsections=ds)
 
 
-def parse_all_textbook_sections(textbook_data: list[dict]) -> pd.DataFrame:
+def _parse_all_openstax_sections(textbook_data: list[dict]) -> pd.DataFrame:
     for chapter in textbook_data:
         if chapter["section"] == 0 or type(chapter["section"]) is str:
             continue
         if "subsections" not in chapter:
-            subsections, suptitle = parse_textbook_soup(chapter["soup"])
+            subsections, suptitle = _parse_openstax_soup(chapter["soup"])
             chapter["subsections"] = subsections
             chapter["title_text"] = suptitle
     return textbook_data
 
 
-def cache_openstax_textbook_contents(outdir: Path, overwrite: bool = False):
-    intro_filepath = outdir / "intro.html"
-    if intro_filepath.exists() and not overwrite:
-        with open(intro_filepath) as infile:
-            html_doc = infile.read()
-        soup = bs4.BeautifulSoup(html_doc, "html.parser")
-    else:
-        data = requests.get(OPENSTAX_URL)
-        html_doc = data.content.decode()
-        soup = bs4.BeautifulSoup(html_doc, "html.parser")
-        with open(intro_filepath, "w") as outfile:
-            outfile.write(soup.prettify())
-    toc = soup.find_all(attrs={"class": "os-text"})
-    assert len(toc) > 0, "Unexpected table-of-contents structure."
-
-    # parse URLs from the table of contents
-    textbook_data = []
-    toc_links = toc[3].parent.parent.parent.parent.parent.parent.find_all("a")
-    for link in toc_links:
-        href = link["href"]
-        url_tokens = href.split("-")
-        try:
-            chapter = int(url_tokens[0])
-        except ValueError:
-            continue
-        try:
-            section = int(url_tokens[1])
-        except ValueError:
-            section = 0
-        if section == 0:
-            for expected_section_name in ["key-terms", "key-concepts", "review-exercises", "practice-test"]:
-                if href.endswith(expected_section_name):
-                    section = expected_section_name.replace("-", "_")
-        if section == 0:
-            continue
-        textbook_data.append(
-            {
-                "chapter": chapter,
-                "section": section,
-                "href": href,
-            },
-        )
-    # retrieve textbook data page by page
-    root_url = OPENSTAX_URL.split("pages")[0] + "pages/"
-    for i, chapter_data in enumerate(textbook_data):
-        part_filepath = outdir / f"part{i}.html"
-        if part_filepath.exists() and not overwrite:
-            with open(part_filepath) as infile:
-                html_doc = infile.read()
-            soup = bs4.BeautifulSoup(html_doc, "html.parser")
-        else:
-            data = requests.get(root_url + chapter_data["href"])
-            html_doc = data.content.decode()
-            soup = bs4.BeautifulSoup(html_doc, "html.parser")
-            with open(part_filepath, "w") as outfile:
-                outfile.write(soup.prettify())
-            time.sleep(RETRIEVAL_DELAY_S)
-        chapter_data["soup"] = soup
-    return textbook_data
-
-
-def parse_section(section):
+def _parse_openstax_section(section):
     header_tags = ["title", "h1", "h2", "h3", "h4", "h5"]
     content_tags = [None, "strong", "em", "b", "li", "span", "a", "sup", "u"]
     if section.has_attr("class") and "section-exercises" in section["class"]:
@@ -143,7 +72,7 @@ def parse_section(section):
     for tag in section.contents:
         text_content = None
         if tag.name == "section":
-            subsubsections.append(parse_section(tag))
+            subsubsections.append(_parse_openstax_section(tag))
             continue
         if tag.name in header_tags:
             tag_text = tag.text.strip()
@@ -179,21 +108,25 @@ def parse_section(section):
     }
 
 
-def parse_textbook_soup(soup):
+def _parse_openstax_soup(soup):
     page = soup.find(attrs={"class": "page-content"})
     suptitle = soup.find("h1").text
     # assert len(page.contents) == 1
     sections = []
     for i, section in enumerate(page.find_all("section", attrs={"data-depth": "1"})):
-        parsed = parse_section(section)
+        parsed = _parse_openstax_section(section)
         if parsed:
             parsed["index"] = i
             sections.append(parsed)
     return sections, suptitle
 
 
-def load_openstax_subsections() -> List[OpenStaxSubsectionChunk]:
-    logging.info("Loading raw OpenStax data")
-    textbook_data = cache_openstax_textbook_contents(OPENSTAX_DOWNLOAD_PATH)
-    logging.info("Preprocessing raw OpenStax data")
-    return get_openstax_subsections(textbook_data)
+def _preprocess_openstax() -> PreprocessedTextbook:
+    openstax_textbook = REFERENCE_HTML_TEXTBOOKS[0]
+    logging.info(f"Preprocessing HTML textbook '{openstax_textbook.name}'")
+    textbook_data = load_openstax_textbook()
+    return _get_openstax_subsections(openstax_textbook, textbook_data)
+
+
+def preprocess_all_html_textbooks() -> List[PreprocessedTextbook]:
+    return [_preprocess_openstax()]

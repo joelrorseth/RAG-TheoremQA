@@ -7,3 +7,7 @@ faiss-cpu
 transformers
 llama-index-vector-stores-faiss
 llama-index-embeddings-huggingface
+huggingface_hub
+pymupdf
+python-Levenshtein
+nltk

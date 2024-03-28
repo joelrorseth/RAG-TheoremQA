@@ -75,14 +75,16 @@ def generate_textbook_page_texts(
     model = VisionEncoderDecoderModel.from_pretrained(HF_OCR_MODEL_NAME)
     model.to(HF_OCR_MODEL_DEVICE)
 
-    for page_batch_idx in range(0, num_pages_to_parse, MAX_OCR_PARALLEL_PAGES):
+    batch_counter = 0
+    for batch_start_idx in range(0, num_pages_to_parse, MAX_OCR_PARALLEL_PAGES):
+        batch_counter += 1
         logging.info(
-            f"Parsing PDF pages batch {page_batch_idx+1}/{num_page_batches}"
+            f"Parsing PDF pages batch {batch_counter}/{num_page_batches}"
         )
 
         # Get the images for this batch
         page_numbers_batch = page_numbers_to_parse[
-            page_batch_idx:page_batch_idx + MAX_OCR_PARALLEL_PAGES
+            batch_start_idx:batch_start_idx + MAX_OCR_PARALLEL_PAGES
         ]
         images = rasterize_pdf(
             pdf_path, page_numbers=page_numbers_batch, return_pil=True
@@ -103,7 +105,7 @@ def generate_textbook_page_texts(
         texts = processor.batch_decode(outputs, skip_special_tokens=True)
         texts = processor.post_process_generation(texts, fix_markdown=False)
         for text_idx, text in enumerate(texts):
-            page_num = page_batch_idx + 1 + text_idx
+            page_num = batch_start_idx + 1 + text_idx
             yield page_num, text
 
 

@@ -17,13 +17,19 @@ def build_index(index_name: str, strategy: IndexingStrategy,
     """
     index_path = INDEX_DATA_PATH / strategy.value / index_name
 
-    # Optionally overwrite previous index
-    if overwrite and index_path.exists() and index_path.is_dir():
-        logging.info(f"Removing old '{index_name}' index")
-        shutil.rmtree(index_path)
-
-    index_path.mkdir(parents=True, exist_ok=True)
-    logging.info(f"Building '{strategy.value}/{index_name}' index at {index_path}")
+    # Handle existing index
+    if index_path.exists() and index_path.is_dir():
+        if not overwrite:
+            logging.info(
+                f"Already built '{strategy.value}/{index_name}' index"
+            )
+            return
+        else:
+            logging.info(f"Removing old '{strategy.value}/{index_name}' index")
+            shutil.rmtree(index_path)
+    else:
+        index_path.mkdir(parents=True, exist_ok=True)
+        logging.info(f"Building '{strategy.value}/{index_name}' index")
 
     logging.info("Configuring HuggingFaceEmbedding")
     Settings.embed_model = HuggingFaceEmbedding(

@@ -36,7 +36,7 @@ MAX_OCR_PARALLEL_PAGES = 10
 REFERENCE_PDF_TEXTBOOK_FILENAME = "textbook.pdf"
 REFERENCE_PDF_PAGES_SUBDIR_NAME = "pages"
 REFERENCE_PDF_PAGE_FILENAME_PREFIX = "page"
-REFERENCE_PDF_PAGE_FILENAME_SUFFIX = ".txt"
+REFERENCE_PDF_PAGE_FILENAME_SUFFIX = ".mmd"
 
 
 class TextbookIdentifier(BaseModel):
@@ -56,8 +56,23 @@ REFERENCE_HTML_TEXTBOOKS = [
 
 REFERENCE_PDF_TEXTBOOKS = [
     TextbookIdentifier(
-        name="precalculus",
+        name="stitz",
         source_url="https://stitz-zeager.com/szprecalculus07042013.pdf",
         subject="calculus"
+    ),
+    TextbookIdentifier(
+        name="guichard",
+        source_url="https://www.whitman.edu/mathematics/multivariable/multivariable.pdf",
+        subject="calculus"
+    ),
+    TextbookIdentifier(
+        name="grinstead",
+        source_url="https://www.whitman.edu/mathematics/multivariable/multivariable.pdf",
+        subject="probability"
+    ),
+    TextbookIdentifier(
+        name="huber",
+        source_url="https://www.markhuberdatascience.org/_files/ugd/c2b9b6_8e0fbc80cfa64a0aa0c393840b0d50f8.pdf",
+        subject="probability"
     )
 ]

@@ -22,13 +22,13 @@ from src.utils.rasterize import get_num_pdf_pages, rasterize_pdf
 
 def get_saved_page_numbers(directory_path: Path) -> Set[int]:
     """
-    Scans the given directory for files matching the pattern 'page{i}.txt' and
+    Scans the given directory for files matching the page file pattern, and
     returns a list of integers i found in the file names.
     """
     page_numbers = set()
 
     for file in directory_path.iterdir():
-        # Check if the file matches the pattern 'page{i}.txt'
+        # Check if the file matches the page file pattern
         if (
             file.name.startswith(REFERENCE_PDF_PAGE_FILENAME_PREFIX)
             and file.name.endswith(REFERENCE_PDF_PAGE_FILENAME_SUFFIX)
@@ -132,7 +132,7 @@ def parse_pdf_textbook(textbook: TextbookIdentifier):
     ):
         # Write each page text as a separate text file
         page_file_path = pages_dir_path / \
-            f"{REFERENCE_PDF_PAGE_FILENAME_PREFIX}{page_num}.txt"
+            f"{REFERENCE_PDF_PAGE_FILENAME_PREFIX}{page_num}{REFERENCE_PDF_PAGE_FILENAME_SUFFIX}"
         with open(page_file_path, "w") as file:
             file.write(page_text)
 

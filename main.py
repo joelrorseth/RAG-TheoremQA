@@ -3,6 +3,7 @@ import json
 import argparse
 from datetime import datetime
 from tqdm import tqdm
+from config import EVAL_DATA_PATH
 from run_gpt import *
 from run_llama import *
 from src.prompting.cot import build_cot_prompt
@@ -81,7 +82,7 @@ if __name__ == "__main__":
     args = parse_arguments()
 
     # Read Question-Answer Dataset
-    with open("./datasets/theoremqa_test.json", 'r') as file:
+    with open(EVAL_DATA_PATH / "theoremqa/test.json", 'r') as file:
         test_set = json.load(file)
 
 

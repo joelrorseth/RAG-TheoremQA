@@ -6,7 +6,8 @@ from transformers import pipeline
 import json
 from tqdm import tqdm
 from datetime import datetime
-from prompt import *
+from src.prompting.basic import build_standard_prompt
+from src.prompting.cot import build_cot_prompt
 
 
 
@@ -16,9 +17,9 @@ def run_TinyLlama(entry, prompt_method):
 
     prompt = ""
     if prompt_method == "standard":
-        prompt = get_standard_prompt(entry['Question'], entry['Answer_type'])
+        prompt = build_standard_prompt(entry['Question'], entry['Answer_type'])
     elif prompt_method == "cot":
-        prompt = get_cot_prompt(entry['Question'], entry['Answer_type'])
+        prompt = build_cot_prompt(entry['Question'], entry['Answer_type'])
     message = [
         # {"role": "system", "content": "You can answer mathematical questions by reasoning"},
         {"role": "user", "content": prompt},
@@ -42,9 +43,9 @@ def run_Llama2_7b(entry, prompt_method):
 
     prompt = ""
     if prompt_method == "standard":
-        prompt = get_standard_prompt(entry['Question'], entry['Answer_type'])
+        prompt = build_standard_prompt(entry['Question'], entry['Answer_type'])
     elif prompt_method == "cot":
-        prompt = get_cot_prompt(entry['Question'], entry['Answer_type'])
+        prompt = build_cot_prompt(entry['Question'], entry['Answer_type'])
     message = [
         # {"role": "system", "content": "You can answer mathematical questions by reasoning"},
         {"role": "user", "content": prompt},

@@ -5,6 +5,7 @@ from datetime import datetime
 from tqdm import tqdm
 from run_gpt import *
 from run_llama import *
+from src.prompting.cot import build_cot_prompt
 
 
 
@@ -47,7 +48,7 @@ def run_model(model_name, short_name, test_set):
         
             message = [
                 # {"role": "system", "content": "You can answer mathematical questions by reasoning"},
-                {"role": "user", "content": get_cot_prompt(entry['Question'], entry['Answer_type'])},
+                {"role": "user", "content": build_cot_prompt(entry['Question'], entry['Answer_type'])},
             ]   
             output = pipe.tokenizer.apply_chat_template(message, tokenize=False, add_generation_prompt=True)
             output = pipe(output, max_new_tokens=1024, do_sample=True, temperature=0.7, top_k=5, top_p=0.95)

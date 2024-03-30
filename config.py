@@ -24,6 +24,9 @@ REFERENCE_PDFS_PATH.mkdir(exist_ok=True)
 INDEX_DATA_PATH = DATA_PATH / "index"
 INDEX_DATA_PATH.mkdir(exist_ok=True)
 
+EVAL_DATA_PATH = DATA_PATH / "evaluation"
+EVAL_DATA_PATH.mkdir(exist_ok=True)
+
 HF_EMBEDDING_MODEL_NAME = "BAAI/bge-small-en-v1.5"
 HF_EMBEDDING_MODEL_DIM = 384
 

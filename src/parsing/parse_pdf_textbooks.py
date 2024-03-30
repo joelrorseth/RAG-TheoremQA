@@ -105,7 +105,7 @@ def generate_textbook_page_texts(
         texts = processor.batch_decode(outputs, skip_special_tokens=True)
         texts = processor.post_process_generation(texts, fix_markdown=False)
         for text_idx, text in enumerate(texts):
-            page_num = batch_start_idx + 1 + text_idx
+            page_num = page_numbers_batch[text_idx]
             yield page_num, text
 
 

@@ -16,6 +16,11 @@ from config import HF_EMBEDDING_MODEL_DIM, HF_EMBEDDING_MODEL_NAME, INDEX_DATA_P
 from src.indexing.strategy import IndexingStrategy, get_index_textbook_groupings
 from src.preprocessing.textbook import PreprocessedTextbook
 
+logging.info("Configuring HuggingFaceEmbedding globally")
+Settings.embed_model = HuggingFaceEmbedding(
+    model_name=HF_EMBEDDING_MODEL_NAME
+)
+
 
 def get_index_path(index_name: str, indexing_strategy: IndexingStrategy) -> Path:
     return INDEX_DATA_PATH / indexing_strategy.value / index_name
@@ -41,11 +46,6 @@ def build_index(index_name: str, strategy: IndexingStrategy,
     else:
         index_path.mkdir(parents=True, exist_ok=True)
         logging.info(f"Building '{strategy.value}/{index_name}' index")
-
-    logging.info("Configuring HuggingFaceEmbedding")
-    Settings.embed_model = HuggingFaceEmbedding(
-        model_name=HF_EMBEDDING_MODEL_NAME
-    )
 
     logging.info("Initializing IndexFlatL2")
     faiss_index = faiss.IndexFlatL2(HF_EMBEDDING_MODEL_DIM)

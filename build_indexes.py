@@ -1,7 +1,7 @@
 import logging
 from src.downloading.download_html_textbooks import download_all_html_textbooks
 from src.downloading.download_pdf_textbooks import download_all_pdf_textbooks
-from src.indexing.faiss import build_all_indexes_for_all_strategies
+from src.indexing.vector import build_all_indexes_for_all_strategies
 from src.parsing.parse_html_textbooks import parse_all_html_textbooks
 from src.parsing.parse_pdf_textbooks import parse_all_pdf_textbooks
 from src.preprocessing.preprocess_html_textbooks import preprocess_all_html_textbooks

@@ -17,6 +17,24 @@ def gpt_setup():
     client = OpenAI(api_key=api_key)
 
 
+def run_tot_gpt(model_name, prompt, n_sample=1, stop='\n', temperature=0.7, max_tokens=1024):
+    global client
+
+    outputs = []
+    completion = client.chat.completions.create(    
+        model = model_name,
+        messages = [
+            {"role": "user", "content": prompt}
+        ],
+        n = n_sample, 
+        stop = stop, 
+        temperature = temperature, 
+        max_tokens = max_tokens
+    )
+    outputs.extend([choice.message.content for choice in completion.choices])
+    return outputs
+
+
 def run_gpt3_5_turbo(entry, prompt_method):
     global client
 

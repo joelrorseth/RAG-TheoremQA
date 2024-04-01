@@ -1,5 +1,5 @@
 from typing import List
-from src.inference.chatgpt import ChatGPTPrompt
+from src.inference.chatgpt import MultiRolePrompt
 
 
 RAG_SYSTEM_PROMPT = """
@@ -9,7 +9,8 @@ Respond with only the value of the answer, and absolutely nothing else.
 """
 
 
-def build_rag_chatgpt_prompt(question: str, sources: List[str]) -> ChatGPTPrompt:
+def build_rag_prompt(question: str, sources: List[str]) -> MultiRolePrompt:
+    # TODO: Add parameter for answer_type?
     prompt_sources = "\n".join(
         f"SOURCE {i+1}:\n----\n{source.strip()}\n"
         for i, source in enumerate(sources)
@@ -19,7 +20,7 @@ def build_rag_chatgpt_prompt(question: str, sources: List[str]) -> ChatGPTPrompt
         f"{prompt_sources}\n"
         "----\nANSWER: "
     )
-    return ChatGPTPrompt(
+    return MultiRolePrompt(
         system_prompt=RAG_SYSTEM_PROMPT,
         user_prompt=user_prompt
     )

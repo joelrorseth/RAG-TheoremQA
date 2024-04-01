@@ -1,4 +1,4 @@
-def build_standard_prompt(question: str, answer_type: str) -> str:
+def build_basic_prompt(question: str, answer_type: str) -> str:
     prompt = '''Please solve the following math question with'''
 
     if answer_type == 'bool':

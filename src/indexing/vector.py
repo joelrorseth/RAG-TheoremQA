@@ -12,8 +12,13 @@ from llama_index.core import (
 )
 from llama_index.vector_stores.faiss import FaissVectorStore
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
-from config import HF_EMBEDDING_MODEL_DIM, HF_EMBEDDING_MODEL_NAME, INDEX_DATA_PATH
-from src.indexing.strategy import IndexingStrategy, get_index_textbook_groupings
+from config import (
+    HF_EMBEDDING_MODEL_DIM,
+    HF_EMBEDDING_MODEL_NAME,
+    INDEX_DATA_PATH,
+    IndexingStrategy
+)
+from src.indexing.strategy import get_index_textbook_groupings
 from src.preprocessing.textbook import PreprocessedTextbook
 
 logging.info("Configuring HuggingFaceEmbedding globally")

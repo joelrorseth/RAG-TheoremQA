@@ -1,13 +1,7 @@
 from collections import defaultdict
-from enum import Enum
 from typing import Dict, List
+from config import IndexingStrategy
 from src.preprocessing.textbook import PreprocessedTextbook
-
-
-class IndexingStrategy(Enum):
-    Subject = "subject"
-    Textbook = "textbook"
-
 
 IndexNameTextbookDict = Dict[str, List[PreprocessedTextbook]]
 

@@ -1,4 +1,6 @@
 import logging
+from enum import Enum
+from typing import Optional
 import torch
 from pathlib import Path
 from pydantic import BaseModel
@@ -27,6 +29,9 @@ INDEX_DATA_PATH.mkdir(exist_ok=True)
 EVAL_DATA_PATH = DATA_PATH / "evaluation"
 EVAL_DATA_PATH.mkdir(exist_ok=True)
 
+OUTPUTS_DATA_PATH = DATA_PATH / "outputs"
+OUTPUTS_DATA_PATH.mkdir(exist_ok=True)
+
 HF_EMBEDDING_MODEL_NAME = "BAAI/bge-small-en-v1.5"
 HF_EMBEDDING_MODEL_DIM = 384
 
@@ -35,6 +40,8 @@ HF_OCR_MODEL_DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 MAX_OCR_TOKENS_PER_PAGE = 3500
 MAX_OCR_PARALLEL_PAGES = 10
+
+LLM_TEMPERATURE = 0.1
 
 REFERENCE_PDF_TEXTBOOK_FILENAME = "textbook.pdf"
 REFERENCE_PDF_PAGES_SUBDIR_NAME = "pages"
@@ -79,3 +86,53 @@ REFERENCE_PDF_TEXTBOOKS = [
         subject="probability"
     )
 ]
+
+
+class IndexingStrategy(Enum):
+    Subject = "subject"
+    Textbook = "textbook"
+
+
+class PromptingStrategy(Enum):
+    Basic = "basic"
+    COT = "cot"
+    RAG2 = "rag2"
+
+
+class LLM(Enum):
+    ChatGPT35 = "gpt-3.5-turbo"
+
+
+class EvaluationDataset(Enum):
+    TheoremQA = "theoremqa"
+
+
+class IndexConfig(BaseModel):
+    indexing_strategy: IndexingStrategy
+    index_name: str
+
+
+class Experiment(BaseModel):
+    llm: LLM
+    prompting_strategy: PromptingStrategy
+    index_config: Optional[IndexConfig]
+    evaluation_dataset: EvaluationDataset
+
+    def to_string(self) -> str:
+        s1 = self.llm.value
+        s2 = self.prompting_strategy.value
+        s3 = (
+            f"{self.index_config.indexing_strategy.value}_{self.index_config.index_name}"
+            if self.index_config is not None
+            else "noindex"
+        )
+        s4 = self.evaluation_dataset.value
+        return f"{s1}_{s2}_{s3}_{s4}"
+
+
+class Prompt(BaseModel):
+    user_prompt: str
+
+
+class MultiRolePrompt(Prompt):
+    system_prompt: str

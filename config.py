@@ -1,7 +1,8 @@
 import logging
+import os
+import torch
 from enum import Enum
 from typing import Optional
-import torch
 from pathlib import Path
 from pydantic import BaseModel
 
@@ -10,6 +11,10 @@ logging.basicConfig(
     format='[%(asctime)s %(levelname)s] %(message)s',
     datefmt='%Y-%m-%d %H:%M:%S'
 )
+
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+if not OPENAI_API_KEY:
+    raise ValueError("OPENAI_API_KEY is not set")
 
 DATA_PATH = Path("data")
 DATA_PATH.mkdir(exist_ok=True)
@@ -29,8 +34,11 @@ INDEX_DATA_PATH.mkdir(exist_ok=True)
 EVAL_DATA_PATH = DATA_PATH / "evaluation"
 EVAL_DATA_PATH.mkdir(exist_ok=True)
 
-OUTPUTS_DATA_PATH = DATA_PATH / "outputs"
+OUTPUTS_DATA_PATH = DATA_PATH / "predictions"
 OUTPUTS_DATA_PATH.mkdir(exist_ok=True)
+
+RESULTS_DATA_PATH = DATA_PATH / "results"
+RESULTS_DATA_PATH.mkdir(exist_ok=True)
 
 HF_EMBEDDING_MODEL_NAME = "BAAI/bge-small-en-v1.5"
 HF_EMBEDDING_MODEL_DIM = 384
@@ -43,7 +51,7 @@ HF_OCR_MODEL_DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 MAX_OCR_TOKENS_PER_PAGE = 3500
 MAX_OCR_PARALLEL_PAGES = 10
 
-LLM_TEMPERATURE = 0.1
+LLM_TEMPERATURE = 0.0
 
 REFERENCE_PDF_TEXTBOOK_FILENAME = "textbook.pdf"
 REFERENCE_PDF_OUTLINE_FILENAME = "outline.json"

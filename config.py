@@ -35,6 +35,8 @@ OUTPUTS_DATA_PATH.mkdir(exist_ok=True)
 HF_EMBEDDING_MODEL_NAME = "BAAI/bge-small-en-v1.5"
 HF_EMBEDDING_MODEL_DIM = 384
 
+INDEX_CHUNK_SIZE = 256
+
 HF_OCR_MODEL_NAME = "facebook/nougat-small"
 HF_OCR_MODEL_DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
@@ -44,6 +46,8 @@ MAX_OCR_PARALLEL_PAGES = 10
 LLM_TEMPERATURE = 0.1
 
 REFERENCE_PDF_TEXTBOOK_FILENAME = "textbook.pdf"
+REFERENCE_PDF_OUTLINE_FILENAME = "outline.json"
+REFERENCE_PDF_CONTENTS_FILENAME = "contents.json"
 REFERENCE_PDF_PAGES_SUBDIR_NAME = "pages"
 REFERENCE_PDF_PAGE_FILENAME_PREFIX = "page"
 REFERENCE_PDF_PAGE_FILENAME_SUFFIX = ".mmd"
@@ -75,16 +79,16 @@ REFERENCE_PDF_TEXTBOOKS = [
         source_url="https://www.whitman.edu/mathematics/multivariable/multivariable.pdf",
         subject="calculus"
     ),
-    TextbookIdentifier(
-        name="grinstead",
-        source_url="https://www.whitman.edu/mathematics/multivariable/multivariable.pdf",
-        subject="probability"
-    ),
-    TextbookIdentifier(
-        name="huber",
-        source_url="https://www.markhuberdatascience.org/_files/ugd/c2b9b6_8e0fbc80cfa64a0aa0c393840b0d50f8.pdf",
-        subject="probability"
-    )
+    # TextbookIdentifier(
+    #     name="grinstead",
+    #     source_url="https://www.whitman.edu/mathematics/multivariable/multivariable.pdf",
+    #     subject="probability"
+    # ),
+    # TextbookIdentifier(
+    #     name="huber",
+    #     source_url="https://www.markhuberdatascience.org/_files/ugd/c2b9b6_8e0fbc80cfa64a0aa0c393840b0d50f8.pdf",
+    #     subject="probability"
+    # )
 ]
 
 
@@ -96,7 +100,10 @@ class IndexingStrategy(Enum):
 class PromptingStrategy(Enum):
     Basic = "basic"
     COT = "cot"
-    RAG2 = "rag2"
+    RAG_TOP2_500W = "rag_top2_500w"
+    RAG_TOP2_200W = "rag_top2_200w"
+    RAG_TOP1_500W = "rag_top1_500w"
+    RAG_TOP1_200W = "rag_top1_200w"
 
 
 class LLM(Enum):

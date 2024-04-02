@@ -2,10 +2,15 @@ from typing import List
 from src.inference.chatgpt import MultiRolePrompt
 
 
-RAG_SYSTEM_PROMPT = """
-You must determine the correct answer to a given question.
-You will be provided with a number of documents, which may be helpful.
-Respond with only the value of the answer, and absolutely nothing else.
+RAG_SYSTEM_PROMPT = """\
+You are a mathematician, you are supposed to answer the given question. \
+You will be provided with a number of documents, which may be helpful. \
+You need to output the answer in your final sentence like "Therefore, the answer is ...". \
+The answer can only be one of the following forms:
+1. a numerical value like 0.1, no symbol and no unit at all.
+2. a list of number like [2, 3, 4].
+3. True/False.
+4. an option like (a), (b), (c), (d)
 """
 
 
@@ -18,7 +23,7 @@ def build_rag_prompt(question: str, sources: List[str]) -> MultiRolePrompt:
     user_prompt = (
         f"QUESTION:\n----\n{question}\n\n"
         f"{prompt_sources}\n"
-        "----\nANSWER: "
+        "\n"
     )
     return MultiRolePrompt(
         system_prompt=RAG_SYSTEM_PROMPT,

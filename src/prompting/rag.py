@@ -14,15 +14,15 @@ The answer can only be one of the following forms:
 """
 
 
-def build_rag_prompt(question: str, sources: List[str]) -> MultiRolePrompt:
+def build_rag_prompt(question: str, documents: List[str]) -> MultiRolePrompt:
     # TODO: Add parameter for answer_type?
-    prompt_sources = "\n".join(
-        f"SOURCE {i+1}:\n----\n{source.strip()}\n"
-        for i, source in enumerate(sources)
+    prompt_documents = "\n".join(
+        f"Document {i+1}:\n----\n{document.strip()}\n"
+        for i, document in enumerate(documents)
     )
     user_prompt = (
-        f"QUESTION:\n----\n{question}\n\n"
-        f"{prompt_sources}\n"
+        f"Question:\n----\n{question}\n\n"
+        f"{prompt_documents}\n"
         "\n"
     )
     return MultiRolePrompt(

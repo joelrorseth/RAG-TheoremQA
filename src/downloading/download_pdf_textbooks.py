@@ -28,7 +28,7 @@ def download_pdf_textbook(textbook: TextbookIdentifier) -> None:
         with open(textbook_pdf_path, 'wb') as f:
             f.write(response.content)
     else:
-        logging.info(f"Already downloaded PDF textbook '{textbook.name}'")
+        logging.info(f"Already downloaded PDF textbook '{textbook.name}', skipping")
 
 
 def download_pdf_textbooks(textbooks: List[TextbookIdentifier]) -> None:

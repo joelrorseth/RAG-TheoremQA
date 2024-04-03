@@ -67,7 +67,7 @@ def generate_textbook_page_texts(
     num_page_batches = ceil(num_pages_to_parse / MAX_OCR_PARALLEL_PAGES)
 
     if num_pages_to_parse == 0:
-        logging.info(f"Already parsed PDF textbook '{textbook.name}'")
+        logging.info(f"Already parsed PDF textbook '{textbook.name}', skipping")
         return
 
     logging.info("Loading Nougat OCR model")

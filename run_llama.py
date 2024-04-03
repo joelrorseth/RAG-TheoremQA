@@ -8,6 +8,7 @@ from tqdm import tqdm
 from datetime import datetime
 from src.prompting.basic import build_basic_prompt
 from src.prompting.cot import build_cot_prompt
+from src.prompting.tot import get_tot_propose_prompt
 
 
 
@@ -20,6 +21,8 @@ def run_TinyLlama(entry, prompt_method):
         prompt = build_basic_prompt(entry['Question'], entry['Answer_type'])
     elif prompt_method == "cot":
         prompt = build_cot_prompt(entry['Question'], entry['Answer_type'])
+    elif prompt_method == "tot_propose":
+        prompt = get_tot_propose_prompt()
     message = [
         # {"role": "system", "content": "You can answer mathematical questions by reasoning"},
         {"role": "user", "content": prompt},

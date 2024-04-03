@@ -3,14 +3,14 @@ from pydantic import BaseModel
 from config import TextbookIdentifier
 
 
-class PreprocessedTextbookSubsection(BaseModel):
-    title: str
+class PreprocessedTextbookChunk(BaseModel):
+    chapter_idx: int
+    section_idx: int
+    subsection_idx: int
+    line_idx: int
     content: str
-    chapter: int
-    section: int
-    index: int
 
 
 class PreprocessedTextbook(BaseModel):
     identifier: TextbookIdentifier
-    subsections: List[PreprocessedTextbookSubsection]
+    chunks: List[PreprocessedTextbookChunk]

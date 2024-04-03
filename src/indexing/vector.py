@@ -42,7 +42,7 @@ def build_index(index_name: str, strategy: IndexingStrategy,
     if index_path.exists() and index_path.is_dir():
         if not overwrite:
             logging.info(
-                f"Already built '{strategy.value}/{index_name}' index"
+                f"Already built '{strategy.value}/{index_name}' index, skipping"
             )
             return
         else:
@@ -55,18 +55,19 @@ def build_index(index_name: str, strategy: IndexingStrategy,
     logging.info("Initializing IndexFlatL2")
     faiss_index = faiss.IndexFlatL2(HF_EMBEDDING_MODEL_DIM)
 
-    # TODO: Consider abstracting the 'subsection' chunk scope
-    chunks = [ss for tb in textbooks for ss in tb.subsections]
     documents = [
         Document(
             text=chunk.content,
             metadata={
-                "title": chunk.title,
-                "chapter": chunk.chapter,
-                "section": chunk.section,
-                "subsection_idx": chunk.index
+                "textbook_name": textbook.identifier.name,
+                "chapter_idx": chunk.chapter_idx,
+                "section_idx": chunk.section_idx,
+                "subsection_idx": chunk.subsection_idx,
+                "line_idx": chunk.line_idx
             }
-        ) for chunk in chunks
+        )
+        for textbook in textbooks
+        for chunk in textbook.chunks
     ]
 
     logging.info("Building FaissVectorStore")

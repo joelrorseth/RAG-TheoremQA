@@ -87,6 +87,16 @@ REFERENCE_PDF_TEXTBOOKS = [
         source_url="https://www.whitman.edu/mathematics/multivariable/multivariable.pdf",
         subject="calculus"
     ),
+    TextbookIdentifier(
+        name="adams",
+        source_url="https://www.mathematicalgemstones.com/maria/OER/CountingRocks-Nov2023.pdf",
+        subject="combinatorics"
+    ),
+    TextbookIdentifier(
+        name="keller",
+        source_url="https://www.rellek.net/book-2017/app-comb-2017.pdf",
+        subject="combinatorics"
+    ),
     # TextbookIdentifier(
     #     name="grinstead",
     #     source_url="https://www.whitman.edu/mathematics/multivariable/multivariable.pdf",
@@ -105,13 +115,20 @@ class IndexingStrategy(Enum):
     Textbook = "textbook"
 
 
+class RetrievalStrategy(Enum):
+    Nearby = "nearby"
+    Section = "section"
+
+
 class PromptingStrategy(Enum):
     Basic = "basic"
     COT = "cot"
-    RAG_TOP2_500W = "rag_top2_500w"
-    RAG_TOP2_200W = "rag_top2_200w"
-    RAG_TOP1_500W = "rag_top1_500w"
-    RAG_TOP1_200W = "rag_top1_200w"
+    RAG_TOP5_NEARBY500 = "rag_top5_nearby500"
+    RAG_TOP2_NEARBY500 = "rag_top2_nearby500"
+    RAG_TOP2_NEARBY200 = "rag_top2_nearby200"
+    RAG_TOP1_NEARBY500 = "rag_top1_nearby500"
+    RAG_TOP1_NEARBY200 = "rag_top1_nearby200"
+    RAG_TOP1_SECTION = "rag_top1_section"
 
 
 class LLM(Enum):

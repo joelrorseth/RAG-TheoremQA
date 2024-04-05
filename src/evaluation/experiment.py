@@ -120,7 +120,7 @@ def _generate_theoremqa_predictions(
         elif experiment.prompting_strategy == PromptingStrategy.TOT:
             step_limit = 3             # The number of steps for the evaluation tree
             breadth_limit = 1          # The number of new nodes to select at each step
-            prompt, llm_answer = run_tot(question, actual_answer_type, step_limit, breadth_limit)
+            prompt, llm_answer = run_tot(question, actual_answer_type, step_limit, breadth_limit, subfield=subfield)
         else:
             prompt = _get_experiment_prompt(
                 experiment, question, actual_answer_type

@@ -76,4 +76,4 @@ experiments = [
 
 for experiment in experiments:
     logging.info(f"Running experiment: {experiment.to_string()}")
-    run_theoremqa_experiment(experiment, "group theory", False)
+    run_theoremqa_experiment(experiment, "calculus", False)

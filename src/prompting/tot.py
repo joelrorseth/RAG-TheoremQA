@@ -58,7 +58,8 @@ def unwrap_vote(outputs: list, n_candidate: int) -> list:
     return votes
 
 
-def run_tot(question, answer_type, step_limit: int, breadth_limit: int, generate_method="propose", to_print=False):
+def run_tot(question, answer_type, step_limit: int, breadth_limit: int, generate_method="propose", 
+            to_print=False, subfield=""):
     # Running Tree of Thought on gpt-3.5-turbo model
     # 
     # step_limit defines the maximum number of thought steps to decompose
@@ -73,7 +74,7 @@ def run_tot(question, answer_type, step_limit: int, breadth_limit: int, generate
     logs = []
     sample_prompt = None
     tot_file_path = OUTPUTS_DATA_PATH / \
-        f"tot_logs.json"
+        f"{subfield}_noindex_tot_logs.json"
     
     for step in range(step_limit):
         new_nodes = []

@@ -4,6 +4,7 @@ from config import LLM, LLM_TEMPERATURE, MultiRolePrompt, Prompt
 import openai
 import os
 
+
 def prompt_llm(prompt: Prompt) -> str:
     llm = OpenAI(model=LLM.ChatGPT35.value, temperature=LLM_TEMPERATURE)
 
@@ -22,10 +23,7 @@ def prompt_llm(prompt: Prompt) -> str:
 
 
 def run_tot_llm(prompt, n_sample=1, stop='\n', temperature=LLM_TEMPERATURE, max_tokens=1024):
-    api_key = os.getenv("OPENAI_API_KEY")
-    if not api_key:
-        raise KeyError("OpenAI api key is not set.")
-    client = openai.OpenAI(api_key=api_key)
+    client = openai.OpenAI()
 
     outputs = []
     completion = client.chat.completions.create(

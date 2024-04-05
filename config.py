@@ -123,6 +123,8 @@ class RetrievalStrategy(Enum):
 class PromptingStrategy(Enum):
     Basic = "basic"
     COT = "cot"
+    COT_SC = "cot_sc"
+    TOT = "tot"
     RAG_TOP5_NEARBY500 = "rag_top5_nearby500"
     RAG_TOP2_NEARBY500 = "rag_top2_nearby500"
     RAG_TOP2_NEARBY200 = "rag_top2_nearby200"

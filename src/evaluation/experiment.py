@@ -20,6 +20,7 @@ from src.prompting.basic import build_basic_prompt
 from src.prompting.cot import build_cot_prompt
 from src.prompting.rag import build_rag_prompt
 from src.retrieval.vector import retrieve_top_k_documents
+from src.prompting.tot import run_tot
 
 
 def _get_experiment_prompt(
@@ -105,10 +106,28 @@ def _generate_theoremqa_predictions(
         # Get prediction
         question: str = question_obj["Question"]
         actual_answer_type: str = question_obj["Answer_type"]
-        prompt = _get_experiment_prompt(
-            experiment, question, actual_answer_type
-        )
-        llm_answer = _prompt_experiment_llm(experiment, prompt)
+
+        # Get Prediction based on type of prompt strategy
+        if experiment.prompting_strategy == PromptingStrategy.COT_SC:
+            raise NotImplementedError("COT_SC not implemented yet")
+        
+            n_generate = 9    # number of cot generation
+            prompt = build_cot_prompt(question, actual_answer_type)
+            llm_answers = []
+            for _ in range(n_generate):
+                llm_answers.append(_prompt_experiment_llm(experiment, prompt))
+            # extract answers and build prediction object
+        elif experiment.prompting_strategy == PromptingStrategy.TOT:
+            step_limit = 3             # The number of steps for the evaluation tree
+            breadth_limit = 1          # The number of new nodes to select at each step
+            prompt, llm_answer = run_tot(question, actual_answer_type, step_limit, breadth_limit)
+        else:
+            prompt = _get_experiment_prompt(
+                experiment, question, actual_answer_type
+            )
+            llm_answer = _prompt_experiment_llm(experiment, prompt)
+
+
         prediction_objects.append(
             build_theoremqa_prediction_obj(
                 question_obj,

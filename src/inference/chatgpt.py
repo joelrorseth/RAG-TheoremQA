@@ -4,7 +4,6 @@ from config import LLM, LLM_TEMPERATURE, MultiRolePrompt, Prompt
 import openai
 import os
 
-
 def prompt_llm(prompt: Prompt) -> str:
     llm = OpenAI(model=LLM.ChatGPT35.value, temperature=LLM_TEMPERATURE)
 

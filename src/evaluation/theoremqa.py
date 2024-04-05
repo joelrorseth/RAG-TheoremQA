@@ -274,6 +274,36 @@ def _normalize(prediction: str):
     return prediction
 
 
+def evaluate_majority_predictions(answers, answer_type, subfield=""):
+    # Given a list of CoT generation answers
+    predictions = []
+    similar_vote = [0 for _ in range(len(answers))]
+    for answer in answers:
+        prediction = extract_predicted_answer(answer)
+        predictions.append(_normalize(prediction))
+
+    for i, prediction in enumerate(predictions):
+        for j in range(i + 1, len(answers)):
+            tmp_prediction = predictions[j]
+            if (isinstance(prediction, (str, int, float)) or isinstance(prediction, list)) \
+                    and (isinstance(tmp_prediction, (str, int, float)) or isinstance(tmp_prediction, list)):
+                # Comparing prediction against each others
+                if answer_type in ['bool', 'option', 'Option']:
+                    cur_correct = int(prediction == tmp_prediction)
+                elif answer_type == 'integer':
+                    cur_correct = int(_compare_two_numbers(prediction, tmp_prediction))
+                elif answer_type == 'float':
+                    cur_correct = int(_compare_two_numbers(prediction, tmp_prediction))
+                elif answer_type in ['list of integer', 'list of float']:
+                    cur_correct = int(_compare_two_list(prediction, tmp_prediction))
+                similar_vote[i] += cur_correct
+                similar_vote[j] += cur_correct
+
+    max_value = max(similar_vote)
+    index = similar_vote.index(max_value)
+    return index, answers[index]
+
+
 def evaluate_theoremqa_predictions(
     experiment: Experiment, subfield: str, overwrite: bool = False
 ):

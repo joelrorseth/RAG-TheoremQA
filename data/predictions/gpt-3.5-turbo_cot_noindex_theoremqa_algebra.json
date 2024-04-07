@@ -2,9 +2,9 @@
     {
         "id": "elainewan/math_algebra_1.json",
         "question": "Find the x value of the solutions to the linear system: 7x - y = 15x, -6x + 8y = 15y.",
-        "prediction": 0,
+        "prediction": "0",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Find the x value of the solutions to the linear system: 7x - y = 15x, -6x + 8y = 15y.\n Consider the reasoning steps: \n 2. Add or subtract the two equations to eliminate one variable, then solve for the remaining variable.\n4. Subtract the second equation from the first to eliminate the variable x, then solve for y.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Find the x value of the solutions to the linear system: 7x - y = 15x, -6x + 8y = 15y.\nLet's think step by step.",
         "answer": 0,
         "rationale": {
             "Question": "Find the x value of the solutions to the linear system: 7x - y = 15x, -6x + 8y = 15y.",
@@ -18,15 +18,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "integer",
-        "correct": true
+        "answer_type": "integer"
     },
     {
         "id": "elainewan/math_algebra_3.json",
         "question": "Is W = {[x, y] in R^2: x >= 0 and y >= 0} a subspace of R^2?",
-        "prediction": 0,
+        "prediction": "True",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Is W = {[x, y] in R^2: x >= 0 and y >= 0} a subspace of R^2?\n Consider the reasoning steps: \n 1. Check if W is closed under addition and scalar multiplication.\n2. Verify if the zero vector is in W, as it is a necessary condition for W to be a subspace.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Is W = {[x, y] in R^2: x >= 0 and y >= 0} a subspace of R^2?\nLet's think step by step.",
         "answer": false,
         "rationale": {
             "Question": "Is W = {[x, y] in R^2: x >= 0 and y >= 0} a subspace of R^2?",
@@ -40,15 +39,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "bool",
-        "correct": true
+        "answer_type": "bool"
     },
     {
         "id": "elainewan/math_algebra_3_6.json",
         "question": "Consider the basis B of R^2 consisting of vectors v_1 = [3,1] and v_2 = [-1, 3]. If x = [10, 10], find the B-coordinate vector of x",
-        "prediction": 0,
+        "prediction": "[4, 2]",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Consider the basis B of R^2 consisting of vectors v_1 = [3,1] and v_2 = [-1, 3]. If x = [10, 10], find the B-coordinate vector of x\n Consider the reasoning steps: \n 1. Find the B-coordinate vector of x by expressing x as a linear combination of v_1 and v_2, then solving for the coefficients.\n2. Set up the equation x = c_1*v_1 + c_2*v_2, where c_1 and c_2 are the coefficients we need to find.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Consider the basis B of R^2 consisting of vectors v_1 = [3,1] and v_2 = [-1, 3]. If x = [10, 10], find the B-coordinate vector of x\nLet's think step by step.",
         "answer": [
             4,
             2
@@ -68,15 +66,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "list of integer",
-        "correct": false
+        "answer_type": "list of integer"
     },
     {
         "id": "elainewan/math_algebra_4_2.json",
         "question": "Let V be the space of all infinite sequences of real numbers. Consider the transformation T(x_0, x_1, x_2, ...) = (x_1, x_2, x_3, ...) from V to V. Is the sequence (1,2,3,...) in the image of T?",
-        "prediction": 0,
+        "prediction": "False",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Let V be the space of all infinite sequences of real numbers. Consider the transformation T(x_0, x_1, x_2, ...) = (x_1, x_2, x_3, ...) from V to V. Is the sequence (1,2,3,...) in the image of T?\n Consider the reasoning steps: \n 2. Another approach could be to analyze the transformation T and determine if it is possible for the sequence (1,2,3,...) to be in its image based on its properties.\n3. One possible next step could be to apply the transformation T to the sequence (1,2,3,...) and see if the resulting sequence matches the form of the image of T.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Let V be the space of all infinite sequences of real numbers. Consider the transformation T(x_0, x_1, x_2, ...) = (x_1, x_2, x_3, ...) from V to V. Is the sequence (1,2,3,...) in the image of T?\nLet's think step by step.",
         "answer": true,
         "rationale": {
             "Question": "Let V be the space of all infinite sequences of real numbers. Consider the transformation T(x_0, x_1, x_2, ...) = (x_1, x_2, x_3, ...) from V to V. Is the sequence (1,2,3,...) in the image of T?",
@@ -90,15 +87,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "bool",
-        "correct": false
+        "answer_type": "bool"
     },
     {
         "id": "mingyin/linear-dependence3.json",
         "question": "suppose the 10-by-10 matrix A has the form: if i \\neq j, A_{i,j}=a_i*b_j; if i=j,  A_{i,j}=1+a_i*b_j for all 1<=i,j<=10. Here a_i = 1/i, b_i=1/(i+1). Find the determinant of A. return the numeric.",
-        "prediction": 0,
+        "prediction": "not provided here due to the complexity of the calculation involved",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: suppose the 10-by-10 matrix A has the form: if i \\neq j, A_{i,j}=a_i*b_j; if i=j,  A_{i,j}=1+a_i*b_j for all 1<=i,j<=10. Here a_i = 1/i, b_i=1/(i+1). Find the determinant of A. return the numeric.\n Consider the reasoning steps: \n 2. Use properties of determinants, such as row operations or properties of triangular matrices, to simplify the calculation of the determinant of A.\n2. Use the property that the determinant of a product of matrices is the product of their determinants to simplify the calculation of the determinant of A.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: suppose the 10-by-10 matrix A has the form: if i \\neq j, A_{i,j}=a_i*b_j; if i=j,  A_{i,j}=1+a_i*b_j for all 1<=i,j<=10. Here a_i = 1/i, b_i=1/(i+1). Find the determinant of A. return the numeric.\nLet's think step by step.",
         "answer": 1.9,
         "rationale": {
             "Question": "suppose the 10-by-10 matrix A has the form: if i \\neq j, A_{i,j}=a_i*b_j; if i=j,  A_{i,j}=1+a_i*b_j for all 1<=i,j<=10. Here a_i = 1/i, b_i=1/(i+1). Find the determinant of A. return the numeric.",
@@ -112,15 +108,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "float",
-        "correct": false
+        "answer_type": "float"
     },
     {
         "id": "elainewan/math_algebra_7_3.json",
         "question": "Does the following transformation have an eigenvector: Counterclockwise rotation through an angle of 45 degrees followed by a scaling by 2 in R^2.",
-        "prediction": 0,
+        "prediction": "Therefore, the transformation does have eigenvectors",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Does the following transformation have an eigenvector: Counterclockwise rotation through an angle of 45 degrees followed by a scaling by 2 in R^2.\n Consider the reasoning steps: \n 2. Use geometric intuition to determine if there are any vectors that remain in the same direction after the transformation, which would indicate the presence of an eigenvector.\n2. Visualize the transformation by applying it to a few sample vectors and observing if any of them remain in the same direction, indicating the presence of an eigenvector.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Does the following transformation have an eigenvector: Counterclockwise rotation through an angle of 45 degrees followed by a scaling by 2 in R^2.\nLet's think step by step.",
         "answer": false,
         "rationale": {
             "Question": "Does the following transformation have an eigenvector: Counterclockwise rotation through an angle of 45 degrees followed by a scaling by 2 in R^2.",
@@ -134,15 +129,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "bool",
-        "correct": true
+        "answer_type": "bool"
     },
     {
         "id": "wenhuchen/factor's_theory.json",
         "question": "Is x-1 a factor of 2*x^4+3*x^2-5x+7?",
-        "prediction": 0,
+        "prediction": "False",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Is x-1 a factor of 2*x^4+3*x^2-5x+7?\n Consider the reasoning steps: \n 1. Use polynomial long division to divide 2*x^4+3*x^2-5x+7 by x-1 to see if there is a remainder.\n2. If there is no remainder when dividing, then x-1 is a factor of 2*x^4+3*x^2-5x+7.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Is x-1 a factor of 2*x^4+3*x^2-5x+7?\nLet's think step by step.",
         "answer": false,
         "rationale": {
             "Question": "Is x-1 a factor of 2*x^4+3*x^2-5x+7?",
@@ -156,15 +150,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "bool",
-        "correct": true
+        "answer_type": "bool"
     },
     {
         "id": "wenhuchen/cramer's_rule1.json",
         "question": "For the two linear equations $2 * x + 3 * y = 10$ and $4 * x + 4 * y = 12$ iwth variables x and y. Use cramer's rule to solve these two variables.",
-        "prediction": 4,
+        "prediction": "$x = -1$ and $y = 4$",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: For the two linear equations $2 * x + 3 * y = 10$ and $4 * x + 4 * y = 12$ iwth variables x and y. Use cramer's rule to solve these two variables.\n Consider the reasoning steps: \n 2. Use the determinants to find the values of x and y by dividing the determinants of the matrices obtained in step 1 by the determinant of the coefficient matrix.\n4. Use the determinants of the matrices obtained in step 1 to find the values of x and y by substituting them into the equations and solving for the variables.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: For the two linear equations $2 * x + 3 * y = 10$ and $4 * x + 4 * y = 12$ iwth variables x and y. Use cramer's rule to solve these two variables.\nLet's think step by step.",
         "answer": [
             -1,
             4
@@ -184,15 +177,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "list of integer",
-        "correct": false
+        "answer_type": "list of integer"
     },
     {
         "id": "elainewan/math_algebra_6_3.json",
         "question": "What is the determinant of matrix [[0, 1, 2], [7, 8, 3], [6, 5, 4]]?",
-        "prediction": -36,
+        "prediction": "-28",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: What is the determinant of matrix [[0, 1, 2], [7, 8, 3], [6, 5, 4]]?\n Consider the reasoning steps: \n det = (0*(8*4 - 3*5)) - (1*(7*4 - 3*6)) + (2*(7*5 - 8*6))\ndet = -36\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: What is the determinant of matrix [[0, 1, 2], [7, 8, 3], [6, 5, 4]]?\nLet's think step by step.",
         "answer": -36,
         "rationale": {
             "Question": "What is the determinant of matrix [[0, 1, 2], [7, 8, 3], [6, 5, 4]]?",
@@ -206,15 +198,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "integer",
-        "correct": true
+        "answer_type": "integer"
     },
     {
         "id": "wenhuchen/eigen_value1.json",
         "question": "For matrix A = [[5, 4], [1, 2]], what are its eigen values?",
-        "prediction": 6,
+        "prediction": "λ = 5 and λ = 2",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: For matrix A = [[5, 4], [1, 2]], what are its eigen values?\n Consider the reasoning steps: \n 2. Use the formula for finding eigenvalues of a 2x2 matrix directly: λ^2 - (trace(A))λ + det(A) = 0.\n3. Calculate the trace of matrix A by adding the diagonal elements: trace(A) = 5 + 2 = 7, and the determinant of matrix A: det(A) = (5*2) - (4*1) = 10 - 4 = 6. Substitute these values into the formula to find the eigenvalues.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: For matrix A = [[5, 4], [1, 2]], what are its eigen values?\nLet's think step by step.",
         "answer": [
             1,
             6
@@ -234,15 +225,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "list of integer",
-        "correct": false
+        "answer_type": "list of integer"
     },
     {
         "id": "elainewan/math_algebra_5.json",
         "question": "Find the orthogonal projection of 9e_1 onto the subspace of R^4 spanned by [2, 2, 1, 0] and [-2, 2, 0, 1].",
-        "prediction": 0,
+        "prediction": "[8, 0, 2, -2]",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Find the orthogonal projection of 9e_1 onto the subspace of R^4 spanned by [2, 2, 1, 0] and [-2, 2, 0, 1].\n Consider the reasoning steps: \n 2. Use the formula for orthogonal projection directly by finding the dot product of 9e_1 with the basis vectors [2, 2, 1, 0] and [-2, 2, 0, 1], and then multiplying each basis vector by the dot product divided by the norm squared of the basis vector.\n4. Use the Gram-Schmidt process to orthogonalize the basis vectors [2, 2, 1, 0] and [-2, 2, 0, 1], and then find the projection of 9e_1 onto the orthogonalized basis vectors.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Find the orthogonal projection of 9e_1 onto the subspace of R^4 spanned by [2, 2, 1, 0] and [-2, 2, 0, 1].\nLet's think step by step.",
         "answer": [
             8,
             0,
@@ -266,15 +256,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "list of integer",
-        "correct": false
+        "answer_type": "list of integer"
     },
     {
         "id": "elainewan/math_algebra_6.json",
         "question": "For a matrix A, is the function F(A) = det A from the linear space R^{3*3} to R a linear transformation?",
-        "prediction": 0,
+        "prediction": "False",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: For a matrix A, is the function F(A) = det A from the linear space R^{3*3} to R a linear transformation?\n Consider the reasoning steps: \n 2. Use the definition of a linear transformation to determine if F(A) = det A is a linear transformation by checking if F(A + B) = F(A) + F(B) and F(cA) = cF(A) for all matrices A, B, and scalar c.\n1. Calculate F(A + B) and F(A) + F(B) for two arbitrary matrices A and B in R^{3*3} to see if they are equal.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: For a matrix A, is the function F(A) = det A from the linear space R^{3*3} to R a linear transformation?\nLet's think step by step.",
         "answer": false,
         "rationale": {
             "Question": "For a matrix A, is the function F(A) = det A from the linear space R^{3*3} to R a linear transformation?",
@@ -288,15 +277,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "bool",
-        "correct": true
+        "answer_type": "bool"
     },
     {
         "id": "elainewan/math_algebra_3_4.json",
         "question": "Are the vectors [1, 2], [2, 3], and [3, 4] linearly independent?",
-        "prediction": 0,
+        "prediction": "True",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Are the vectors [1, 2], [2, 3], and [3, 4] linearly independent?\n Consider the reasoning steps: \n 2. Write the vectors as columns in a matrix and row reduce the matrix to see if there are any non-trivial solutions to the equation Ax = 0, where A is the matrix formed by the vectors. If there are no non-trivial solutions, then the vectors are linearly independent.\n1. Calculate the determinant of the matrix formed by the vectors [1, 2], [2, 3], and [3, 4]. If the determinant is non-zero, then the vectors are linearly independent.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Are the vectors [1, 2], [2, 3], and [3, 4] linearly independent?\nLet's think step by step.",
         "answer": false,
         "rationale": {
             "Question": "Are the vectors [1, 2], [2, 3], and [3, 4] linearly independent?",
@@ -310,15 +298,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "bool",
-        "correct": true
+        "answer_type": "bool"
     },
     {
         "id": "elainewan/math_algebra_3_2.json",
         "question": "Are the vectors v_1 = [1,2,3], v_2 = [4,5,6], v_3 = [7,8,9] linearly independent?",
-        "prediction": 0,
+        "prediction": "False",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Are the vectors v_1 = [1,2,3], v_2 = [4,5,6], v_3 = [7,8,9] linearly independent?\n Consider the reasoning steps: \n 2. Write the vectors as columns of a matrix and row reduce to see if there are any non-trivial solutions to the equation c_1*v_1 + c_2*v_2 + c_3*v_3 = 0. If there are no non-trivial solutions, then the vectors are linearly independent.\n1. Calculate the determinant of the matrix formed by the vectors v_1, v_2, and v_3. If the determinant is non-zero, then the vectors are linearly independent.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Are the vectors v_1 = [1,2,3], v_2 = [4,5,6], v_3 = [7,8,9] linearly independent?\nLet's think step by step.",
         "answer": false,
         "rationale": {
             "Question": "Are the vectors v_1 = [1,2,3], v_2 = [4,5,6], v_3 = [7,8,9] linearly independent?",
@@ -332,15 +319,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "bool",
-        "correct": true
+        "answer_type": "bool"
     },
     {
         "id": "elainewan/math_algebra_additional_1.json",
         "question": "Let f_1, ..., f_n be polynomials. Do they span the space P of all polynomials?",
-        "prediction": 0,
+        "prediction": "linearly independent or not",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Let f_1, ..., f_n be polynomials. Do they span the space P of all polynomials?\n Consider the reasoning steps: \n 2. Find the dimension of the space spanned by the polynomials f_1, ..., f_n and compare it to the dimension of the space P of all polynomials. If the dimensions are equal, then the polynomials span the space P.\n4. Use the concept of linear independence to determine if the polynomials f_1, ..., f_n are linearly independent. If they are linearly independent and the dimension of the space they span is equal to the dimension of P, then they span the space P.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Let f_1, ..., f_n be polynomials. Do they span the space P of all polynomials?\nLet's think step by step.",
         "answer": false,
         "rationale": {
             "Question": "Let f_1, ..., f_n be polynomials. Do they span the space P of all polynomials?",
@@ -354,15 +340,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "bool",
-        "correct": true
+        "answer_type": "bool"
     },
     {
         "id": "elainewan/math_algebra_6_5.json",
         "question": "What is the determinant of the matrix A = [[1, 0, 0, 0, 0, 0], [2, 7, 0, 0, 0, 0], [3, 8, 6, 0, 0, 0], [4, 9, 5, 2, 1, 4], [5, 8, 4, 0, 2, 5], [6, 7, 3, 0, 3, 6]]?",
-        "prediction": 504,
+        "prediction": "-156",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: What is the determinant of the matrix A = [[1, 0, 0, 0, 0, 0], [2, 7, 0, 0, 0, 0], [3, 8, 6, 0, 0, 0], [4, 9, 5, 2, 1, 4], [5, 8, 4, 0, 2, 5], [6, 7, 3, 0, 3, 6]]?\n Consider the reasoning steps: \n 2. Use row operations to simplify the matrix and make it easier to calculate the determinant.\n1. Use row operations to create zeros in the lower triangle of the matrix, such as subtracting multiples of the first row from the subsequent rows.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: What is the determinant of the matrix A = [[1, 0, 0, 0, 0, 0], [2, 7, 0, 0, 0, 0], [3, 8, 6, 0, 0, 0], [4, 9, 5, 2, 1, 4], [5, 8, 4, 0, 2, 5], [6, 7, 3, 0, 3, 6]]?\nLet's think step by step.",
         "answer": -252,
         "rationale": {
             "Question": "What is the determinant of the matrix A = [[1, 0, 0, 0, 0, 0], [2, 7, 0, 0, 0, 0], [3, 8, 6, 0, 0, 0], [4, 9, 5, 2, 1, 4], [5, 8, 4, 0, 2, 5], [6, 7, 3, 0, 3, 6]]?",
@@ -376,15 +361,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "integer",
-        "correct": false
+        "answer_type": "integer"
     },
     {
         "id": "wenhuchen/cramer's_rule2.json",
         "question": "For the two linear equations $2 * x + 3 * y + z = 8$ and $4 * x + 4 * y + 4z = 12$ and $x + y + 8z = 10$ with variables x, y and z. Use cramer's rule to solve these three variables.",
-        "prediction": 0,
+        "prediction": "the values of x, y, and z obtained by solving the above equations",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: For the two linear equations $2 * x + 3 * y + z = 8$ and $4 * x + 4 * y + 4z = 12$ and $x + y + 8z = 10$ with variables x, y and z. Use cramer's rule to solve these three variables.\n Consider the reasoning steps: \n 2. Use Cramer's rule to find the values of x, y, and z by calculating the determinants of the matrices obtained by replacing the columns of the coefficient matrix with the constants vector.\n3. Calculate the determinant of the coefficient matrix and then calculate the determinants of the matrices obtained by replacing each column with the constants vector, to find the values of x, y, and z using Cramer's rule.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: For the two linear equations $2 * x + 3 * y + z = 8$ and $4 * x + 4 * y + 4z = 12$ and $x + y + 8z = 10$ with variables x, y and z. Use cramer's rule to solve these three variables.\nLet's think step by step.",
         "answer": [
             -1,
             3,
@@ -406,15 +390,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "list of integer",
-        "correct": false
+        "answer_type": "list of integer"
     },
     {
         "id": "jianyu_xu/integer_programming_1.json",
         "question": "30 students from 5 classes solved 40 math problems. Each student must answer at least one question. Every two students in the same class solved the same number of questions. The number of questions answered by any two students in different classes is also different. Question: What's maximum possible number of students who only answered one question?",
-        "prediction": 0,
+        "prediction": "25",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: 30 students from 5 classes solved 40 math problems. Each student must answer at least one question. Every two students in the same class solved the same number of questions. The number of questions answered by any two students in different classes is also different. Question: What's maximum possible number of students who only answered one question?\n Consider the reasoning steps: \n 2. Create a system of equations based on the given conditions and solve for the maximum possible number of students who only answered one question.\n2. Use a combination of trial and error and logical reasoning to determine the maximum possible number of students who only answered one question.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: 30 students from 5 classes solved 40 math problems. Each student must answer at least one question. Every two students in the same class solved the same number of questions. The number of questions answered by any two students in different classes is also different. Question: What's maximum possible number of students who only answered one question?\nLet's think step by step.",
         "answer": 26,
         "rationale": {
             "Question": "30 students from 5 classes solved 40 math problems. Each student must answer at least one question. Every two students in the same class solved the same number of questions. The number of questions answered by any two students in different classes is also different. Question: What's maximum possible number of students who only answered one question?",
@@ -428,15 +411,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "integer",
-        "correct": false
+        "answer_type": "integer"
     },
     {
         "id": "mingyin/gaussian-elimination1.json",
         "question": "for the matrix $A=(\\begin{array}{rrrrr} 1 & 2 & 3 & 4 & -3 \\1 & 2 & 0 & -5 & 1 \\2 & 4 & -3 & -19 & 6 \\3 & 6 & -3 & -24 & 7\\end{array})$, what is its row rank and column rank? return the two numbers as a list.",
-        "prediction": 0,
+        "prediction": "[2, 2]",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: for the matrix $A=(\\begin{array}{rrrrr} 1 & 2 & 3 & 4 & -3 \\1 & 2 & 0 & -5 & 1 \\2 & 4 & -3 & -19 & 6 \\3 & 6 & -3 & -24 & 7\\end{array})$, what is its row rank and column rank? return the two numbers as a list.\n Consider the reasoning steps: \n 1. To find the row rank, we can perform row operations to reduce the matrix to row-echelon form and count the number of non-zero rows. To find the column rank, we can perform column operations to reduce the matrix to column-echelon form and count the number of non-zero columns.\n1. Perform row operations to reduce the matrix to row-echelon form and count the number of non-zero rows to find the row rank. Then, perform column operations to reduce the matrix to column-echelon form and count the number of non-zero columns to find the column rank.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: for the matrix $A=(\\begin{array}{rrrrr} 1 & 2 & 3 & 4 & -3 \\1 & 2 & 0 & -5 & 1 \\2 & 4 & -3 & -19 & 6 \\3 & 6 & -3 & -24 & 7\\end{array})$, what is its row rank and column rank? return the two numbers as a list.\nLet's think step by step.",
         "answer": [
             2,
             2
@@ -456,15 +438,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "list of integer",
-        "correct": false
+        "answer_type": "list of integer"
     },
     {
         "id": "wenhuchen/gauss_lemma.json",
         "question": "Is 7 a quadratic residue modulo 19? Use Gauss's Lemma to answer it.",
-        "prediction": 0,
+        "prediction": "False",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Is 7 a quadratic residue modulo 19? Use Gauss's Lemma to answer it.\n Consider the reasoning steps: \n 1. Calculate the Legendre symbol (7/19) using Gauss's Lemma to determine if 7 is a quadratic residue modulo 19.\n2. Use Euler's criterion to calculate (7/19) and compare the result with the Legendre symbol obtained in step 1 to confirm if 7 is a quadratic residue modulo 19.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Is 7 a quadratic residue modulo 19? Use Gauss's Lemma to answer it.\nLet's think step by step.",
         "answer": true,
         "rationale": {
             "Question": "Is 7 a quadratic residue modulo 19? Use Gauss's Lemma to answer it.",
@@ -478,15 +459,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "bool",
-        "correct": false
+        "answer_type": "bool"
     },
     {
         "id": "mingyin/Sylveete-rank-inequality1.json",
         "question": "Both A, B are n-by-n matrices with rank(A)=n, rank(A*B)=0. What is rank(B)?",
-        "prediction": 0,
+        "prediction": "0",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Both A, B are n-by-n matrices with rank(A)=n, rank(A*B)=0. What is rank(B)?\n Consider the reasoning steps: \n 2. Use the fact that rank(A*B) = 0 to conclude that the columns of A*B are linearly dependent. Then use the definition of matrix multiplication to determine the relationship between the columns of A and B, which can help determine the rank of B.\n4. Consider the properties of matrix multiplication and the rank-nullity theorem to determine the rank of B based on the given information about A and A*B.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Both A, B are n-by-n matrices with rank(A)=n, rank(A*B)=0. What is rank(B)?\nLet's think step by step.",
         "answer": 0.0,
         "rationale": {
             "Question": "Both A, B are n-by-n matrices with rank(A)=n, rank(A*B)=0. What is rank(B)?",
@@ -500,15 +480,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "float",
-        "correct": true
+        "answer_type": "float"
     },
     {
         "id": "elainewan/math_algebra_7.json",
         "question": "Let A be an invertible n * n matrix and v and eigenvector of both A and B, is v necesarily an eigenvector of A + B?",
-        "prediction": 0,
+        "prediction": "False",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Let A be an invertible n * n matrix and v and eigenvector of both A and B, is v necesarily an eigenvector of A + B?\n Consider the reasoning steps: \n 2. Consider the properties of invertible matrices and how they affect eigenvectors to determine if v is necessarily an eigenvector of A + B.\n4. Utilize the fact that v is an eigenvector of both A and B to express v in terms of the corresponding eigenvalues, and then substitute into the eigenvector equation for A + B to see if it holds true.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Let A be an invertible n * n matrix and v and eigenvector of both A and B, is v necesarily an eigenvector of A + B?\nLet's think step by step.",
         "answer": true,
         "rationale": {
             "Question": "Let A be an invertible n * n matrix and v and eigenvector of both A and B, is v necesarily an eigenvector of A + B?",
@@ -522,15 +501,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "bool",
-        "correct": false
+        "answer_type": "bool"
     },
     {
         "id": "wenhuchen/vieta's_formula2.json",
         "question": "The polynomial $x^3 - Ax + 15$ has three real roots. Two of these roots sum to 5. What is |A|?",
-        "prediction": 0.3,
+        "prediction": "22",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: The polynomial $x^3 - Ax + 15$ has three real roots. Two of these roots sum to 5. What is |A|?\n Consider the reasoning steps: \n 2. Set up a system of equations using the information given about the roots and solve for A.\n2. Use the fact that the sum of two roots is 5 to write an equation involving the sum of the roots. Then, use Vieta's formulas to relate this equation to the coefficient A.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: The polynomial $x^3 - Ax + 15$ has three real roots. Two of these roots sum to 5. What is |A|?\nLet's think step by step.",
         "answer": 22.0,
         "rationale": {
             "Question": "The polynomial $x^3 - Ax + 15$ has three real roots. Two of these roots sum to 5. What is |A|?",
@@ -544,15 +522,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "float",
-        "correct": false
+        "answer_type": "float"
     },
     {
         "id": "mingyin/linear-dependence2.json",
         "question": "suppose a,b,c,\\alpha,\\beta,\\gamma are six real numbers with a^2+b^2+c^2>0.  In addition, $a=b*cos(\\gamma)+c*cos(\\beta), b=c*cos(\\alpha)+a*cos(\\gamma), c=a*cos(\\beta)+b*cos(\\alpha)$. What is the value of $cos^2(\\alpha)+cos^2(\\beta)+cos^2(\\gamma)+2*cos(\\alpha)*cos(\\beta)*cos(\\gamma)? return the numeric.",
-        "prediction": 0,
+        "prediction": "\\(\\boxed{1}\\)",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: suppose a,b,c,\\alpha,\\beta,\\gamma are six real numbers with a^2+b^2+c^2>0.  In addition, $a=b*cos(\\gamma)+c*cos(\\beta), b=c*cos(\\alpha)+a*cos(\\gamma), c=a*cos(\\beta)+b*cos(\\alpha)$. What is the value of $cos^2(\\alpha)+cos^2(\\beta)+cos^2(\\gamma)+2*cos(\\alpha)*cos(\\beta)*cos(\\gamma)? return the numeric.\n Consider the reasoning steps: \n 2. Use the trigonometric identity cos^2(x) = 1 - sin^2(x) to rewrite the expression in terms of sin(alpha), sin(beta), and sin(gamma). Then use the given equations to express sin(alpha), sin(beta), and sin(gamma) in terms of a, b, and c. Finally, substitute these expressions into the expression to be evaluated and simplify.\n4. Use the Pythagorean identity sin^2(x) + cos^2(x) = 1 to rewrite the expression in terms of sin(alpha), sin(beta), and sin(gamma). Then use the given equations to express sin(alpha), sin(beta), and sin(gamma) in terms of a, b, and c. Finally, substitute these expressions into the expression to be evaluated and simplify.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: suppose a,b,c,\\alpha,\\beta,\\gamma are six real numbers with a^2+b^2+c^2>0.  In addition, $a=b*cos(\\gamma)+c*cos(\\beta), b=c*cos(\\alpha)+a*cos(\\gamma), c=a*cos(\\beta)+b*cos(\\alpha)$. What is the value of $cos^2(\\alpha)+cos^2(\\beta)+cos^2(\\gamma)+2*cos(\\alpha)*cos(\\beta)*cos(\\gamma)? return the numeric.\nLet's think step by step.",
         "answer": 1.0,
         "rationale": {
             "Question": "suppose a,b,c,\\alpha,\\beta,\\gamma are six real numbers with a^2+b^2+c^2>0.  In addition, $a=b*cos(\\gamma)+c*cos(\\beta), b=c*cos(\\alpha)+a*cos(\\gamma), c=a*cos(\\beta)+b*cos(\\alpha)$. What is the value of $cos^2(\\alpha)+cos^2(\\beta)+cos^2(\\gamma)+2*cos(\\alpha)*cos(\\beta)*cos(\\gamma)? return the numeric.",
@@ -566,15 +543,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "float",
-        "correct": false
+        "answer_type": "float"
     },
     {
         "id": "wenhuchen/determinant2.json",
         "question": "For matrix A = [[2, 4, 3], [3, 3, 1], [42, 20, 51]], what is its determinant?",
-        "prediction": -980,
+        "prediction": "-356",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: For matrix A = [[2, 4, 3], [3, 3, 1], [42, 20, 51]], what is its determinant?\n Consider the reasoning steps: \n 2. Use row operations to simplify the matrix and then calculate the determinant.\n2. Use row operations to create zeros in the second and third columns below the diagonal elements, then calculate the determinant using cofactor expansion.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: For matrix A = [[2, 4, 3], [3, 3, 1], [42, 20, 51]], what is its determinant?\nLet's think step by step.",
         "answer": -376,
         "rationale": {
             "Question": "For matrix A = [[2, 4, 3], [3, 3, 1], [42, 20, 51]], what is its determinant?",
@@ -588,15 +564,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "integer",
-        "correct": false
+        "answer_type": "integer"
     },
     {
         "id": "wenhuchen/vieta's_formula3.json",
         "question": "Let $x_1$ and $x_2$ be the roots of the equation $x^2 + 3x + 1 =0$. Compute $(x_1/(x_2 + 1))^2 + (x_2 / (x_1 + 1))^2$.",
-        "prediction": 0,
+        "prediction": "Simplifying this expression step by step will give us the final answer",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Let $x_1$ and $x_2$ be the roots of the equation $x^2 + 3x + 1 =0$. Compute $(x_1/(x_2 + 1))^2 + (x_2 / (x_1 + 1))^2$.\n Consider the reasoning steps: \n 2. Express $x_1/(x_2 + 1)$ and $x_2/(x_1 + 1)$ in terms of $x_1$ and $x_2$ using the fact that $x_1x_2 = 1$.\n4. Use Vieta's formulas to find the sum and product of the roots, then substitute those values into the expression and simplify to find the final answer.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Let $x_1$ and $x_2$ be the roots of the equation $x^2 + 3x + 1 =0$. Compute $(x_1/(x_2 + 1))^2 + (x_2 / (x_1 + 1))^2$.\nLet's think step by step.",
         "answer": 18.0,
         "rationale": {
             "Question": "Let $x_1$ and $x_2$ be the roots of the equation $x^2 + 3x + 1 =0$. Compute $(x_1/(x_2 + 1))^2 + (x_2 / (x_1 + 1))^2$.",
@@ -610,15 +585,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "float",
-        "correct": false
+        "answer_type": "float"
     },
     {
         "id": "elainewan/math_algebra_3_3.json",
         "question": "What is the vector that spans the kernel of A = [[1, 0, 2, 4], [0, 1, -3, -1], [3, 4, -6, 8], [0, -1, 3, 4]]?",
-        "prediction": 0,
+        "prediction": "[[-2], [3], [1], [0]]",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: What is the vector that spans the kernel of A = [[1, 0, 2, 4], [0, 1, -3, -1], [3, 4, -6, 8], [0, -1, 3, 4]]?\n Consider the reasoning steps: \n 2. Set up the system of equations Ax = 0 and solve for the vector x to find the basis for the kernel.\n3. Use row reduction to find the reduced row echelon form of matrix A and then solve for the vector x to find the basis for the kernel.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: What is the vector that spans the kernel of A = [[1, 0, 2, 4], [0, 1, -3, -1], [3, 4, -6, 8], [0, -1, 3, 4]]?\nLet's think step by step.",
         "answer": [
             -2,
             3,
@@ -642,15 +616,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "list of integer",
-        "correct": false
+        "answer_type": "list of integer"
     },
     {
         "id": "mingyin/gaussian-elimination2.json",
         "question": "V is a vector space over the real field R. It is known that the vector group u_1, u_2, u_3 in V are linearly independent. Finding the rank of vector group ${u_1-\\lambda u_2, u_2-\\lambda u_3, u_3-\\lambda u_1}$ for $\\lambda=\\sqrt{5}$ and $\\lambda=1$ separately. Return the answer as a list.",
-        "prediction": 0,
+        "prediction": "[3, 3]",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: V is a vector space over the real field R. It is known that the vector group u_1, u_2, u_3 in V are linearly independent. Finding the rank of vector group ${u_1-\\lambda u_2, u_2-\\lambda u_3, u_3-\\lambda u_1}$ for $\\lambda=\\sqrt{5}$ and $\\lambda=1$ separately. Return the answer as a list.\n Consider the reasoning steps: \n 2. Use the properties of linear independence and linear combinations to manipulate the vectors in the new group and simplify them to determine their rank.\n4. Use the determinant of the matrix formed by the vectors in the new group to determine their rank for each value of lambda.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: V is a vector space over the real field R. It is known that the vector group u_1, u_2, u_3 in V are linearly independent. Finding the rank of vector group ${u_1-\\lambda u_2, u_2-\\lambda u_3, u_3-\\lambda u_1}$ for $\\lambda=\\sqrt{5}$ and $\\lambda=1$ separately. Return the answer as a list.\nLet's think step by step.",
         "answer": [
             3,
             2
@@ -670,15 +643,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "list of integer",
-        "correct": false
+        "answer_type": "list of integer"
     },
     {
         "id": "elainewan/math_algebra_7_2.json",
         "question": "Is there an eigenbasis for the identity matrix I_n?",
-        "prediction": 0,
+        "prediction": "True",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Is there an eigenbasis for the identity matrix I_n?\n Consider the reasoning steps: \n 2. Recall that the identity matrix I_n has eigenvalues of 1 with multiplicity n, and determine if there are n linearly independent eigenvectors to form a basis.\n3. Calculate the eigenvectors of the identity matrix I_n and check if they are linearly independent.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Is there an eigenbasis for the identity matrix I_n?\nLet's think step by step.",
         "answer": true,
         "rationale": {
             "Question": "Is there an eigenbasis for the identity matrix I_n?",
@@ -692,15 +664,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "bool",
-        "correct": false
+        "answer_type": "bool"
     },
     {
         "id": "elainewan/math_algebra_7_5.json",
         "question": "For which 2 * 2 matrices A does there exist a nonzero matrix M such that AM = MD, where D = [[2, 0], [0, 3]]? Give your answer in terms of eigenvalues of A.",
-        "prediction": 0,
+        "prediction": "the solutions to the characteristic equation λ^2 - (a + d)λ + (ad - bc) = 0",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: For which 2 * 2 matrices A does there exist a nonzero matrix M such that AM = MD, where D = [[2, 0], [0, 3]]? Give your answer in terms of eigenvalues of A.\n Consider the reasoning steps: \n 2. Use the fact that the eigenvalues of a matrix are the same as the eigenvalues of its transpose to simplify the problem.\n4. Use the fact that similar matrices have the same eigenvalues to determine the possible matrices A that satisfy the given condition.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: For which 2 * 2 matrices A does there exist a nonzero matrix M such that AM = MD, where D = [[2, 0], [0, 3]]? Give your answer in terms of eigenvalues of A.\nLet's think step by step.",
         "answer": [
             2,
             3
@@ -720,15 +691,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "list of integer",
-        "correct": false
+        "answer_type": "list of integer"
     },
     {
         "id": "elainewan/math_algebra_2.json",
         "question": "Is the transformation [[-1, 0], [0, -1]] invertible?",
-        "prediction": 0,
+        "prediction": "True",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Is the transformation [[-1, 0], [0, -1]] invertible?\n Consider the reasoning steps: \n 1. Calculate the determinant of the transformation matrix to determine if it is invertible.\n3. Use the inverse matrix to apply the transformation to a vector and see if it returns to the original vector. If it does, then the transformation is invertible.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Is the transformation [[-1, 0], [0, -1]] invertible?\nLet's think step by step.",
         "answer": true,
         "rationale": {
             "Question": "Is the transformation [[-1, 0], [0, -1]] invertible?",
@@ -742,15 +712,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "bool",
-        "correct": false
+        "answer_type": "bool"
     },
     {
         "id": "wenhuchen/eigen_value2.json",
         "question": "For matrix A = [[3, 1, 1], [2, 4, 2], [1, 1, 3]], what are its eigen values?",
-        "prediction": 0,
+        "prediction": "approximately 10.56 and 0.44",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: For matrix A = [[3, 1, 1], [2, 4, 2], [1, 1, 3]], what are its eigen values?\n Consider the reasoning steps: \n 1. Calculate the characteristic polynomial of matrix A by finding the determinant of (A - λI), where λ is the eigenvalue and I is the identity matrix.\n2. Set the determinant of (A - λI) equal to 0 and solve for λ to find the eigenvalues of matrix A.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: For matrix A = [[3, 1, 1], [2, 4, 2], [1, 1, 3]], what are its eigen values?\nLet's think step by step.",
         "answer": [
             2,
             6
@@ -770,15 +739,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "list of integer",
-        "correct": false
+        "answer_type": "list of integer"
     },
     {
         "id": "wenhuchen/definite_matrix1.json",
         "question": "Consider the matrix of A=[[1, 4], [4, 1]], is this a positive definite matrix?",
-        "prediction": 0,
+        "prediction": "False",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Consider the matrix of A=[[1, 4], [4, 1]], is this a positive definite matrix?\n Consider the reasoning steps: \n 1. Calculate the eigenvalues of matrix A and check if they are all positive.\n2. Calculate the determinant of all the principal minors of matrix A and check if they are all positive.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Consider the matrix of A=[[1, 4], [4, 1]], is this a positive definite matrix?\nLet's think step by step.",
         "answer": false,
         "rationale": {
             "Question": "Consider the matrix of A=[[1, 4], [4, 1]], is this a positive definite matrix?",
@@ -792,15 +760,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "bool",
-        "correct": true
+        "answer_type": "bool"
     },
     {
         "id": "elainewan/math_algebra_6_4.json",
         "question": "What is the determinant of the matrix A = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]?",
-        "prediction": 0,
+        "prediction": "0",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: What is the determinant of the matrix A = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]?\n Consider the reasoning steps: \n 1. Calculate the determinant using the formula for a 3x3 matrix: det(A) = a(ei − fh) − b(di − fg) + c(dh − eg), where a, b, c, d, e, f, g, h, i are the elements of the matrix.\n2. Use the shortcut method for calculating the determinant of a 3x3 matrix by adding the products of the diagonals going from top left to bottom right and subtracting the products of the diagonals going from top right to bottom left: det(A) = (1*5*9 + 2*6*7 + 3*4*8) - (3*5*7 + 2*4*9 + 1*6*8).\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: What is the determinant of the matrix A = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]?\nLet's think step by step.",
         "answer": -3,
         "rationale": {
             "Question": "What is the determinant of the matrix A = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]?",
@@ -814,15 +781,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "integer",
-        "correct": false
+        "answer_type": "integer"
     },
     {
         "id": "mingyin/orthogonal-similarity1.json",
         "question": "If A and B are both orthogonal square matrices, and det A = -det B. What is det(A+B)? Return the numerical value.",
-        "prediction": 0,
+        "prediction": "-1",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: If A and B are both orthogonal square matrices, and det A = -det B. What is det(A+B)? Return the numerical value.\n Consider the reasoning steps: \n 2. Use the fact that orthogonal matrices have determinant either 1 or -1. Since det A = -det B, this means that one of the matrices has determinant 1 and the other has determinant -1. Use this information to determine the numerical value of det(A+B).\n3. Determine whether A or B has determinant 1 and which one has determinant -1. Then, calculate det(A+B) based on this information.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: If A and B are both orthogonal square matrices, and det A = -det B. What is det(A+B)? Return the numerical value.\nLet's think step by step.",
         "answer": 0.0,
         "rationale": {
             "Question": "If A and B are both orthogonal square matrices, and det A = -det B. What is det(A+B)? Return the numerical value.",
@@ -836,15 +802,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "float",
-        "correct": true
+        "answer_type": "float"
     },
     {
         "id": "wenhuchen/gauss_lemma2.json",
         "question": "Is 10 a quadratic residue modulo 19? Use Gauss's Lemma to answer it.",
-        "prediction": 0,
+        "prediction": "False",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Is 10 a quadratic residue modulo 19? Use Gauss's Lemma to answer it.\n Consider the reasoning steps: \n 2. Use Euler's criterion to simplify the calculation of the Legendre symbol (10|19) and determine if 10 is a quadratic residue modulo 19.\n3. Calculate (10^9) mod 19 using Euler's criterion to determine if 10 is a quadratic residue modulo 19.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Is 10 a quadratic residue modulo 19? Use Gauss's Lemma to answer it.\nLet's think step by step.",
         "answer": false,
         "rationale": {
             "Question": "Is 10 a quadratic residue modulo 19? Use Gauss's Lemma to answer it.",
@@ -858,18 +823,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "bool",
-        "correct": true
+        "answer_type": "bool"
     },
     {
         "id": "jianyu_xu/integer_programming_2.json",
         "question": "Solve the following linear programming problems: maximize 3x + y subject to (1) -x + y <= 1, (2) 2x + y <= 4, (3) x>= 0 and y >= 0. What's [x, y] for the optimal solution?",
-        "prediction": [
-            1,
-            2
-        ],
+        "prediction": "[2, 3]",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Solve the following linear programming problems: maximize 3x + y subject to (1) -x + y <= 1, (2) 2x + y <= 4, (3) x>= 0 and y >= 0. What's [x, y] for the optimal solution?\n Consider the reasoning steps: \n 2. Use the simplex method to solve the linear programming problem by setting up the initial tableau and iteratively improving the solution until the optimal solution is reached.\n1. Identify the initial basic feasible solution by setting up the initial tableau with slack variables for each constraint and then applying the simplex method to iteratively improve the solution.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Solve the following linear programming problems: maximize 3x + y subject to (1) -x + y <= 1, (2) 2x + y <= 4, (3) x>= 0 and y >= 0. What's [x, y] for the optimal solution?\nLet's think step by step.",
         "answer": [
             2,
             0
@@ -889,15 +850,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "list of integer",
-        "correct": false
+        "answer_type": "list of integer"
     },
     {
         "id": "wenhuchen/definite_matrix2.json",
         "question": "Consider the matrix of A=[[1, -1], [-1, 4]], is this a positive definite matrix?",
-        "prediction": 0,
+        "prediction": "False",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Consider the matrix of A=[[1, -1], [-1, 4]], is this a positive definite matrix?\n Consider the reasoning steps: \n 1. Calculate the eigenvalues of matrix A and check if they are all positive.\n3. Check if the matrix A is symmetric and all its leading principal minors are positive.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Consider the matrix of A=[[1, -1], [-1, 4]], is this a positive definite matrix?\nLet's think step by step.",
         "answer": true,
         "rationale": {
             "Question": "Consider the matrix of A=[[1, -1], [-1, 4]], is this a positive definite matrix?",
@@ -911,15 +871,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "bool",
-        "correct": false
+        "answer_type": "bool"
     },
     {
         "id": "wenhuchen/vieta's_formula.json",
         "question": "Let m and n be the roots of the equation 2x^2 + 15x + 16 = 0. What is the value of 1/m + 1/n?",
-        "prediction": -0.9375,
+        "prediction": "-15/16",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Let m and n be the roots of the equation 2x^2 + 15x + 16 = 0. What is the value of 1/m + 1/n?\n Consider the reasoning steps: \n 1. Use Vieta's formulas to find the sum and product of the roots, then use those values to find the value of 1/m + 1/n.\n2. Use the sum and product of the roots to set up a system of equations with 1/m + 1/n and solve for the value.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Let m and n be the roots of the equation 2x^2 + 15x + 16 = 0. What is the value of 1/m + 1/n?\nLet's think step by step.",
         "answer": -0.9375,
         "rationale": {
             "Question": "Let m and n be the roots of the equation 2x^2 + 15x + 16 = 0. What is the value of 1/m + 1/n?",
@@ -933,15 +892,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "float",
-        "correct": true
+        "answer_type": "float"
     },
     {
         "id": "elainewan/math_algebra_7_4.json",
         "question": "What are the real eigenvalues of the matrix [[3, -2, 5], [1, 0, 7], [0, 0, 2]]?",
-        "prediction": 0,
+        "prediction": "[2]",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: What are the real eigenvalues of the matrix [[3, -2, 5], [1, 0, 7], [0, 0, 2]]?\n Consider the reasoning steps: \n 2. Use the fact that the eigenvalues are the roots of the characteristic polynomial, and then solve for the eigenvalues by setting the determinant of the matrix minus lambda times the identity matrix equal to zero.\n1. Calculate the determinant of the matrix minus lambda times the identity matrix, set it equal to zero, and solve for lambda to find the eigenvalues.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: What are the real eigenvalues of the matrix [[3, -2, 5], [1, 0, 7], [0, 0, 2]]?\nLet's think step by step.",
         "answer": [
             1,
             2,
@@ -963,15 +921,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "list of integer",
-        "correct": false
+        "answer_type": "list of integer"
     },
     {
         "id": "wenhuchen/determinant1.json",
         "question": "For matrix A = [[2, 4, 3], [3, 0, 1], [1, 2, 5]], what is its determinant?",
-        "prediction": -96,
+        "prediction": "-42",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: For matrix A = [[2, 4, 3], [3, 0, 1], [1, 2, 5]], what is its determinant?\n Consider the reasoning steps: \n 2. Use row operations to simplify the matrix and then calculate the determinant.\n2. Use the properties of determinants to simplify the matrix and then calculate the determinant.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: For matrix A = [[2, 4, 3], [3, 0, 1], [1, 2, 5]], what is its determinant?\nLet's think step by step.",
         "answer": -42,
         "rationale": {
             "Question": "For matrix A = [[2, 4, 3], [3, 0, 1], [1, 2, 5]], what is its determinant?",
@@ -985,15 +942,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "integer",
-        "correct": false
+        "answer_type": "integer"
     },
     {
         "id": "wenhuchen/vieta's_formula5.json",
         "question": "The product of two of the four roots of the quartic equation x^4 - 18x^3 +kx2 + 200x - 1984 = 0 is -32. Determine the value of k.",
-        "prediction": 0,
+        "prediction": "\\(\\boxed{2080}\\)",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: The product of two of the four roots of the quartic equation x^4 - 18x^3 +kx2 + 200x - 1984 = 0 is -32. Determine the value of k.\n Consider the reasoning steps: \n 1. Use Vieta's formulas to find the sum and product of the roots of the quartic equation, then use the given information to solve for k.\n2. Set up the Vieta's formulas for the sum and product of the roots of the quartic equation, then substitute the given product of two roots to solve for k.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: The product of two of the four roots of the quartic equation x^4 - 18x^3 +kx2 + 200x - 1984 = 0 is -32. Determine the value of k.\nLet's think step by step.",
         "answer": 86,
         "rationale": {
             "Question": "The product of two of the four roots of the quartic equation x^4 - 18x^3 +kx2 + 200x - 1984 = 0 is -32. Determine the value of k.",
@@ -1007,15 +963,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "integer",
-        "correct": false
+        "answer_type": "integer"
     },
     {
         "id": "elainewan/math_algebra_4.json",
         "question": "Is the set of 3 * 3 matrices in reduced row-echelon form a subspace of R^{3 * 3}?",
-        "prediction": 0,
+        "prediction": "a subspace of R^{3 * 3}",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Is the set of 3 * 3 matrices in reduced row-echelon form a subspace of R^{3 * 3}?\n Consider the reasoning steps: \n 1. Check if the set of 3 * 3 matrices in reduced row-echelon form satisfies the properties of a subspace, such as closure under addition and scalar multiplication.\n2. Verify if the set contains the zero matrix, as it is a necessary condition for a subspace.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Is the set of 3 * 3 matrices in reduced row-echelon form a subspace of R^{3 * 3}?\nLet's think step by step.",
         "answer": false,
         "rationale": {
             "Question": "Is the set of 3 * 3 matrices in reduced row-echelon form a subspace of R^{3 * 3}?",
@@ -1029,15 +984,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "bool",
-        "correct": true
+        "answer_type": "bool"
     },
     {
         "id": "elainewan/math_algebra_3_5.json",
         "question": "Consider an m * n matrix A and an n * m matrix B (with n != m) such that AB = I_m. Are the columns of A linearly independent?",
-        "prediction": 0,
+        "prediction": "True",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Consider an m * n matrix A and an n * m matrix B (with n != m) such that AB = I_m. Are the columns of A linearly independent?\n Consider the reasoning steps: \n 2. Use the fact that AB = I_m to show that the columns of A must be linearly independent.\n3. Assume the columns of A are linearly dependent and derive a contradiction using the fact that AB = I_m.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Consider an m * n matrix A and an n * m matrix B (with n != m) such that AB = I_m. Are the columns of A linearly independent?\nLet's think step by step.",
         "answer": false,
         "rationale": {
             "Question": "Consider an m * n matrix A and an n * m matrix B (with n != m) such that AB = I_m. Are the columns of A linearly independent?",
@@ -1051,15 +1005,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "bool",
-        "correct": true
+        "answer_type": "bool"
     },
     {
         "id": "mingyin/linear-dependence1.json",
         "question": "Finding all the real roots of the equation $\\sqrt{x^2+x+1}+\\sqrt{2 x^2+x+5}=\\sqrt{x^2-3 x+13}$. Return the answer as a list with ascending order.",
-        "prediction": 0,
+        "prediction": "\\([1, 3]\\)",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Finding all the real roots of the equation $\\sqrt{x^2+x+1}+\\sqrt{2 x^2+x+5}=\\sqrt{x^2-3 x+13}$. Return the answer as a list with ascending order.\n Consider the reasoning steps: \n 2. Substitute $x^2$ with $y$ to simplify the equation and then solve for $y$ before finding the corresponding values of $x$.\n4. Rearrange the equation to isolate one square root term on one side and then square both sides to eliminate the square roots before solving for $x$.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Finding all the real roots of the equation $\\sqrt{x^2+x+1}+\\sqrt{2 x^2+x+5}=\\sqrt{x^2-3 x+13}$. Return the answer as a list with ascending order.\nLet's think step by step.",
         "answer": [
             -1.7807764064,
             0.2807764064
@@ -1079,15 +1032,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "list of float",
-        "correct": false
+        "answer_type": "list of float"
     },
     {
         "id": "wenhuchen/vieta's_formula4.json",
         "question": "If the quartic x^4 + 3x^3 + 11x^2 + 9x + A has roots k, l, m, and n such that kl = mn, find A.",
-        "prediction": 9,
+        "prediction": "A",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: If the quartic x^4 + 3x^3 + 11x^2 + 9x + A has roots k, l, m, and n such that kl = mn, find A.\n Consider the reasoning steps: \n 2. Use the fact that kl = mn to create a system of equations involving the roots and then solve for A.\n2. Use Vieta's formulas to express the sum and product of the roots in terms of the coefficients of the quartic equation, then use the fact that kl = mn to create a system of equations involving the coefficients and solve for A.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: If the quartic x^4 + 3x^3 + 11x^2 + 9x + A has roots k, l, m, and n such that kl = mn, find A.\nLet's think step by step.",
         "answer": 9,
         "rationale": {
             "Question": "If the quartic x^4 + 3x^3 + 11x^2 + 9x + A has roots k, l, m, and n such that kl = mn, find A.",
@@ -1101,15 +1053,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "integer",
-        "correct": true
+        "answer_type": "integer"
     },
     {
         "id": "elainewan/math_algebra_1_2.json",
         "question": "Suppose the graph of a polynomial f(t) = a + bt + ct^2 passes through points (1, -1), (2, 3), and (3, 13). What is f(-1)?",
-        "prediction": 0,
+        "prediction": "7",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Suppose the graph of a polynomial f(t) = a + bt + ct^2 passes through points (1, -1), (2, 3), and (3, 13). What is f(-1)?\n Consider the reasoning steps: \n 1. Use the given points to create a system of equations and solve for the coefficients a, b, and c in the polynomial function f(t).\n2. Once the coefficients a, b, and c are found, substitute t = -1 into the polynomial function f(t) to find f(-1).\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Suppose the graph of a polynomial f(t) = a + bt + ct^2 passes through points (1, -1), (2, 3), and (3, 13). What is f(-1)?\nLet's think step by step.",
         "answer": 9,
         "rationale": {
             "Question": "Suppose the graph of a polynomial f(t) = a + bt + ct^2 passes through points (1, -1), (2, 3), and (3, 13). What is f(-1)?",
@@ -1123,15 +1074,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "integer",
-        "correct": false
+        "answer_type": "integer"
     },
     {
         "id": "mingyin/minimal-polynomial1.json",
         "question": "matrix $A=(\\begin{array}{rrrr} -2 & -1 & -1 & -1 \\ 2 & 1 & 3 & 2 \\ 1 & 1 & 0 & 1 \\ -1 & -1 & -2 & -2 \\end{array})$. Suppose f is the minimal polynomial of A. What is f(99)? Return the numeric without explanation.",
-        "prediction": 99,
+        "prediction": "9604",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: matrix $A=(\\begin{array}{rrrr} -2 & -1 & -1 & -1 \\ 2 & 1 & 3 & 2 \\ 1 & 1 & 0 & 1 \\ -1 & -1 & -2 & -2 \\end{array})$. Suppose f is the minimal polynomial of A. What is f(99)? Return the numeric without explanation.\n Consider the reasoning steps: \n 2. Use the Cayley-Hamilton theorem to find the minimal polynomial of matrix A and then evaluate f(99).\n2. Use the diagonalization method to find the minimal polynomial of matrix A, then evaluate f(99).\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: matrix $A=(\\begin{array}{rrrr} -2 & -1 & -1 & -1 \\ 2 & 1 & 3 & 2 \\ 1 & 1 & 0 & 1 \\ -1 & -1 & -2 & -2 \\end{array})$. Suppose f is the minimal polynomial of A. What is f(99)? Return the numeric without explanation.\nLet's think step by step.",
         "answer": 990000.0,
         "rationale": {
             "Question": "matrix $A=(\\begin{array}{rrrr} -2 & -1 & -1 & -1 \\ 2 & 1 & 3 & 2 \\ 1 & 1 & 0 & 1 \\ -1 & -1 & -2 & -2 \\end{array})$. Suppose f is the minimal polynomial of A. What is f(99)? Return the numeric without explanation.",
@@ -1145,15 +1095,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "float",
-        "correct": false
+        "answer_type": "float"
     },
     {
         "id": "elainewan/math_algebra_6_2.json",
         "question": "Let V be the space spanned by functions cos(2x) and sin(2x). Find the determinant of the linear transformation D(f) = f' from V to V.",
-        "prediction": 4,
+        "prediction": "4",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Let V be the space spanned by functions cos(2x) and sin(2x). Find the determinant of the linear transformation D(f) = f' from V to V.\n Consider the reasoning steps: \n 1. Find the matrix representation of the linear transformation D(f) = f' with respect to the basis {cos(2x), sin(2x)} and then calculate the determinant of the matrix.\n3. Calculate the derivative of cos(2x) and sin(2x) to express the linear transformation D(f) = f' in terms of the basis {cos(2x), sin(2x)}, and then find the determinant of the transformation directly.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Let V be the space spanned by functions cos(2x) and sin(2x). Find the determinant of the linear transformation D(f) = f' from V to V.\nLet's think step by step.",
         "answer": 4,
         "rationale": {
             "Question": "Let V be the space spanned by functions cos(2x) and sin(2x). Find the determinant of the linear transformation D(f) = f' from V to V.",
@@ -1167,15 +1116,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "integer",
-        "correct": true
+        "answer_type": "integer"
     },
     {
         "id": "jianyu_xu/geometric_counting_1.json",
         "question": "How many triangles are there whose sides are all integers and whose maximum side length equals 11?",
-        "prediction": 0,
+        "prediction": "221",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: How many triangles are there whose sides are all integers and whose maximum side length equals 11?\n Consider the reasoning steps: \n 2. Another possible next step is to use the formula for the number of triangles with integer sides given a maximum side length, which involves finding the number of integer solutions to the equation a + b + c ≤ 11, where a, b, and c are the side lengths of the triangle.\n3. Another possible next step is to list out all the possible combinations of integer side lengths that satisfy the condition of having a maximum side length of 11, and then count the number of valid triangles that can be formed from those combinations.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: How many triangles are there whose sides are all integers and whose maximum side length equals 11?\nLet's think step by step.",
         "answer": 36,
         "rationale": {
             "Question": "How many triangles are there whose sides are all integers and whose maximum side length equals 11?",
@@ -1189,15 +1137,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "integer",
-        "correct": false
+        "answer_type": "integer"
     },
     {
         "id": "mingyin/gaussian-elimination3.json",
         "question": "Suppose V is a finite-dimensional vector space on F. $M1={a_1,a_2,a_3}$ is a basis of V, $M2={b_1,b_2,b_3}$ is another basis of V. Suppose the coordinates of b_1,b_2,b_3 under M1 are $c_1=(1,1,-1),c_2=(1,-1,1),c_3=(-1,1,1)$. Suppose the coordinate of $d\\in V$ under M1 is (1,3,5). What is the coordinate of d under M2? Return the three coordinate values as a list.",
-        "prediction": 0,
+        "prediction": "[3, 1, 7]",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Suppose V is a finite-dimensional vector space on F. $M1={a_1,a_2,a_3}$ is a basis of V, $M2={b_1,b_2,b_3}$ is another basis of V. Suppose the coordinates of b_1,b_2,b_3 under M1 are $c_1=(1,1,-1),c_2=(1,-1,1),c_3=(-1,1,1)$. Suppose the coordinate of $d\\in V$ under M1 is (1,3,5). What is the coordinate of d under M2? Return the three coordinate values as a list.\n Consider the reasoning steps: \n 2. Find the coordinate of d under M2 by expressing d as a linear combination of the basis vectors in M2.\n3. Use the coordinates of b1, b2, and b3 under M1 to find the transformation matrix from M1 to M2. Then, multiply this matrix by the coordinate vector of d under M1 to find the coordinate vector of d under M2.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Suppose V is a finite-dimensional vector space on F. $M1={a_1,a_2,a_3}$ is a basis of V, $M2={b_1,b_2,b_3}$ is another basis of V. Suppose the coordinates of b_1,b_2,b_3 under M1 are $c_1=(1,1,-1),c_2=(1,-1,1),c_3=(-1,1,1)$. Suppose the coordinate of $d\\in V$ under M1 is (1,3,5). What is the coordinate of d under M2? Return the three coordinate values as a list.\nLet's think step by step.",
         "answer": [
             2,
             3,
@@ -1219,15 +1166,14 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "list of integer",
-        "correct": false
+        "answer_type": "list of integer"
     },
     {
         "id": "xinyi/linear_projection.json",
         "question": "Which of the following matrices takes any vector $v$ and projects it onto the space spanned by the columns of $\\Phi$? (a) $(\\Phi^T\\Phi)^{-1}$. (b) $\\Phi(\\Phi^T\\Phi)^{-1}$. (c) $\\Phi(\\Phi^T\\Phi)^{-1}\\Phi^T$. (d) $\\Phi^T(\\Phi^T\\Phi)^{-1}\\Phi^T$.",
-        "prediction": 0,
+        "prediction": "(c) $\\Phi(\\Phi^T\\Phi)^{-1}\\Phi^T$",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Which of the following matrices takes any vector $v$ and projects it onto the space spanned by the columns of $\\Phi$? (a) $(\\Phi^T\\Phi)^{-1}$. (b) $\\Phi(\\Phi^T\\Phi)^{-1}$. (c) $\\Phi(\\Phi^T\\Phi)^{-1}\\Phi^T$. (d) $\\Phi^T(\\Phi^T\\Phi)^{-1}\\Phi^T$.\n Consider the reasoning steps: \n 2. Use the properties of projection matrices to determine the correct answer, such as $P^2 = P$ and $P = P^T$.\n4. Substitute the given matrices into the projection formula $P = \\Phi(\\Phi^T\\Phi)^{-1}\\Phi^T$ and simplify to see which option matches the projection matrix definition.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Which of the following matrices takes any vector $v$ and projects it onto the space spanned by the columns of $\\Phi$? (a) $(\\Phi^T\\Phi)^{-1}$. (b) $\\Phi(\\Phi^T\\Phi)^{-1}$. (c) $\\Phi(\\Phi^T\\Phi)^{-1}\\Phi^T$. (d) $\\Phi^T(\\Phi^T\\Phi)^{-1}\\Phi^T$.\nLet's think step by step.",
         "answer": "(c)",
         "rationale": {
             "Question": "Which of the following matrices takes any vector $v$ and projects it onto the space spanned by the columns of $\\Phi$? (a) $(\\Phi^T\\Phi)^{-1}$. (b) $\\Phi(\\Phi^T\\Phi)^{-1}$. (c) $\\Phi(\\Phi^T\\Phi)^{-1}\\Phi^T$. (d) $\\Phi^T(\\Phi^T\\Phi)^{-1}\\Phi^T$.",
@@ -1241,7 +1187,6 @@
             "subfield": "Algebra",
             "field": "Math"
         },
-        "answer_type": "option",
-        "correct": false
+        "answer_type": "option"
     }
 ]

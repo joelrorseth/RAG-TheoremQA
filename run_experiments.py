@@ -6,6 +6,13 @@ from src.evaluation.experiment import run_theoremqa_experiment
 experiments = [
     # Experiment(
     #     llm=LLM.ChatGPT35,
+    #     prompting_strategy=PromptingStrategy.Basic,
+    #     index_config=None,
+    #     evaluation_dataset=EvaluationDataset.TheoremQA
+    # ),
+
+    # Experiment(
+    #     llm=LLM.ChatGPT35,
     #     prompting_strategy=PromptingStrategy.COT,
     #     index_config=None,
     #     evaluation_dataset=EvaluationDataset.TheoremQA
@@ -18,12 +25,12 @@ experiments = [
         evaluation_dataset=EvaluationDataset.TheoremQA
     ),
 
-    # Experiment(
-    #     llm=LLM.ChatGPT35,
-    #     prompting_strategy=PromptingStrategy.TOT,
-    #     index_config=None,
-    #     evaluation_dataset=EvaluationDataset.TheoremQA
-    # ),
+    Experiment(
+        llm=LLM.ChatGPT35,
+        prompting_strategy=PromptingStrategy.TOT,
+        index_config=None,
+        evaluation_dataset=EvaluationDataset.TheoremQA
+    ),
 
     # Experiment(
     #     llm=LLM.ChatGPT35,
@@ -76,4 +83,4 @@ experiments = [
 
 for experiment in experiments:
     logging.info(f"Running experiment: {experiment.to_string()}")
-    run_theoremqa_experiment(experiment, "combinatorics", False)
+    run_theoremqa_experiment(experiment, "calculus", False)

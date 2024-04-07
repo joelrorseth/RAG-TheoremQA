@@ -1,5 +1,5 @@
 import re
-from config import Prompt
+from config import MultiRolePrompt, Prompt
 from src.prompting.basic import BASIC_SYSTEM_PROMPT
 from src.inference.chatgpt import run_tot_llm
 from datetime import datetime
@@ -7,19 +7,15 @@ from config import OUTPUTS_DATA_PATH
 import json
 
 
+
 # Functions for Tree of Thought Prompting
 def build_tot_sample_prompt(question: str, rationale: str, answer_type: str):
-    prompt = f"Please read a math question, and then think step by step to derive the answer. Question: {question}\n"
-    prompt += f"Consider the reasoning steps: \n {rationale}\n"
-    prompt += "Write the continuation steps line by line. Output your final answer in the form of \"Therefore, the answer is \", followed by "
-    if answer_type == 'bool':
-        prompt += "a True or False answer."
-    elif answer_type == 'option':
-        prompt += "a multiple choice answer, in the form of (a), (b), (c) or (d)."
-    else:
-        prompt += "a numerical answer."
+    return MultiRolePrompt(
+        system_prompt=BASIC_SYSTEM_PROMPT,
+        user_prompt=f"Question: {question}\n Consider the reasoning steps: \n {rationale}\n" 
+            "Write the continuation steps line by line."
+    )
 
-    return Prompt(user_prompt=prompt)
 
 
 def build_tot_propose_prompt(question: str, rationale: str, n_propose: int):
@@ -27,12 +23,16 @@ def build_tot_propose_prompt(question: str, rationale: str, n_propose: int):
     prompt += f"Consider the reasoning steps: \n {rationale}\n"
     prompt += f"Propose {n_propose} different possible next steps to solve the question."
     prompt += "Write every proposal in their own line."
-    return Prompt(user_prompt=prompt)
+    return MultiRolePrompt(
+        system_prompt=BASIC_SYSTEM_PROMPT,
+        user_prompt=prompt
+    )
 
 
 def build_tot_vote_prompt(question: str, nodes: list):
     prompt = f"Consider the math question: {question}\n"
-    prompt += "Given several approaches to solve this question, decide which one is most promising. Analyze each choice in detail. "
+    prompt += "Given several approaches to solve this question, decide which one is most promising. " 
+    prompt += "Analyze each choice in detail. "
     for i, node in enumerate(nodes):
         prompt += f"Choice {i}. \n{node}\n"
 

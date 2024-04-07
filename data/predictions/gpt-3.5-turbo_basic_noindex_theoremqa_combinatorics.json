@@ -2,9 +2,9 @@
     {
         "id": "jianyu_xu/Lah_number_6.json",
         "question": "How many ways are there to divide a set of 8 elements into 5 non-empty ordered subsets?",
-        "prediction": "6. Multiply the number of ways for each subset size together to get the total number of ways to divide the set into 5 non-empty ordered subsets",
+        "prediction": "S(8, 5) = 140",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: How many ways are there to divide a set of 8 elements into 5 non-empty ordered subsets?\n Consider the reasoning steps: \n 2. Break down the problem into smaller parts by considering the number of elements in each subset and the possible arrangements within each subset.\n1. Calculate the number of ways to divide the set into subsets of sizes 1, 1, 1, 2, and 3, and then consider the arrangements within each subset.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: How many ways are there to divide a set of 8 elements into 5 non-empty ordered subsets?",
         "answer": 11760,
         "rationale": {
             "Question": "How many ways are there to divide a set of 8 elements into 5 non-empty ordered subsets?",
@@ -23,9 +23,9 @@
     {
         "id": "jianyu_xu/Lah_number_5.json",
         "question": "How many ways are there to divide a set of 7 elements into 4 non-empty ordered subsets?",
-        "prediction": "34 ways to divide a set of 7 elements into 4 non-empty ordered subsets",
+        "prediction": "\\( S(7, 4) = 350 \\)",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: How many ways are there to divide a set of 7 elements into 4 non-empty ordered subsets?\n Consider the reasoning steps: \n 1. Calculate the number of ways to divide the set into 4 non-empty subsets by using the formula for combinations: C(n, k) = n! / (k!(n-k)!), where n is the total number of elements in the set and k is the number of subsets. In this case, n = 7 and k = 4.\n3. Break down the problem into smaller steps by first calculating the total number of ways to divide the set into 4 subsets (including empty subsets), and then subtracting the number of ways to divide the set into 4 empty subsets.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: How many ways are there to divide a set of 7 elements into 4 non-empty ordered subsets?",
         "answer": 4200,
         "rationale": {
             "Question": "How many ways are there to divide a set of 7 elements into 4 non-empty ordered subsets?",
@@ -44,9 +44,9 @@
     {
         "id": "jianyu_xu/Stirling_number_second_kind_6.json",
         "question": "In how many ways can a set of 6 distinct letters be partitioned into 3 non-empty groups if each group must contain at least 2 letters?",
-        "prediction": "10. Subtract the total number of ways that violate the condition of each group having at least 2 letters from the total number of ways to partition the 6 letters into 3 groups without any restrictions to find the final answer",
+        "prediction": "approximately 23.33",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: In how many ways can a set of 6 distinct letters be partitioned into 3 non-empty groups if each group must contain at least 2 letters?\n Consider the reasoning steps: \n 1. Calculate the total number of ways to partition the 6 letters into 3 groups without any restrictions, and then subtract the number of ways that violate the condition of each group having at least 2 letters.\n2. Calculate the number of ways that violate the condition of each group having at least 2 letters by considering the cases where one or more groups have only 1 letter, and subtract this from the total number of ways to partition the 6 letters into 3 groups.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: In how many ways can a set of 6 distinct letters be partitioned into 3 non-empty groups if each group must contain at least 2 letters?",
         "answer": 15,
         "rationale": {
             "Question": "In how many ways can a set of 6 distinct letters be partitioned into 3 non-empty groups if each group must contain at least 2 letters?",
@@ -65,9 +65,9 @@
     {
         "id": "jianyu_xu/Catalan_1.json",
         "question": "How many ways are there to arrange 6 pairs of parentheses such that they are balanced?",
-        "prediction": "9. The final result will give the total number of ways to arrange 6 pairs of balanced parentheses",
+        "prediction": "132",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: How many ways are there to arrange 6 pairs of parentheses such that they are balanced?\n Consider the reasoning steps: \n 1. Use the concept of Catalan numbers to determine the number of ways to arrange balanced parentheses.\n3. Use a dynamic programming approach to count the number of ways to arrange balanced parentheses.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: How many ways are there to arrange 6 pairs of parentheses such that they are balanced?",
         "answer": 132,
         "rationale": {
             "Question": "How many ways are there to arrange 6 pairs of parentheses such that they are balanced?",
@@ -86,9 +86,9 @@
     {
         "id": "jianyu_xu/Stirling_number_second_kind_2.json",
         "question": "In how many ways can a group of 9 people be divided into 3 non-empty subsets?",
-        "prediction": "created, we can determine the total number of ways to divide the group of 9 people into 3 non-empty subsets when considering permutations",
+        "prediction": "118",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: In how many ways can a group of 9 people be divided into 3 non-empty subsets?\n Consider the reasoning steps: \n 2. Another possible next step is to consider the problem in terms of partitions, where each person can be placed into one of the three subsets. This involves considering the number of ways to partition a set of 9 elements into 3 non-empty subsets, which can be calculated using combinatorial reasoning.\n4. Another possible next step is to consider the problem in terms of permutations, where the order in which the subsets are formed matters. This involves calculating the number of ways to arrange the 9 people into 3 non-empty subsets, taking into account the different possible orders in which the subsets can be created.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: In how many ways can a group of 9 people be divided into 3 non-empty subsets?",
         "answer": 3025,
         "rationale": {
             "Question": "In how many ways can a group of 9 people be divided into 3 non-empty subsets?",
@@ -107,9 +107,9 @@
     {
         "id": "jianyu_xu/Multinomial_6.json",
         "question": "A box contains 4 red, 3 green, and 2 blue balls. Balls are distinct even with the same color. In how many ways can we choose 4 balls, if at least 2 are red?",
-        "prediction": "6. Add the results from steps 2, 3, 4, and 5 to get the total number of ways to choose 4 balls with at least 2 red balls",
+        "prediction": "81",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: A box contains 4 red, 3 green, and 2 blue balls. Balls are distinct even with the same color. In how many ways can we choose 4 balls, if at least 2 are red?\n Consider the reasoning steps: \n 2. Calculate the number of ways to choose exactly 2 red balls, then exactly 3 red balls, and then exactly 4 red balls, and add those results together.\n3. Calculate the number of ways to choose 2 red balls from the 4 available, then calculate the number of ways to choose the remaining 2 balls from the remaining colors (green and blue).\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: A box contains 4 red, 3 green, and 2 blue balls. Balls are distinct even with the same color. In how many ways can we choose 4 balls, if at least 2 are red?",
         "answer": 81,
         "rationale": {
             "Question": "A box contains 4 red, 3 green, and 2 blue balls. Balls are distinct even with the same color. In how many ways can we choose 4 balls, if at least 2 are red?",
@@ -128,9 +128,9 @@
     {
         "id": "jianyu_xu/inclusion_and_exclusion_2.json",
         "question": "In how many ways can we color a loop of 5 vertices with 3 colors such that no two adjacent vertices have the same color?",
-        "prediction": "7. Finally, we can use the principle of inclusion-exclusion to subtract the number of ways with adjacent vertices having the same color from the total number of ways to color the loop with no restrictions. This gives us 243 - 16 = 227 ways to color the loop of 5 vertices with 3 colors such that no two adjacent vertices have the same color",
+        "prediction": "12",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: In how many ways can we color a loop of 5 vertices with 3 colors such that no two adjacent vertices have the same color?\n Consider the reasoning steps: \n 2. Another possible next step is to consider the different cases based on the color of the first vertex. For example, if the first vertex is colored red, then the second vertex can be colored either blue or green. From there, continue to explore the possible color choices for the remaining vertices while ensuring no adjacent vertices have the same color.\n3. Another possible next step is to use the principle of inclusion-exclusion to count the number of ways to color the loop with no restrictions, then subtract the number of ways where adjacent vertices have the same color. This can help simplify the problem and provide a systematic approach to finding the solution.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: In how many ways can we color a loop of 5 vertices with 3 colors such that no two adjacent vertices have the same color?",
         "answer": 30,
         "rationale": {
             "Question": "In how many ways can we color a loop of 5 vertices with 3 colors such that no two adjacent vertices have the same color?",
@@ -149,9 +149,9 @@
     {
         "id": "jianyu_xu/Stirling_number_second_kind_4.json",
         "question": "In how many ways can 10 distinct balls be placed into 4 identical boxes if each box must have at least 1 balls?",
-        "prediction": "the number of ways to distribute 10 distinct balls into 4 identical boxes with each box having at least 1 ball",
+        "prediction": "84",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: In how many ways can 10 distinct balls be placed into 4 identical boxes if each box must have at least 1 balls?\n Consider the reasoning steps: \n 2. Use a generating function to represent the problem and find the coefficient of a specific term to determine the number of ways.\n2. Use the principle of inclusion-exclusion to account for the cases where one or more boxes are empty, then subtract that from the total number of ways to distribute the balls into the boxes.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: In how many ways can 10 distinct balls be placed into 4 identical boxes if each box must have at least 1 balls?",
         "answer": 26335,
         "rationale": {
             "Question": "In how many ways can 10 distinct balls be placed into 4 identical boxes if each box must have at least 1 balls?",
@@ -170,9 +170,9 @@
     {
         "id": "jianyu_xu/Ramsey_5.json",
         "question": "Coloring the edges of a complete graph with n vertices in 2 colors (red and blue), what is the smallest n that guarantees there is either a 4-clique in red or a 5-clique in blue?",
-        "prediction": "8. Finally, considering the implications of the Pigeonhole Principle in the context of coloring complete graphs with 2 colors may provide a simpler way to determine the minimum value of n that guarantees the existence of either a 4-clique in red or a 5-clique in blue. By reasoning about the distribution of edges among the colors, we can identify the critical threshold for n",
+        "prediction": "25",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Coloring the edges of a complete graph with n vertices in 2 colors (red and blue), what is the smallest n that guarantees there is either a 4-clique in red or a 5-clique in blue?\n Consider the reasoning steps: \n 2. Another possible next step is to analyze the problem theoretically by considering the worst-case scenario for each color. This could involve exploring the combinatorial properties of complete graphs and cliques to determine the minimum value of n that guarantees the existence of either a 4-clique in red or a 5-clique in blue.\n4. Another possible next step is to explore the concept of Ramsey numbers, which provide bounds on the minimum size of a complete graph that guarantees the existence of certain substructures. By analyzing the Ramsey numbers for the specific case of a 4-clique in red or a 5-clique in blue, we can determine the smallest n that satisfies the given conditions.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Coloring the edges of a complete graph with n vertices in 2 colors (red and blue), what is the smallest n that guarantees there is either a 4-clique in red or a 5-clique in blue?",
         "answer": 25,
         "rationale": {
             "Question": "Coloring the edges of a complete graph with n vertices in 2 colors (red and blue), what is the smallest n that guarantees there is either a 4-clique in red or a 5-clique in blue?",
@@ -191,9 +191,9 @@
     {
         "id": "jianyu_xu/Ramsey_3.json",
         "question": "What is the minimum number of people needed in a room to guarantee that there are 4 mutual friends or 4 mutual strangers?",
-        "prediction": "7",
+        "prediction": "18",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: What is the minimum number of people needed in a room to guarantee that there are 4 mutual friends or 4 mutual strangers?\n Consider the reasoning steps: \n 1. Use the pigeonhole principle to determine the minimum number of people needed in a room to guarantee that there are 4 mutual friends or 4 mutual strangers.\n2. Consider the scenario where each person in the room is either friends with or a stranger to every other person. Calculate the minimum number of people needed to guarantee that there are 4 mutual friends or 4 mutual strangers in this scenario.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: What is the minimum number of people needed in a room to guarantee that there are 4 mutual friends or 4 mutual strangers?",
         "answer": 18,
         "rationale": {
             "Question": "What is the minimum number of people needed in a room to guarantee that there are 4 mutual friends or 4 mutual strangers?",
@@ -212,9 +212,9 @@
     {
         "id": "jianyu_xu/Stirling_number_first_kind_6.json",
         "question": "In how many ways can 10 people be seated at 1 identical round tables? Each table must have at least 1 person seated.",
-        "prediction": "40,320 ways to seat 10 people at 1 identical round table, with each table having at least 1 person seated",
+        "prediction": "8!",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: In how many ways can 10 people be seated at 1 identical round tables? Each table must have at least 1 person seated.\n Consider the reasoning steps: \n 2. Start by seating 1 person at the table, then calculate the number of ways to seat the remaining 9 people around the table. Repeat this process for each person seated at the table.\n2. After seating the first person, consider the remaining 9 people as indistinguishable and calculate the number of ways to arrange them around the table.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: In how many ways can 10 people be seated at 1 identical round tables? Each table must have at least 1 person seated.",
         "answer": 362880,
         "rationale": {
             "Question": "In how many ways can 10 people be seated at 1 identical round tables? Each table must have at least 1 person seated.",
@@ -233,9 +233,9 @@
     {
         "id": "jianyu_xu/derangement_1.json",
         "question": "How many ways are there to arrange 9 people in a line such that no one is standing in their correct position?",
-        "prediction": "standing in their correct position",
+        "prediction": "1",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: How many ways are there to arrange 9 people in a line such that no one is standing in their correct position?\n Consider the reasoning steps: \n 2. Use the principle of derangements to directly calculate the number of ways to arrange 9 people in a line such that no one is standing in their correct position.\n1. Calculate the number of derangements for 9 people using the formula !n = n!(1 - 1/1! + 1/2! - 1/3! + ... + (-1)^n/n!)\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: How many ways are there to arrange 9 people in a line such that no one is standing in their correct position?",
         "answer": 133496,
         "rationale": {
             "Question": "How many ways are there to arrange 9 people in a line such that no one is standing in their correct position?",
@@ -254,9 +254,9 @@
     {
         "id": "jianyu_xu/Stirling_number_first_kind_2.json",
         "question": "In how many ways can 6 people be seated at 2 identical round tables? Each table must have at least 1 person seated.",
-        "prediction": "- Subtract the result from step 4 from the result from step 3 to get the final answer",
+        "prediction": "360",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: In how many ways can 6 people be seated at 2 identical round tables? Each table must have at least 1 person seated.\n Consider the reasoning steps: \n 1. Calculate the total number of ways to seat 6 people at 2 round tables without any restrictions, then subtract the number of ways where one table is empty.\n2. Calculate the number of ways to seat 6 people at 2 round tables with at least 1 person at each table, then subtract the number of ways where one table is empty.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: In how many ways can 6 people be seated at 2 identical round tables? Each table must have at least 1 person seated.",
         "answer": 225,
         "rationale": {
             "Question": "In how many ways can 6 people be seated at 2 identical round tables? Each table must have at least 1 person seated.",
@@ -275,9 +275,9 @@
     {
         "id": "jianyu_xu/Stirling_number_second_kind_1.json",
         "question": "In how many ways can a group of 7 people be divided into 2 non-empty subsets?",
-        "prediction": "7. Add up the total number of ways for each combination to determine the total number of ways to divide the group into 2 non-empty subsets",
+        "prediction": "2^(7-1) - 1 = 2^6 - 1 = 64 - 1 = 63",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: In how many ways can a group of 7 people be divided into 2 non-empty subsets?\n Consider the reasoning steps: \n 2. Start by considering the simplest case of dividing the group into subsets of 1 person and 6 people, then continue to explore other possible combinations such as 2 and 5, 3 and 4, etc.\n2. Use combinatorial reasoning to determine the total number of ways to divide the group into 2 non-empty subsets by considering the number of ways to choose the number of people in the first subset, then the number of people in the second subset.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: In how many ways can a group of 7 people be divided into 2 non-empty subsets?",
         "answer": 63,
         "rationale": {
             "Question": "In how many ways can a group of 7 people be divided into 2 non-empty subsets?",
@@ -296,9 +296,9 @@
     {
         "id": "jianyu_xu/Polya_1.json",
         "question": "How many distinct necklaces with 12 beads can be made with 10 beads of color R and 2 beads of color B, assuming rotations and reflections are considered equivalent?",
-        "prediction": "made with 10 beads of color R and 2 beads of color B",
+        "prediction": "1",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: How many distinct necklaces with 12 beads can be made with 10 beads of color R and 2 beads of color B, assuming rotations and reflections are considered equivalent?\n Consider the reasoning steps: \n 2. Use Burnside's Lemma to directly calculate the number of distinct necklaces with 12 beads that can be made with 10 beads of color R and 2 beads of color B.\n4. Use the formula for calculating the number of distinct necklaces with indistinguishable beads to account for the different arrangements of the 10 beads of color R and 2 beads of color B.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: How many distinct necklaces with 12 beads can be made with 10 beads of color R and 2 beads of color B, assuming rotations and reflections are considered equivalent?",
         "answer": 6,
         "rationale": {
             "Question": "How many distinct necklaces with 12 beads can be made with 10 beads of color R and 2 beads of color B, assuming rotations and reflections are considered equivalent?",
@@ -317,9 +317,9 @@
     {
         "id": "jianyu_xu/Binomial_2.json",
         "question": "How many different 6-letter arrangements can be made from the letters in the word BANANA?",
-        "prediction": "6. Count the total number of branches in the tree diagram to confirm the total number of different 6-letter arrangements",
+        "prediction": "6! / (3! * 2!) = 60",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: How many different 6-letter arrangements can be made from the letters in the word BANANA?\n Consider the reasoning steps: \n 2. Break down the word BANANA into its individual letters and count the number of times each letter appears. Then calculate the total number of arrangements by considering the repeated letters.\n2. Create a tree diagram to visualize all possible arrangements, taking into account the repeated letters, and then count the total number of branches to find the answer.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: How many different 6-letter arrangements can be made from the letters in the word BANANA?",
         "answer": 60,
         "rationale": {
             "Question": "How many different 6-letter arrangements can be made from the letters in the word BANANA?",
@@ -340,7 +340,7 @@
         "question": "In a set of 20 positive integers, at least how many pairs of numbers have a difference that is a multiple of 10?",
         "prediction": "a multiple of 10",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: In a set of 20 positive integers, at least how many pairs of numbers have a difference that is a multiple of 10?\n Consider the reasoning steps: \n 2. List out all possible pairs of numbers and calculate the difference for each pair, then count how many differences are multiples of 10.\n2. Use modular arithmetic to determine the possible remainders when the pairs of numbers are divided by 10, then calculate the number of pairs with remainders that result in a multiple of 10.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: In a set of 20 positive integers, at least how many pairs of numbers have a difference that is a multiple of 10?",
         "answer": 10,
         "rationale": {
             "Question": "In a set of 20 positive integers, at least how many pairs of numbers have a difference that is a multiple of 10?",
@@ -359,9 +359,9 @@
     {
         "id": "jianyu_xu/Burnside_3.json",
         "question": "How many ways are there to arrange the letters in the word *BANANA* up to the symmetries of the word?",
-        "prediction": "7. Divide the total number of arrangements by the number of symmetries to account for the interchangeable A's, resulting in 60/2 = 30 ways to arrange the letters in the word BANANA up to the symmetries",
+        "prediction": "2",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: How many ways are there to arrange the letters in the word *BANANA* up to the symmetries of the word?\n Consider the reasoning steps: \n 2. Consider the symmetries of the word BANANA, such as the two A's being interchangeable, and adjust the total number of arrangements accordingly.\n4. Adjust the total number of arrangements by considering the symmetries of the word, such as the two A's being interchangeable, resulting in a final answer of 30 ways to arrange the letters in the word BANANA up to the symmetries.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: How many ways are there to arrange the letters in the word *BANANA* up to the symmetries of the word?",
         "answer": 30,
         "rationale": {
             "Question": "How many ways are there to arrange the letters in the word *BANANA* up to the symmetries of the word?",
@@ -380,9 +380,9 @@
     {
         "id": "jianyu_xu/Multinomial_4.json",
         "question": "In how many ways can we form a 7-digit number using the digits 1, 2, 2, 3, 3, 3, 3?",
-        "prediction": "840 + 840 = 1680 ways",
+        "prediction": "4200",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: In how many ways can we form a 7-digit number using the digits 1, 2, 2, 3, 3, 3, 3?\n Consider the reasoning steps: \n 2. Create cases for the different arrangements of the repeated digits (2 and 3) and calculate the total number of ways to arrange the digits in each case, then add up the results.\n2. Create separate cases for the arrangements of the repeated digits (2 and 3) and calculate the total number of ways to arrange the digits in each case, then add up the results.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: In how many ways can we form a 7-digit number using the digits 1, 2, 2, 3, 3, 3, 3?",
         "answer": 105,
         "rationale": {
             "Question": "In how many ways can we form a 7-digit number using the digits 1, 2, 2, 3, 3, 3, 3?",
@@ -401,9 +401,9 @@
     {
         "id": "jianyu_xu/Binomial_5.json",
         "question": "In how many ways can a committee of 2 men and 3 women be selected from a group of 6 men and 8 women?",
-        "prediction": "840 ways to select a committee of 2 men and 3 women from a group of 6 men and 8 women",
+        "prediction": "840",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: In how many ways can a committee of 2 men and 3 women be selected from a group of 6 men and 8 women?\n Consider the reasoning steps: \n 1. Calculate the number of ways to select 2 men from 6 men and 3 women from 8 women separately, then multiply the results together to find the total number of ways to select the committee.\n2. Calculate the total number of ways to select 5 people (2 men and 3 women) from a group of 14 people (6 men and 8 women) using the combination formula C(14, 5) = 2002. This will give you the total number of ways to select the committee.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: In how many ways can a committee of 2 men and 3 women be selected from a group of 6 men and 8 women?",
         "answer": 840,
         "rationale": {
             "Question": "In how many ways can a committee of 2 men and 3 women be selected from a group of 6 men and 8 women?",
@@ -422,9 +422,9 @@
     {
         "id": "jianyu_xu/Ramsey_6.json",
         "question": "Coloring the edges of a complete graph with n vertices in 2 colors (red and blue), what is the smallest n that guarantees there is either a triangle in red or a 6-clique in blue?",
-        "prediction": "6",
+        "prediction": "18",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Coloring the edges of a complete graph with n vertices in 2 colors (red and blue), what is the smallest n that guarantees there is either a triangle in red or a 6-clique in blue?\n Consider the reasoning steps: \n 2. Another possible next step is to use the Pigeonhole Principle to determine the minimum number of vertices required to guarantee the presence of either a triangle in red or a 6-clique in blue. This involves considering the worst-case scenario for each color and determining the minimum number of vertices needed to ensure that one of these scenarios must occur.\n4. Another possible next step is to explore the concept of Ramsey numbers, which provide bounds on the minimum number of vertices required to guarantee the presence of certain substructures in a graph. By analyzing the Ramsey numbers related to triangles and 6-cliques, we can determine the smallest n that guarantees the desired scenario.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Coloring the edges of a complete graph with n vertices in 2 colors (red and blue), what is the smallest n that guarantees there is either a triangle in red or a 6-clique in blue?",
         "answer": 18,
         "rationale": {
             "Question": "Coloring the edges of a complete graph with n vertices in 2 colors (red and blue), what is the smallest n that guarantees there is either a triangle in red or a 6-clique in blue?",
@@ -443,9 +443,9 @@
     {
         "id": "jianyu_xu/Stirling_number_second_kind_3.json",
         "question": "In how many ways can a group of 10 people be divided into 3 non-empty subsets?",
-        "prediction": "6. Sum up the total number of valid combinations from each case to determine the final answer to the problem",
+        "prediction": "57",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: In how many ways can a group of 10 people be divided into 3 non-empty subsets?\n Consider the reasoning steps: \n 2. Break down the problem into smaller cases, such as dividing the 10 people into subsets of 3, 3, and 4 people, then 3, 4, and 3 people, and so on, until all possible combinations have been considered.\n2. Use a recursive approach to systematically generate all possible ways to divide the 10 people into 3 non-empty subsets, ensuring that each person is accounted for in one of the subsets.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: In how many ways can a group of 10 people be divided into 3 non-empty subsets?",
         "answer": 9330,
         "rationale": {
             "Question": "In how many ways can a group of 10 people be divided into 3 non-empty subsets?",
@@ -464,9 +464,9 @@
     {
         "id": "jianyu_xu/Multinomial_3.json",
         "question": "In how many ways can we form a 7-digit number using the digits 1, 2, 2, 3, 3, 3, 4?",
-        "prediction": "5. Add up the number of ways from each case to get the total number of ways to form a 7-digit number using the given digits",
+        "prediction": "6480",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: In how many ways can we form a 7-digit number using the digits 1, 2, 2, 3, 3, 3, 4?\n Consider the reasoning steps: \n 2. Break the problem down into cases based on the number of times each digit is repeated, and calculate the number of ways to arrange the digits in each case.\n1. Calculate the number of ways to arrange the digits when each digit is repeated the same number of times (e.g. 1, 1, 1, 1, 1, 1, 1).\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: In how many ways can we form a 7-digit number using the digits 1, 2, 2, 3, 3, 3, 4?",
         "answer": 420,
         "rationale": {
             "Question": "In how many ways can we form a 7-digit number using the digits 1, 2, 2, 3, 3, 3, 4?",
@@ -485,9 +485,9 @@
     {
         "id": "jianyu_xu/Stirling_number_first_kind_3.json",
         "question": "In how many ways can 7 people be seated at 5 identical round tables? Each table must have at least 1 person seated.",
-        "prediction": "6. Subtracting the number of ways with at least one table empty from the total number of ways without any restrictions, we get 330 - 120 = 210 ways to seat 7 people at 5 tables with each table having at least 1 person seated",
+        "prediction": "570",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: In how many ways can 7 people be seated at 5 identical round tables? Each table must have at least 1 person seated.\n Consider the reasoning steps: \n 1. Calculate the total number of ways to seat 7 people at 5 tables without any restrictions, then subtract the number of ways where at least one table is empty.\n2. Calculate the total number of ways to seat 7 people at 5 tables without any restrictions by using the formula for distributing identical objects into distinct groups, which is (n+r-1) choose (r-1), where n is the number of objects and r is the number of groups.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: In how many ways can 7 people be seated at 5 identical round tables? Each table must have at least 1 person seated.",
         "answer": 175,
         "rationale": {
             "Question": "In how many ways can 7 people be seated at 5 identical round tables? Each table must have at least 1 person seated.",
@@ -506,9 +506,9 @@
     {
         "id": "jianyu_xu/multiplication_1.json",
         "question": "Given that each cone can contain two ice cream balls, how many different ice cream cones can you make if you have 6 flavors of ice cream and 5 types of cones?",
-        "prediction": "8. Therefore, you can make 15 different ice cream cones with 6 flavors of ice cream and 5 types of cones",
+        "prediction": "75",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Given that each cone can contain two ice cream balls, how many different ice cream cones can you make if you have 6 flavors of ice cream and 5 types of cones?\n Consider the reasoning steps: \n 2. Divide the total number of possible combinations by 2 to account for each cone containing two ice cream balls.\n4. Use the formula for combinations to calculate the total number of different ice cream cones that can be made.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Given that each cone can contain two ice cream balls, how many different ice cream cones can you make if you have 6 flavors of ice cream and 5 types of cones?",
         "answer": 180,
         "rationale": {
             "Question": "Given that each cone can contain two ice cream balls, how many different ice cream cones can you make if you have 6 flavors of ice cream and 5 types of cones?",
@@ -527,9 +527,9 @@
     {
         "id": "jianyu_xu/Graph_1.json",
         "question": "What is the smallest number of vertices in a graph that guarantees the existence of a clique of size 3 or an independent set of size 2?",
-        "prediction": "8. To guarantee the existence of a clique of size 3 or an independent set of size 2, we need at least 3 vertices in the graph",
+        "prediction": "6",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: What is the smallest number of vertices in a graph that guarantees the existence of a clique of size 3 or an independent set of size 2?\n Consider the reasoning steps: \n 2. Consider the fact that in a graph with 3 vertices, there are only 3 possible edges that can be formed. By drawing out all possible combinations of edges, determine if there is a clique of size 3 or an independent set of size 2.\n3. Calculate the total number of edges in a graph with n vertices using the formula n(n-1)/2, and then determine the smallest number of vertices needed to guarantee the existence of a clique of size 3 or an independent set of size 2.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: What is the smallest number of vertices in a graph that guarantees the existence of a clique of size 3 or an independent set of size 2?",
         "answer": 3,
         "rationale": {
             "Question": "What is the smallest number of vertices in a graph that guarantees the existence of a clique of size 3 or an independent set of size 2?",
@@ -548,9 +548,9 @@
     {
         "id": "jianyu_xu/Ramsey_4.json",
         "question": "Coloring the edges of a complete graph with n vertices in 2 colors (red and blue), what is the smallest n that guarantees there is either a 4-clique in red or a 4-clique in blue?",
-        "prediction": "8. In conclusion, by understanding the concept of Ramsey numbers and their implications for edge-colored complete graphs, we can determine the minimum value of n required to ensure the presence of a 4-clique in either red or blue",
+        "prediction": "18",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Coloring the edges of a complete graph with n vertices in 2 colors (red and blue), what is the smallest n that guarantees there is either a 4-clique in red or a 4-clique in blue?\n Consider the reasoning steps: \n 2. Another possible next step is to analyze the problem theoretically by considering the worst-case scenario for each color. This could involve exploring the combinatorial properties of complete graphs and using mathematical reasoning to determine the smallest n that guarantees the presence of a 4-clique in either red or blue.\n4. Another possible next step is to explore the concept of Ramsey numbers, which provide bounds on the smallest values of n that guarantee the existence of certain substructures in edge-colored complete graphs. By studying the Ramsey numbers related to 4-cliques, we can determine the minimum value of n required to ensure the presence of a 4-clique in either red or blue.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Coloring the edges of a complete graph with n vertices in 2 colors (red and blue), what is the smallest n that guarantees there is either a 4-clique in red or a 4-clique in blue?",
         "answer": 18,
         "rationale": {
             "Question": "Coloring the edges of a complete graph with n vertices in 2 colors (red and blue), what is the smallest n that guarantees there is either a 4-clique in red or a 4-clique in blue?",
@@ -569,9 +569,9 @@
     {
         "id": "jianyu_xu/Ramsey_1.json",
         "question": "Coloring the edges of a complete graph with 6 vertices in 2 colors, how many triangles of the same color are there at least?",
-        "prediction": "20, as each triangle must have at least one color repeated",
+        "prediction": "60",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Coloring the edges of a complete graph with 6 vertices in 2 colors, how many triangles of the same color are there at least?\n Consider the reasoning steps: \n 2. Consider the possible combinations of coloring the edges with 2 colors and determine the minimum number of triangles of the same color based on those combinations.\n2. Use combinatorial reasoning to analyze the different ways the edges can be colored with 2 colors, and then calculate the minimum number of triangles of the same color that can be formed.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Coloring the edges of a complete graph with 6 vertices in 2 colors, how many triangles of the same color are there at least?",
         "answer": 2,
         "rationale": {
             "Question": "Coloring the edges of a complete graph with 6 vertices in 2 colors, how many triangles of the same color are there at least?",
@@ -592,7 +592,7 @@
         "question": "What is the minimum number of people needed in a room to guarantee that there are 3 mutual friends or 3 mutual strangers?",
         "prediction": "6",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: What is the minimum number of people needed in a room to guarantee that there are 3 mutual friends or 3 mutual strangers?\n Consider the reasoning steps: \n 2. Consider the worst-case scenario where each person is either friends with or a stranger to every other person in the room, and calculate the minimum number of people needed to guarantee the desired outcome.\n3. Use the pigeonhole principle to determine the minimum number of people needed in the room to guarantee the desired outcome.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: What is the minimum number of people needed in a room to guarantee that there are 3 mutual friends or 3 mutual strangers?",
         "answer": 6,
         "rationale": {
             "Question": "What is the minimum number of people needed in a room to guarantee that there are 3 mutual friends or 3 mutual strangers?",
@@ -611,9 +611,9 @@
     {
         "id": "jianyu_xu/Lah_number_4.json",
         "question": "How many ways are there to divide a set of 6 elements into 3 non-empty ordered subsets?",
-        "prediction": "7. Add up the total number of ways from step 6 to get the final answer",
+        "prediction": "equal to 10 ways",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: How many ways are there to divide a set of 6 elements into 3 non-empty ordered subsets?\n Consider the reasoning steps: \n 2. Break down the problem into smaller steps by first determining the number of ways to choose the elements for the first subset, then the second subset, and finally the third subset. This can help simplify the calculation process.\n1. Calculate the number of ways to choose the elements for the first subset by using combinations. Since the subsets are ordered, we can choose 1 element for the first subset in 6 ways, 2 elements in 15 ways, and 3 elements in 20 ways.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: How many ways are there to divide a set of 6 elements into 3 non-empty ordered subsets?",
         "answer": 1200,
         "rationale": {
             "Question": "How many ways are there to divide a set of 6 elements into 3 non-empty ordered subsets?",
@@ -632,9 +632,9 @@
     {
         "id": "jianyu_xu/pigeonhole_4.json",
         "question": "In a group of 1000 people, at least how many people have to share the same birthday?",
-        "prediction": "6. Use the result from the formula to conclude that in a group of 1000 people, at least 2 people must share the same birthday based on the probability calculated",
+        "prediction": "23",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: In a group of 1000 people, at least how many people have to share the same birthday?\n Consider the reasoning steps: \n 2. Use the pigeonhole principle to determine that in a group of 1000 people, at least 2 people must share the same birthday.\n1. Calculate the probability of at least 2 people sharing the same birthday in a group of 1000 people using the birthday paradox formula.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: In a group of 1000 people, at least how many people have to share the same birthday?",
         "answer": 3,
         "rationale": {
             "Question": "In a group of 1000 people, at least how many people have to share the same birthday?",
@@ -653,9 +653,9 @@
     {
         "id": "jianyu_xu/Binomial_6.json",
         "question": "A pizza parlor offers 8 different toppings. In how many ways can a customer order a pizza with 3 toppings?",
-        "prediction": "336 ways for a customer to order a pizza with 3 toppings from the 8 different toppings offered",
+        "prediction": "56",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: A pizza parlor offers 8 different toppings. In how many ways can a customer order a pizza with 3 toppings?\n Consider the reasoning steps: \n 1. Calculate the number of ways to choose 3 toppings out of 8 using the combination formula: C(8, 3) = 8! / (3!(8-3)!) = 56\n2. Calculate the total number of ways to order a pizza with 3 toppings by multiplying the number of ways to choose the toppings (56) by the number of ways to arrange them on the pizza (3! = 6).\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: A pizza parlor offers 8 different toppings. In how many ways can a customer order a pizza with 3 toppings?",
         "answer": 56,
         "rationale": {
             "Question": "A pizza parlor offers 8 different toppings. In how many ways can a customer order a pizza with 3 toppings?",
@@ -674,9 +674,9 @@
     {
         "id": "jianyu_xu/Stirling_number_second_kind_5.json",
         "question": "In how many ways can a set of 6 distinct letters be partitioned into 2 non-empty groups if each group must contain at least 2 letters?",
-        "prediction": "7. Multiply the result of step 5 by the number of ways to assign the remaining 2 letters to get the final answer",
+        "prediction": "37.5",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: In how many ways can a set of 6 distinct letters be partitioned into 2 non-empty groups if each group must contain at least 2 letters?\n Consider the reasoning steps: \n 2. Start by selecting 2 letters to form the first group, then select 2 more letters to form the second group, and finally assign the remaining 2 letters to either group. Calculate the number of ways to do this.\n3. Calculate the number of ways to select 2 letters out of 6 to form the first group, which is 6 choose 2.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: In how many ways can a set of 6 distinct letters be partitioned into 2 non-empty groups if each group must contain at least 2 letters?",
         "answer": 25,
         "rationale": {
             "Question": "In how many ways can a set of 6 distinct letters be partitioned into 2 non-empty groups if each group must contain at least 2 letters?",
@@ -695,9 +695,9 @@
     {
         "id": "jianyu_xu/pigeonhole_2.json",
         "question": "Arbitrarily place 19 points in a unit square and cover as many of these points as possible with a circle of diameter $\\frac{\\sqrt 2}{3}$. Question: At least how many points can be guaranteed to be covered?",
-        "prediction": "covered by circles of diameter $\\frac{\\sqrt 2}{3}$ placed in the unit square",
+        "prediction": "9",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Arbitrarily place 19 points in a unit square and cover as many of these points as possible with a circle of diameter $\\frac{\\sqrt 2}{3}$. Question: At least how many points can be guaranteed to be covered?\n Consider the reasoning steps: \n 2. Use the Pigeonhole Principle to show that at least 7 points must be covered by the circle, as each point can be the center of a circle with diameter $\\frac{\\sqrt 2}{3}$ that covers at most 6 other points.\n3. Calculate the maximum number of circles with diameter $\\frac{\\sqrt 2}{3}$ that can be placed in the unit square without overlapping, and use this information to determine the minimum number of points that can be covered.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Arbitrarily place 19 points in a unit square and cover as many of these points as possible with a circle of diameter $\\frac{\\sqrt 2}{3}$. Question: At least how many points can be guaranteed to be covered?",
         "answer": 3,
         "rationale": {
             "Question": "Arbitrarily place 19 points in a unit square and cover as many of these points as possible with a circle of diameter $\\frac{\\sqrt 2}{3}$. Question: At least how many points can be guaranteed to be covered?",
@@ -716,9 +716,9 @@
     {
         "id": "jianyu_xu/combination_and_permutation_1.json",
         "question": "How many ways are there to distribute 13 identical balls into 4 distinct boxes if the boxes are distinguishable and no box can be left empty?",
-        "prediction": "(9 + 3 - 1) choose (3 - 1) = 11 choose 2 = 55 ways",
+        "prediction": "455",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: How many ways are there to distribute 13 identical balls into 4 distinct boxes if the boxes are distinguishable and no box can be left empty?\n Consider the reasoning steps: \n 2. Consider using a combinatorial approach by calculating the number of ways to distribute the balls while ensuring that no box is left empty.\n3. Calculate the number of ways to distribute the balls by using the stars and bars method, where each ball is represented by a star and the boxes are represented by bars. Ensure that no box is left empty by adding one ball to each box before distributing the remaining balls.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: How many ways are there to distribute 13 identical balls into 4 distinct boxes if the boxes are distinguishable and no box can be left empty?",
         "answer": 220,
         "rationale": {
             "Question": "How many ways are there to distribute 13 identical balls into 4 distinct boxes if the boxes are distinguishable and no box can be left empty?",
@@ -737,9 +737,9 @@
     {
         "id": "jianyu_xu/Lah_number_2.json",
         "question": "How many ways are there to divide a set of 5 elements into 2 non-empty ordered subsets?",
-        "prediction": "10 ways to divide the set of 5 elements into 2 non-empty ordered subsets",
+        "prediction": "5",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: How many ways are there to divide a set of 5 elements into 2 non-empty ordered subsets?\n Consider the reasoning steps: \n 2. Use the concept of combinations to calculate the number of ways to choose 2 elements out of 5 to form one subset, and then the remaining 3 elements will form the other subset.\n1. Calculate the number of ways to choose 2 elements out of 5 using the combination formula C(5,2) = 5! / (2!(5-2)!) = 10. Then, the remaining 3 elements will automatically form the other subset. Therefore, there are 10 ways to divide the set of 5 elements into 2 non-empty ordered subsets.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: How many ways are there to divide a set of 5 elements into 2 non-empty ordered subsets?",
         "answer": 240,
         "rationale": {
             "Question": "How many ways are there to divide a set of 5 elements into 2 non-empty ordered subsets?",
@@ -758,9 +758,9 @@
     {
         "id": "jianyu_xu/pigeonhole_1.json",
         "question": "How many people at least shall we include in one group, such that there must exist two different people in this group whose birthdays are in the same month?",
-        "prediction": "5. Therefore, we must include at least 13 people in a group to guarantee that at least two people have birthdays in the same month",
+        "prediction": "13",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: How many people at least shall we include in one group, such that there must exist two different people in this group whose birthdays are in the same month?\n Consider the reasoning steps: \n 2. Use the Pigeonhole Principle to determine the minimum number of people needed in a group to guarantee that at least two people have birthdays in the same month.\n3. Calculate the total number of possible birthday months (12) and then add 1 to determine the minimum number of people needed in a group.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: How many people at least shall we include in one group, such that there must exist two different people in this group whose birthdays are in the same month?",
         "answer": 13,
         "rationale": {
             "Question": "How many people at least shall we include in one group, such that there must exist two different people in this group whose birthdays are in the same month?",
@@ -779,9 +779,9 @@
     {
         "id": "jianyu_xu/pigeonhole_3.json",
         "question": "In a group of 10 people, each of whom has one of 3 different eye colors, at least how many people must have the same eye color?",
-        "prediction": "8",
+        "prediction": "9",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: In a group of 10 people, each of whom has one of 3 different eye colors, at least how many people must have the same eye color?\n Consider the reasoning steps: \n 1. Calculate the minimum number of people needed to ensure that at least 2 people have the same eye color using the Pigeonhole Principle.\n2. Determine the maximum number of people that can have different eye colors in the group of 10.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: In a group of 10 people, each of whom has one of 3 different eye colors, at least how many people must have the same eye color?",
         "answer": 4,
         "rationale": {
             "Question": "In a group of 10 people, each of whom has one of 3 different eye colors, at least how many people must have the same eye color?",
@@ -800,9 +800,9 @@
     {
         "id": "jianyu_xu/Multinomial_2.json",
         "question": "A group of 9 people is split into 3 committees of 3 people. Committees are identical besides of members. In how many ways can this be done?",
-        "prediction": "1680 ways to split the group of 9 people into 3 committees of 3 people each",
+        "prediction": "\\( 84 \\times 20 = 1680 \\)",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: A group of 9 people is split into 3 committees of 3 people. Committees are identical besides of members. In how many ways can this be done?\n Consider the reasoning steps: \n 2. Use the formula for combinations to directly calculate the total number of ways to split the group into committees: 9 choose 3 for the first committee, multiplied by 6 choose 3 for the second committee, multiplied by 3 choose 3 for the third committee.\nMultiply these together to get the total number of ways to split the group into committees.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: A group of 9 people is split into 3 committees of 3 people. Committees are identical besides of members. In how many ways can this be done?",
         "answer": 280,
         "rationale": {
             "Question": "A group of 9 people is split into 3 committees of 3 people. Committees are identical besides of members. In how many ways can this be done?",
@@ -821,9 +821,9 @@
     {
         "id": "jianyu_xu/Stirling_number_first_kind_5.json",
         "question": "In how many ways can 8 people be seated at 2 identical round tables? Each table must have at least 1 person seated.",
-        "prediction": "empty from the total number of ways without any restrictions to get the number of ways to seat 8 people at 2 tables with at least 1 person at each table",
+        "prediction": "6720",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: In how many ways can 8 people be seated at 2 identical round tables? Each table must have at least 1 person seated.\n Consider the reasoning steps: \n 1. Calculate the total number of ways to seat 8 people at 2 tables without any restrictions, then subtract the number of ways where one table is empty.\n2. Calculate the number of ways to seat 8 people at 2 tables with at least 1 person at each table, then subtract the number of ways where one table is empty.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: In how many ways can 8 people be seated at 2 identical round tables? Each table must have at least 1 person seated.",
         "answer": 13068,
         "rationale": {
             "Question": "In how many ways can 8 people be seated at 2 identical round tables? Each table must have at least 1 person seated.",
@@ -842,9 +842,9 @@
     {
         "id": "jianyu_xu/inclusion_and_exclusion_1.json",
         "question": "How many integers between 1 (included) and 100 (included) are divisible by either 2, 3, or 5?",
-        "prediction": "12. Subtract the sum of the numbers calculated in steps 7, 8, 9, and 10 from the total number calculated in step 11 to find the final answer",
+        "prediction": "74",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: How many integers between 1 (included) and 100 (included) are divisible by either 2, 3, or 5?\n Consider the reasoning steps: \n 2. Use the principle of inclusion-exclusion to find the total number of integers divisible by either 2, 3, or 5 between 1 and 100.\n3. Calculate the number of integers divisible by 2, 3, and 5 separately, then subtract the sum of these three numbers from the total number of integers divisible by at least one of them.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: How many integers between 1 (included) and 100 (included) are divisible by either 2, 3, or 5?",
         "answer": 74,
         "rationale": {
             "Question": "How many integers between 1 (included) and 100 (included) are divisible by either 2, 3, or 5?",
@@ -863,9 +863,9 @@
     {
         "id": "jianyu_xu/Catalan_2.json",
         "question": "How many paths are there from the origin (0,0) to the point (10,10) on a grid such that the path only moves up or right and does not cross the diagonal line y = x?",
-        "prediction": "8. By summing up the possibilities for each point on the grid, we can calculate the total number of paths that satisfy the given conditions. This approach allows us to efficiently count all possible paths without crossing the diagonal line and reach the desired solution",
+        "prediction": "16796",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: How many paths are there from the origin (0,0) to the point (10,10) on a grid such that the path only moves up or right and does not cross the diagonal line y = x?\n Consider the reasoning steps: \n 2. Another possible next step is to use combinatorial techniques, such as combinations and permutations, to calculate the number of paths that satisfy the given conditions. This approach can help in systematically counting all possible paths without crossing the diagonal line.\n3. One possible next step is to break down the problem into smaller subproblems by considering the number of ways to reach each point on the grid. This can be done by considering the number of ways to reach each point by only moving up or right, and then summing up the possibilities for each point to get the total number of paths.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: How many paths are there from the origin (0,0) to the point (10,10) on a grid such that the path only moves up or right and does not cross the diagonal line y = x?",
         "answer": 16796,
         "rationale": {
             "Question": "How many paths are there from the origin (0,0) to the point (10,10) on a grid such that the path only moves up or right and does not cross the diagonal line y = x?",
@@ -884,9 +884,9 @@
     {
         "id": "jianyu_xu/Multinomial_1.json",
         "question": "A group of 10 people is split into 3 different committees of 3, 4, and 3 people, respectively. In how many ways can this be done?",
-        "prediction": "4200 ways to split the group of 10 people into committees of 3, 4, and 3 people",
+        "prediction": "4200",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: A group of 10 people is split into 3 different committees of 3, 4, and 3 people, respectively. In how many ways can this be done?\n Consider the reasoning steps: \n 2. Use the formula for combinations to calculate the total number of ways to split the group into committees: C(10,3) * C(7,4) * C(3,3).\n3. Calculate each combination separately: C(10,3) = 120, C(7,4) = 35, C(3,3) = 1. Then multiply the results together to find the total number of ways.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: A group of 10 people is split into 3 different committees of 3, 4, and 3 people, respectively. In how many ways can this be done?",
         "answer": 4200,
         "rationale": {
             "Question": "A group of 10 people is split into 3 different committees of 3, 4, and 3 people, respectively. In how many ways can this be done?",
@@ -905,9 +905,9 @@
     {
         "id": "jianyu_xu/Binomial_1.json",
         "question": "A company has 8 employees, including 3 managers and 5 engineers. How many different ways are there to form a team of 4 employees that includes at least 1 manager and at least 2 engineers?",
-        "prediction": "14. Subtract the result from step 13 from the total in step 12 to get the final answer for the total number of ways to form a team with at least 1 manager and at least 2 engineers",
+        "prediction": "26",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: A company has 8 employees, including 3 managers and 5 engineers. How many different ways are there to form a team of 4 employees that includes at least 1 manager and at least 2 engineers?\n Consider the reasoning steps: \n 2. Calculate the number of ways to choose 1 manager and 2 engineers, then add the number of ways to choose 2 managers and 2 engineers, and finally add the number of ways to choose 3 managers and 1 engineer.\n4. Calculate the total number of ways to choose 4 employees from the 8 total employees, and then subtract the number of ways to choose a team with no managers or less than 2 engineers. This will give you the total number of ways to form a team with at least 1 manager and at least 2 engineers.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: A company has 8 employees, including 3 managers and 5 engineers. How many different ways are there to form a team of 4 employees that includes at least 1 manager and at least 2 engineers?",
         "answer": 60,
         "rationale": {
             "Question": "A company has 8 employees, including 3 managers and 5 engineers. How many different ways are there to form a team of 4 employees that includes at least 1 manager and at least 2 engineers?",
@@ -926,9 +926,9 @@
     {
         "id": "jianyu_xu/Stirling_number_first_kind_1.json",
         "question": "How many ways are there to partition a set of 5 elements into 3 non-empty cycles?",
-        "prediction": "7. Add up the number of ways for each scenario to get the total number of ways to partition a set of 5 elements into 3 non-empty cycles. In this case, 20 + 30 + 30 = 80 ways",
+        "prediction": "B(5) = 52",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: How many ways are there to partition a set of 5 elements into 3 non-empty cycles?\n Consider the reasoning steps: \n 1. Calculate the number of ways to partition a set of 5 elements into 3 non-empty cycles by using the formula for Stirling numbers of the second kind.\n3. Break down the problem by considering each possible number of elements in each cycle (e.g. 3-1-1, 2-2-1, etc.) and calculate the number of ways for each scenario.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: How many ways are there to partition a set of 5 elements into 3 non-empty cycles?",
         "answer": 35,
         "rationale": {
             "Question": "How many ways are there to partition a set of 5 elements into 3 non-empty cycles?",
@@ -947,9 +947,9 @@
     {
         "id": "jianyu_xu/Lah_number_1.json",
         "question": "A group of 7 people is to be divided into 3 committees. Within each committee, people are ranked in a certain order. In how many ways can this be done?",
-        "prediction": "8. Multiply the results from steps 3, 4, 6, and 7 together to find the total number of ways to divide the group of 7 people into 3 committees with a certain ranking within each committee",
+        "prediction": "210",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: A group of 7 people is to be divided into 3 committees. Within each committee, people are ranked in a certain order. In how many ways can this be done?\n Consider the reasoning steps: \n 2. Consider the ranking within each committee and calculate the number of ways to arrange the people in each committee separately. Then multiply the results together.\n2. Break down the problem into smaller parts by first selecting the people for each committee and then arranging them within each committee. Use combinations to calculate the number of ways to select people for each committee, and permutations to arrange them within each committee. Multiply the results together to find the total number of ways to divide the group into committees.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: A group of 7 people is to be divided into 3 committees. Within each committee, people are ranked in a certain order. In how many ways can this be done?",
         "answer": 12600,
         "rationale": {
             "Question": "A group of 7 people is to be divided into 3 committees. Within each committee, people are ranked in a certain order. In how many ways can this be done?",
@@ -968,9 +968,9 @@
     {
         "id": "jianyu_xu/Catalan_3.json",
         "question": "In how many ways can a convex polygon with 8 sides be divided into triangles by connecting its vertices, with no intersecting lines?",
-        "prediction": "20 different ways to divide a convex polygon with 8 sides into triangles by connecting its vertices with non-intersecting lines",
+        "prediction": "6",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: In how many ways can a convex polygon with 8 sides be divided into triangles by connecting its vertices, with no intersecting lines?\n Consider the reasoning steps: \n 2. Use the formula for the number of triangles that can be formed in a polygon with n sides, which is (n-2)C3. Plug in n=8 to find the answer.\n3. Calculate (8-2)C3 = 6C3 = 20 to find the number of ways the convex polygon with 8 sides can be divided into triangles.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: In how many ways can a convex polygon with 8 sides be divided into triangles by connecting its vertices, with no intersecting lines?",
         "answer": 132,
         "rationale": {
             "Question": "In how many ways can a convex polygon with 8 sides be divided into triangles by connecting its vertices, with no intersecting lines?",
@@ -989,9 +989,9 @@
     {
         "id": "jianyu_xu/combination_1.json",
         "question": "Consider a group of 10 people {A,B,C,D,E,F,G,H,I,J} and we are to choose a committee of 4 people from them. Given that (1) A and B should not be chosen together, and that (2) A, C, F should not be chosen together, then how many ways are there to choose such a committee?",
-        "prediction": "8. Subtract the results from steps 6 and 7 from the total number of ways calculated in step 5 to get the final answer",
+        "prediction": "176",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Consider a group of 10 people {A,B,C,D,E,F,G,H,I,J} and we are to choose a committee of 4 people from them. Given that (1) A and B should not be chosen together, and that (2) A, C, F should not be chosen together, then how many ways are there to choose such a committee?\n Consider the reasoning steps: \n 2. Create separate cases for when A is chosen and when A is not chosen, and then calculate the number of ways to choose a committee in each case while considering the given restrictions.\n1. Calculate the total number of ways to choose a committee of 4 people from 10, and then subtract the number of ways that A and B are chosen together and the number of ways that A, C, and F are chosen together.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Consider a group of 10 people {A,B,C,D,E,F,G,H,I,J} and we are to choose a committee of 4 people from them. Given that (1) A and B should not be chosen together, and that (2) A, C, F should not be chosen together, then how many ways are there to choose such a committee?",
         "answer": 176,
         "rationale": {
             "Question": "Consider a group of 10 people {A,B,C,D,E,F,G,H,I,J} and we are to choose a committee of 4 people from them. Given that (1) A and B should not be chosen together, and that (2) A, C, F should not be chosen together, then how many ways are there to choose such a committee?",
@@ -1010,9 +1010,9 @@
     {
         "id": "jianyu_xu/Stirling_number_first_kind_4.json",
         "question": "In how many ways can 8 people be seated at 5 identical round tables? Each table must have at least 1 person seated.",
-        "prediction": "495 - 35 = 460 ways",
+        "prediction": "35",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: In how many ways can 8 people be seated at 5 identical round tables? Each table must have at least 1 person seated.\n Consider the reasoning steps: \n 1. Calculate the total number of ways to seat 8 people at 5 tables without any restrictions, then subtract the number of ways where at least one table is empty.\n1. Calculate the total number of ways to seat 8 people at 5 tables by using the formula for distributing identical objects into distinct groups, then subtract the number of ways where at least one table is empty.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: In how many ways can 8 people be seated at 5 identical round tables? Each table must have at least 1 person seated.",
         "answer": 1960,
         "rationale": {
             "Question": "In how many ways can 8 people be seated at 5 identical round tables? Each table must have at least 1 person seated.",
@@ -1031,9 +1031,9 @@
     {
         "id": "jianyu_xu/Burnside_1.json",
         "question": "How many ways are there to color the vertices of a cube with two colors, up to rotation?",
-        "prediction": "6. By combining these approaches and carefully analyzing the symmetries of the cube, we can determine the total number of ways to color the vertices of a cube with two colors, up to rotation. This comprehensive analysis will provide a clear understanding of the symmetry properties of the cube and the resulting number of distinct colorings",
+        "prediction": "1 + 3 + 6 = 10",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: How many ways are there to color the vertices of a cube with two colors, up to rotation?\n Consider the reasoning steps: \n 1. One possible next step is to consider the symmetries of a cube and how they affect the number of distinct colorings. By understanding how rotations of the cube can result in equivalent colorings, we can determine the total number of unique colorings.\n3. We can also explore the concept of orbit counting, which involves counting the number of distinct colorings that are preserved under the action of the group of symmetries of the cube. This approach can help us determine the total number of unique colorings up to rotation.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: How many ways are there to color the vertices of a cube with two colors, up to rotation?",
         "answer": 23,
         "rationale": {
             "Question": "How many ways are there to color the vertices of a cube with two colors, up to rotation?",
@@ -1052,9 +1052,9 @@
     {
         "id": "jianyu_xu/Binomial_4.json",
         "question": "In how many ways can 3 students be selected from a class of 20 to form a study group?",
-        "prediction": "1140 ways to select a study group of 3 students from a class of 20",
+        "prediction": "\\( \\binom{20}{3} = \\frac{20!}{3!(20-3)!} = \\frac{20 \\times 19 \\times 18}{3 \\times 2 \\times 1} = 1140 \\)",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: In how many ways can 3 students be selected from a class of 20 to form a study group?\n Consider the reasoning steps: \n 1. Calculate the number of ways to select 3 students out of 20 using the combination formula: C(20, 3) = 20! / (3!(20-3)!)\n1. Calculate C(20, 3) = 1140 to find the total number of ways to select 3 students from a class of 20.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: In how many ways can 3 students be selected from a class of 20 to form a study group?",
         "answer": 1140,
         "rationale": {
             "Question": "In how many ways can 3 students be selected from a class of 20 to form a study group?",
@@ -1073,9 +1073,9 @@
     {
         "id": "jianyu_xu/Binomial_3.json",
         "question": "A basketball team has 12 players, including 5 guards and 7 forwards. How many different starting lineups can be formed that include 3 guards and 2 forwards?",
-        "prediction": "formed with 3 guards and 2 forwards from a team of 12 players",
+        "prediction": "210",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: A basketball team has 12 players, including 5 guards and 7 forwards. How many different starting lineups can be formed that include 3 guards and 2 forwards?\n Consider the reasoning steps: \n 2. Use the combination formula to calculate the number of ways to choose 3 guards from 5 and 2 forwards from 7, then multiply these two combinations together to find the total number of different starting lineups.\n4. Calculate the total number of different starting lineups by multiplying the number of ways to choose 3 guards from 5 (C(5,3)) by the number of ways to choose 2 forwards from 7 (C(7,2)). This will give you the total number of different starting lineups that can be formed.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: A basketball team has 12 players, including 5 guards and 7 forwards. How many different starting lineups can be formed that include 3 guards and 2 forwards?",
         "answer": 210,
         "rationale": {
             "Question": "A basketball team has 12 players, including 5 guards and 7 forwards. How many different starting lineups can be formed that include 3 guards and 2 forwards?",
@@ -1094,9 +1094,9 @@
     {
         "id": "jianyu_xu/Lah_number_3.json",
         "question": "In how many ways can a group of 6 people be divided into 2 teams? Notice that members in each team are ordered.",
-        "prediction": "ordered",
+        "prediction": "20",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: In how many ways can a group of 6 people be divided into 2 teams? Notice that members in each team are ordered.\n Consider the reasoning steps: \n 1. Calculate the total number of ways to divide 6 people into 2 teams by using the formula for combinations: C(6, 3) = 20.\n2. Calculate the number of ways to order the 3 people in each team, which is 3! = 6 for each team. Then, multiply this by the total number of ways to divide the 6 people into 2 teams to get the final answer.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: In how many ways can a group of 6 people be divided into 2 teams? Notice that members in each team are ordered.",
         "answer": 1800,
         "rationale": {
             "Question": "In how many ways can a group of 6 people be divided into 2 teams? Notice that members in each team are ordered.",
@@ -1117,7 +1117,7 @@
         "question": "What is the coefficient of $x^2y^5$ for the formula $(x + 2y)^7$?",
         "prediction": "21",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: What is the coefficient of $x^2y^5$ for the formula $(x + 2y)^7$?\n Consider the reasoning steps: \n 2. Use the formula for finding the coefficient of a specific term in a binomial expansion, which involves combinatorial coefficients.\n3. Apply the binomial theorem formula, which states that the coefficient of $x^m y^n$ in the expansion of $(x + y)^n$ is given by $\\binom{n}{m}$. In this case, $m=2$, $n=7$, so the coefficient of $x^2y^5$ would be $\\binom{7}{2}$.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: What is the coefficient of $x^2y^5$ for the formula $(x + 2y)^7$?",
         "answer": 672,
         "rationale": {
             "Question": "What is the coefficient of $x^2y^5$ for the formula $(x + 2y)^7$?",
@@ -1136,9 +1136,9 @@
     {
         "id": "jianyu_xu/Burnside_2.json",
         "question": "How many ways are there to color the faces of a cube with three colors, up to rotation?",
-        "prediction": "30 ways to color the faces of a cube with three colors, up to rotation",
+        "prediction": "57",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: How many ways are there to color the faces of a cube with three colors, up to rotation?\n Consider the reasoning steps: \n 1. Calculate the total number of ways to color the faces of a cube with three colors without considering rotations, then divide by the number of possible rotations for a cube.\n2. Determine the number of possible rotations for a cube: A cube has 24 rotational symmetries, so we divide the total number of ways to color the cube (729) by the number of possible rotations (24) to get the final answer.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: How many ways are there to color the faces of a cube with three colors, up to rotation?",
         "answer": 57,
         "rationale": {
             "Question": "How many ways are there to color the faces of a cube with three colors, up to rotation?",
@@ -1157,9 +1157,9 @@
     {
         "id": "jianyu_xu/Multinomial_5.json",
         "question": "A box contains 4 red, 3 green, and 2 blue balls. Balls are identical besides of their colors. In how many ways can we choose 4 balls, if at least 2 are red?",
-        "prediction": "6. Add the results from steps 3, 4, and 5 together to get the total number of ways to choose 4 balls with at least 2 red balls",
+        "prediction": "81",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: A box contains 4 red, 3 green, and 2 blue balls. Balls are identical besides of their colors. In how many ways can we choose 4 balls, if at least 2 are red?\n Consider the reasoning steps: \n 2. Calculate the number of ways to choose exactly 2 red balls, then exactly 3 red balls, and then exactly 4 red balls, and add these numbers together.\n3. Calculate the number of ways to choose 2 red balls from the 4 available, which is 4 choose 2 (4C2) = 6. Then calculate the number of ways to choose the remaining 2 balls from the 5 non-red balls, which is 5 choose 2 (5C2) = 10. Multiply these two numbers together to get the total number of ways to choose 2 red balls and 2 non-red balls.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: A box contains 4 red, 3 green, and 2 blue balls. Balls are identical besides of their colors. In how many ways can we choose 4 balls, if at least 2 are red?",
         "answer": 6,
         "rationale": {
             "Question": "A box contains 4 red, 3 green, and 2 blue balls. Balls are identical besides of their colors. In how many ways can we choose 4 balls, if at least 2 are red?",
@@ -1178,9 +1178,9 @@
     {
         "id": "mingyin/combinatorial-math1.json",
         "question": "Consider a $21 \\times 17$ rectangular region. This region is to be tiled using tiles of the two types shown in ./mingyin/square1.png (The dotted lines divide the tiles into $1\\times 1$ squares.) The tiles may be rotated and reflected, as long as their sides are parallel to the sides of the rectangular region. They must all fit within the region, and they must cover it completely without overlapping. What is the minimum number of tiles required to tile the region?",
-        "prediction": "7. Choose the arrangement that uses the minimum number of tiles to tile the region completely without any gaps or overlaps",
+        "prediction": "23",
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Consider a $21 \\times 17$ rectangular region. This region is to be tiled using tiles of the two types shown in ./mingyin/square1.png (The dotted lines divide the tiles into $1\\times 1$ squares.) The tiles may be rotated and reflected, as long as their sides are parallel to the sides of the rectangular region. They must all fit within the region, and they must cover it completely without overlapping. What is the minimum number of tiles required to tile the region?\n Consider the reasoning steps: \n 2. Start by trying to tile the region with one type of tile, then try the other type if the first one doesn't work. Keep experimenting with different arrangements until the entire region is covered without any gaps or overlaps. Count the number of tiles used in each arrangement to determine the minimum number required.\n3. Try tiling the region with the first type of tile by starting from one corner and working your way across row by row. Count the number of tiles used and see if it covers the entire region without any gaps.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Consider a $21 \\times 17$ rectangular region. This region is to be tiled using tiles of the two types shown in ./mingyin/square1.png (The dotted lines divide the tiles into $1\\times 1$ squares.) The tiles may be rotated and reflected, as long as their sides are parallel to the sides of the rectangular region. They must all fit within the region, and they must cover it completely without overlapping. What is the minimum number of tiles required to tile the region?",
         "answer": 99,
         "rationale": {
             "Question": "Consider a $21 \\times 17$ rectangular region. This region is to be tiled using tiles of the two types shown in ./mingyin/square1.png (The dotted lines divide the tiles into $1\\times 1$ squares.) The tiles may be rotated and reflected, as long as their sides are parallel to the sides of the rectangular region. They must all fit within the region, and they must cover it completely without overlapping. What is the minimum number of tiles required to tile the region?",

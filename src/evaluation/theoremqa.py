@@ -285,19 +285,18 @@ def evaluate_majority_predictions(answers, answer_type, subfield=""):
     for i, prediction in enumerate(predictions):
         for j in range(i + 1, len(answers)):
             tmp_prediction = predictions[j]
-            if (isinstance(prediction, (str, int, float)) or isinstance(prediction, list)) \
-                    and (isinstance(tmp_prediction, (str, int, float)) or isinstance(tmp_prediction, list)):
-                # Comparing prediction against each others
-                if answer_type in ['bool', 'option', 'Option']:
-                    cur_correct = int(prediction == tmp_prediction)
-                elif answer_type == 'integer':
-                    cur_correct = int(_compare_two_numbers(prediction, tmp_prediction))
-                elif answer_type == 'float':
-                    cur_correct = int(_compare_two_numbers(prediction, tmp_prediction))
-                elif answer_type in ['list of integer', 'list of float']:
-                    cur_correct = int(_compare_two_list(prediction, tmp_prediction))
-                similar_vote[i] += cur_correct
-                similar_vote[j] += cur_correct
+            # Comparing prediction against each others
+            cur_correct = 0
+            if answer_type in ['bool', 'option', 'Option'] and isinstance(prediction, (str, int, float)) and isinstance(tmp_prediction, (str, int, float)):
+                cur_correct = int(prediction == tmp_prediction)
+            elif answer_type == 'integer' and isinstance(prediction, (str, int, float)) and isinstance(tmp_prediction, (str, int, float)):
+                cur_correct = int(_compare_two_numbers(prediction, tmp_prediction))
+            elif answer_type == 'float'and isinstance(prediction, (str, int, float)) and isinstance(tmp_prediction, (str, int, float)):
+                cur_correct = int(_compare_two_numbers(prediction, tmp_prediction))
+            elif answer_type in ['list of integer', 'list of float'] and isinstance(prediction, list) and isinstance(tmp_prediction, list):
+                cur_correct = int(_compare_two_list(prediction, tmp_prediction))
+            similar_vote[i] += cur_correct
+            similar_vote[j] += cur_correct
 
     max_value = max(similar_vote)
     index = similar_vote.index(max_value)

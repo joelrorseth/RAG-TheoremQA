@@ -2,9 +2,12 @@
     {
         "id": "mingyin/double-integral4.json",
         "question": "compute the line integral of \\int_K xy dx, \\int_L xy dx, where K is a straight line from (0,0) to (1,1) and L is the Parabola y=x^2 from (0,0) to (1,1). return the answer as a list",
-        "prediction": "[1/3, 1/4]",
+        "prediction": [
+            0.3333333333333333,
+            0.25
+        ],
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: compute the line integral of \\int_K xy dx, \\int_L xy dx, where K is a straight line from (0,0) to (1,1) and L is the Parabola y=x^2 from (0,0) to (1,1). return the answer as a list\n Consider the reasoning steps: \n 1. To compute the line integral of \\int_K xy dx, we can parameterize the straight line K as x=t, y=t for t in [0,1]. Then we substitute these values into the integrand and integrate with respect to t.\n1. Next step: Substitute x=t, y=t into the integrand xy dx to get \\int_0^1 t^2 dt. Then integrate to find the line integral of K.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: compute the line integral of \\int_K xy dx, \\int_L xy dx, where K is a straight line from (0,0) to (1,1) and L is the Parabola y=x^2 from (0,0) to (1,1). return the answer as a list\nLet's think step by step.",
         "answer": [
             0.333,
             0.25
@@ -24,14 +27,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "list of float"
+        "answer_type": "list of float",
+        "correct": true
     },
     {
         "id": "elainewan/math_calculus_7_3.json",
         "question": "Let g(x) be the inverse of f(x) = x + cos(x). What is g'(1)?",
-        "prediction": "6. Therefore, g'(1) = 1 / (1 - sin(1))",
+        "prediction": 1,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Let g(x) be the inverse of f(x) = x + cos(x). What is g'(1)?\n Consider the reasoning steps: \n 2. Use the fact that the derivative of an inverse function is the reciprocal of the derivative of the original function at the corresponding point, and find g'(1) directly from f'(x) at x=1.\n1. Find the derivative of f(x) = x + cos(x) using the sum rule and chain rule, then evaluate f'(1) to find g'(1) using the fact that g'(1) = 1 / f'(g(1)).\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Let g(x) be the inverse of f(x) = x + cos(x). What is g'(1)?\nLet's think step by step.",
         "answer": 1,
         "rationale": {
             "Question": "Let g(x) be the inverse of f(x) = x + cos(x). What is g'(1)?",
@@ -45,14 +49,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "integer"
+        "answer_type": "integer",
+        "correct": true
     },
     {
         "id": "elainewan/math_calculus_2_3.json",
         "question": "$\\lim_{x \\to c}((x^2 - 5x - 6) / (x - c))$ exists. What is the value of c?",
-        "prediction": "the value that does not result in division by zero. In this case, $c = 6$",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: $\\lim_{x \\to c}((x^2 - 5x - 6) / (x - c))$ exists. What is the value of c?\n Consider the reasoning steps: \n 2. Use L'Hopital's Rule to evaluate the limit by taking the derivative of the numerator and denominator separately.\n4. Factor the numerator and denominator to simplify the expression before evaluating the limit as x approaches c.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: $\\lim_{x \\to c}((x^2 - 5x - 6) / (x - c))$ exists. What is the value of c?\nLet's think step by step.",
         "answer": [
             -1,
             6
@@ -72,14 +77,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "list of integer"
+        "answer_type": "list of integer",
+        "correct": false
     },
     {
         "id": "elainewan/math_calculus_6.json",
         "question": "Find the area of the region between the graphs of the functions f(x) = x^2 - 4x + 10, g(x) = 4x - x^2, 1 <= x <= 3.",
-        "prediction": "8. Evaluate the integral to find the area of the region between the two functions",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Find the area of the region between the graphs of the functions f(x) = x^2 - 4x + 10, g(x) = 4x - x^2, 1 <= x <= 3.\n Consider the reasoning steps: \n 1. Find the points of intersection between the two functions by setting f(x) equal to g(x) and solving for x. Then, integrate the absolute difference between the two functions over the interval [1,3] to find the area.\n2. Graph the two functions and visually identify the region between them. Then, set up the integral to find the area of this region.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Find the area of the region between the graphs of the functions f(x) = x^2 - 4x + 10, g(x) = 4x - x^2, 1 <= x <= 3.\nLet's think step by step.",
         "answer": 5.333,
         "rationale": {
             "Question": "Find the area of the region between the graphs of the functions f(x) = x^2 - 4x + 10, g(x) = 4x - x^2, 1 <= x <= 3.",
@@ -93,14 +99,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "xueguangma/intermediate_value_theorem.json",
         "question": "Does $p(x) = x^5 + x − 1$ have any real roots?",
-        "prediction": "Therefore, the polynomial $p(x) = x^5 + x - 1$ has at least one real root",
+        "prediction": true,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Does $p(x) = x^5 + x − 1$ have any real roots?\n Consider the reasoning steps: \n 2. Use the Rational Root Theorem to check for any possible rational roots of the polynomial.\n3. Use the Intermediate Value Theorem to determine if there are any real roots by evaluating the polynomial at different points.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Does $p(x) = x^5 + x − 1$ have any real roots?\nLet's think step by step.",
         "answer": true,
         "rationale": {
             "Question": "Does $p(x) = x^5 + x − 1$ have any real roots?",
@@ -114,14 +121,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "bool"
+        "answer_type": "bool",
+        "correct": true
     },
     {
         "id": "elainewan/math_calculus_2_11.json",
         "question": "Does cos(x) = x^k have a solution for k = 2023?",
-        "prediction": "not valid, reassess the approach and consider trying a different root-finding method or adjusting the initial conditions of the algorithm",
+        "prediction": false,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Does cos(x) = x^k have a solution for k = 2023?\n Consider the reasoning steps: \n 2. Another possible next step is to graph both functions, cos(x) and x^2023, and see if they intersect at any point.\n4. Rewrite the equation as cos(x) - x^2023 = 0 and use a root-finding algorithm, such as the bisection method or the secant method, to find the solution for x.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Does cos(x) = x^k have a solution for k = 2023?\nLet's think step by step.",
         "answer": true,
         "rationale": {
             "Question": "Does cos(x) = x^k have a solution for k = 2023?",
@@ -135,14 +143,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "bool"
+        "answer_type": "bool",
+        "correct": false
     },
     {
         "id": "xueguangma/fundamental_theorem_of_calculus.json",
         "question": "Find $\\int_{0}^{\\sqrt{3}} \\frac{dx}{1+x^2}$.",
-        "prediction": "4. Therefore, $\\int_{0}^{\\sqrt{3}} \\frac{dx}{1+x^2} = \\frac{\\pi}{3}$",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Find $\\int_{0}^{\\sqrt{3}} \\frac{dx}{1+x^2}$.\n Consider the reasoning steps: \n 1. One possible next step is to recognize that the integrand is the derivative of arctan(x), so we can directly evaluate the integral as arctan(x) evaluated from 0 to sqrt(3).\n3. We can also substitute $x = \\tan(u)$ to simplify the integral, which will result in $\\int_{0}^{\\frac{\\pi}{3}} du$.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Find $\\int_{0}^{\\sqrt{3}} \\frac{dx}{1+x^2}$.\nLet's think step by step.",
         "answer": 1.0472,
         "rationale": {
             "Question": "Find $\\int_{0}^{\\sqrt{3}} \\frac{dx}{1+x^2}$.",
@@ -156,14 +165,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "mingyin/integral-theorem3.json",
         "question": "What is the value of the integral $\\int_2^4 \\frac{\\sqrt{log(9-x)}}{\\sqrt{log(9-x)}+\\sqrt{log(x+3)}} dx$?",
-        "prediction": "$2(log(5))^2 \\cdot \\sqrt{log(7)} - 2\\sqrt{log(7)} - 2\\sqrt{log(5)} - 2(log(3))^2 \\cdot \\sqrt{log(6)} + 2\\sqrt{log(6)} + 2\\sqrt{log(3)}$",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: What is the value of the integral $\\int_2^4 \\frac{\\sqrt{log(9-x)}}{\\sqrt{log(9-x)}+\\sqrt{log(x+3)}} dx$?\n Consider the reasoning steps: \n 2. Use the properties of logarithms to combine the two square roots in the denominator and simplify the expression before integrating.\n3. Let $u = \\sqrt{log(9-x)}$ and $dv = \\frac{1}{\\sqrt{log(x+3)}} dx$ to apply integration by parts.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: What is the value of the integral $\\int_2^4 \\frac{\\sqrt{log(9-x)}}{\\sqrt{log(9-x)}+\\sqrt{log(x+3)}} dx$?\nLet's think step by step.",
         "answer": 1.0,
         "rationale": {
             "Question": "What is the value of the integral $\\int_2^4 \\frac{\\sqrt{log(9-x)}}{\\sqrt{log(9-x)}+\\sqrt{log(x+3)}} dx$?",
@@ -177,14 +187,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "elainewan/math_calculus_5_2.json",
         "question": "dy/dt = \\sqrt{t}, y(1) = 1. What is y(4)?",
-        "prediction": "Therefore, y(4) = 17/3",
+        "prediction": 5.666666666666667,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: dy/dt = \\sqrt{t}, y(1) = 1. What is y(4)?\n Consider the reasoning steps: \n 2. Use the initial condition y(1) = 1 to find the constant of integration, then substitute into the equation to find y(4).\n3. Integrate both sides of the equation with respect to t to find the general solution for y(t), then use the initial condition to solve for the constant of integration and find y(4).\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: dy/dt = \\sqrt{t}, y(1) = 1. What is y(4)?\nLet's think step by step.",
         "answer": 5.667,
         "rationale": {
             "Question": "dy/dt = \\sqrt{t}, y(1) = 1. What is y(4)?",
@@ -198,14 +209,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": true
     },
     {
         "id": "xueguangma/tonelli_theorem.json",
         "question": "For the function $f(x,y)$ defined by $f(x,y)=1$ if $x=y$, $f(x,y)=0$ otherwise. Can we measure its integraion over the rectangle $[0,1]\\times[0,1]$ using the Tonelli's Theorem? Answer true or false.",
-        "prediction": "0",
+        "prediction": true,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: For the function $f(x,y)$ defined by $f(x,y)=1$ if $x=y$, $f(x,y)=0$ otherwise. Can we measure its integraion over the rectangle $[0,1]\\times[0,1]$ using the Tonelli's Theorem? Answer true or false.\n Consider the reasoning steps: \n 2. Use Tonelli's Theorem to switch the order of integration and simplify the calculation of the double integral over the rectangle $[0,1]\\times[0,1]$.\n2. Use Fubini's Theorem instead of Tonelli's Theorem to simplify the calculation of the double integral over the rectangle $[0,1]\\times[0,1]$.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: For the function $f(x,y)$ defined by $f(x,y)=1$ if $x=y$, $f(x,y)=0$ otherwise. Can we measure its integraion over the rectangle $[0,1]\\times[0,1]$ using the Tonelli's Theorem? Answer true or false.\nLet's think step by step.",
         "answer": false,
         "rationale": {
             "Question": "For the function $f(x,y)$ defined by $f(x,y)=1$ if $x=y$, $f(x,y)=0$ otherwise. Can we measure its integraion over the rectangle $[0,1]\\times[0,1]$ using the Tonelli's Theorem? Answer true or false.",
@@ -219,14 +231,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "bool"
+        "answer_type": "bool",
+        "correct": false
     },
     {
         "id": "elainewan/math_calculus_3_8.json",
         "question": "Julian is jogging around a circular track of radius 50 m. In a coordinate system with its origin at the center of the track, Julian's x-coordinate is changing at a rate of -1.25 m/s when his coordinates are (40, 30). Find dy/dt at this moment.",
-        "prediction": "5/3 m/s",
+        "prediction": 1.6666666666666667,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Julian is jogging around a circular track of radius 50 m. In a coordinate system with its origin at the center of the track, Julian's x-coordinate is changing at a rate of -1.25 m/s when his coordinates are (40, 30). Find dy/dt at this moment.\n Consider the reasoning steps: \n 2. Use the chain rule to differentiate the equation relating x and y with respect to time, and then solve for dy/dt.\n2. Use the Pythagorean theorem to relate x, y, and the radius of the track, and then differentiate the equation with respect to time to find dy/dt.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Julian is jogging around a circular track of radius 50 m. In a coordinate system with its origin at the center of the track, Julian's x-coordinate is changing at a rate of -1.25 m/s when his coordinates are (40, 30). Find dy/dt at this moment.\nLet's think step by step.",
         "answer": 1.667,
         "rationale": {
             "Question": "Julian is jogging around a circular track of radius 50 m. In a coordinate system with its origin at the center of the track, Julian's x-coordinate is changing at a rate of -1.25 m/s when his coordinates are (40, 30). Find dy/dt at this moment.",
@@ -240,14 +253,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": true
     },
     {
         "id": "elainewan/math_calculus_9_3.json",
         "question": "Find the arc length of y = x^{-1} over the interval [1,2] using the Simpson's Rule S_8.",
-        "prediction": "the approximate arc length of y = x^{-1} over the interval [1,2] using Simpson's Rule S_8",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Find the arc length of y = x^{-1} over the interval [1,2] using the Simpson's Rule S_8.\n Consider the reasoning steps: \n 2. Use Simpson's Rule formula with the data points obtained in step 1 to find the arc length of y = x^{-1} over the interval [1,2].\n4. Divide the interval [1,2] into subintervals and calculate the values of y = x^{-1} at the endpoints of each subinterval. Then, use Simpson's Rule formula with the data points obtained to find the arc length over the interval [1,2].\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Find the arc length of y = x^{-1} over the interval [1,2] using the Simpson's Rule S_8.\nLet's think step by step.",
         "answer": 1.132,
         "rationale": {
             "Question": "Find the arc length of y = x^{-1} over the interval [1,2] using the Simpson's Rule S_8.",
@@ -261,14 +275,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "mingyin/double-integral3.json",
         "question": "compute the integral $\\iint_V \\frac{d x d y d z}{(1+x+y+z)^3}$, where V={(x, y, z): x, y, z \\geq 0, x+y+z\\leq 1}.",
-        "prediction": "9. Evaluate the triple integral using the limits of integration obtained in step 7 and simplify the expression to find the final result",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: compute the integral $\\iint_V \\frac{d x d y d z}{(1+x+y+z)^3}$, where V={(x, y, z): x, y, z \\geq 0, x+y+z\\leq 1}.\n Consider the reasoning steps: \n 2. Use a change of variables to simplify the integral, such as letting u = x + y + z.\n4. Use the change of variables to transform the region V={(x, y, z): x, y, z \\geq 0, x+y+z\\leq 1} into a simpler region in terms of u, v, and w. This will help in setting up the limits of integration for the new variables.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: compute the integral $\\iint_V \\frac{d x d y d z}{(1+x+y+z)^3}$, where V={(x, y, z): x, y, z \\geq 0, x+y+z\\leq 1}.\nLet's think step by step.",
         "answer": 0.034,
         "rationale": {
             "Question": "compute the integral $\\iint_V \\frac{d x d y d z}{(1+x+y+z)^3}$, where V={(x, y, z): x, y, z \\geq 0, x+y+z\\leq 1}.",
@@ -282,14 +297,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "mingyin/l'Hopital-rule1.json",
         "question": "For every positive real number $x$, let $g(x)=\\lim _{r \\rightarrow 0}((x+1)^{r+1}-x^{r+1})^{1/r}$. What is the limit of $g(x)/x$ as $x$ goes to infinity?",
-        "prediction": "$\\boxed{2}$",
+        "prediction": 1,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: For every positive real number $x$, let $g(x)=\\lim _{r \\rightarrow 0}((x+1)^{r+1}-x^{r+1})^{1/r}$. What is the limit of $g(x)/x$ as $x$ goes to infinity?\n Consider the reasoning steps: \n 2. Use L'Hopital's Rule to evaluate the limit of $g(x)/x$ as $x$ approaches infinity.\n3. Rewrite $g(x)/x$ as $\\lim_{x \\to \\infty} \\frac{(x+1)^{1+1/x} - x^{1+1/x}}{x}$ and then apply L'Hopital's Rule to find the limit.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: For every positive real number $x$, let $g(x)=\\lim _{r \\rightarrow 0}((x+1)^{r+1}-x^{r+1})^{1/r}$. What is the limit of $g(x)/x$ as $x$ goes to infinity?\nLet's think step by step.",
         "answer": 2.7182818,
         "rationale": {
             "Question": "For every positive real number $x$, let $g(x)=\\lim _{r \\rightarrow 0}((x+1)^{r+1}-x^{r+1})^{1/r}$. What is the limit of $g(x)/x$ as $x$ goes to infinity?",
@@ -303,14 +319,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "elainewan/math_real_analysis_additional_5.json",
         "question": "Define f: R \to R by f(x) = (x^3) / (1 + x^2). Is f uniformly continuous on R?",
-        "prediction": "a continuous function on the entire real line",
+        "prediction": false,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Define f: R \to R by f(x) = (x^3) / (1 + x^2). Is f uniformly continuous on R?\n Consider the reasoning steps: \n 2. Use the definition of uniform continuity to directly analyze the function f(x) = (x^3) / (1 + x^2) and determine if it is uniformly continuous on R.\n2. Use the fact that f is a rational function and analyze its behavior at the points where the denominator is zero to determine if f is uniformly continuous on R.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Define f: R \to R by f(x) = (x^3) / (1 + x^2). Is f uniformly continuous on R?\nLet's think step by step.",
         "answer": true,
         "rationale": {
             "Question": "Define f: R \to R by f(x) = (x^3) / (1 + x^2). Is f uniformly continuous on R?",
@@ -324,14 +341,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "bool"
+        "answer_type": "bool",
+        "correct": false
     },
     {
         "id": "wenhuchen/line_integral2.json",
         "question": "Find the arc length of the curve, where x=t, y=t^2 and z=2*t^3/3.",
-        "prediction": "10. Integrate the simplified expression with respect to t to find the arc length of the curve",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Find the arc length of the curve, where x=t, y=t^2 and z=2*t^3/3.\n Consider the reasoning steps: \n 2. Find the derivatives of x, y, and z with respect to t, then plug them into the arc length formula and integrate.\n4. Use the arc length formula directly by finding the square root of the sum of the squares of the derivatives of x, y, and z with respect to t, which are dx/dt = 1, dy/dt = 2t, and dz/dt = 2t^2. Integrate this expression to find the arc length of the curve.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Find the arc length of the curve, where x=t, y=t^2 and z=2*t^3/3.\nLet's think step by step.",
         "answer": 7.333,
         "rationale": {
             "Question": "Find the arc length of the curve, where x=t, y=t^2 and z=2*t^3/3.",
@@ -345,14 +363,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "wenhuchen/L'Hôpital_rule2.json",
         "question": "Is the function of f(x) = sin(x) / |x| continuous everywhere?",
-        "prediction": "continuous everywhere",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Is the function of f(x) = sin(x) / |x| continuous everywhere?\n Consider the reasoning steps: \n 1. Check the continuity of f(x) at x = 0 by evaluating the limit as x approaches 0 from the left and right.\n2. Determine the behavior of the function as x approaches positive and negative infinity to see if there are any discontinuities at those points.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Is the function of f(x) = sin(x) / |x| continuous everywhere?\nLet's think step by step.",
         "answer": false,
         "rationale": {
             "Question": "Is the function of f(x) = sin(x) / |x| continuous everywhere?",
@@ -366,14 +385,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "bool"
+        "answer_type": "bool",
+        "correct": true
     },
     {
         "id": "mingyin/greens-formula1.json",
         "question": "compute the integral \\int_{\\Gamma} \\frac{x*dy-y*dx}{x^2+y^2}, where $\\Gamma$ is any piecewise smooth, closed curve that encloses the origin but does not pass through it.",
-        "prediction": "0",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: compute the integral \\int_{\\Gamma} \\frac{x*dy-y*dx}{x^2+y^2}, where $\\Gamma$ is any piecewise smooth, closed curve that encloses the origin but does not pass through it.\n Consider the reasoning steps: \n 1. Use Green's Theorem to rewrite the integral as a line integral around the curve $\\Gamma$ of the vector field $\\left(\\frac{-y}{x^2+y^2}, \\frac{x}{x^2+y^2}\\right)$.\n2. Use the fact that the vector field is conservative (since it is the gradient of the scalar field $\\arctan(y/x)$) to rewrite the integral as the difference of the scalar field evaluated at the endpoints of the curve $\\Gamma$.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: compute the integral \\int_{\\Gamma} \\frac{x*dy-y*dx}{x^2+y^2}, where $\\Gamma$ is any piecewise smooth, closed curve that encloses the origin but does not pass through it.\nLet's think step by step.",
         "answer": 6.2831852,
         "rationale": {
             "Question": "compute the integral \\int_{\\Gamma} \\frac{x*dy-y*dx}{x^2+y^2}, where $\\Gamma$ is any piecewise smooth, closed curve that encloses the origin but does not pass through it.",
@@ -387,14 +407,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "elainewan/math_calculus_2_8.json",
         "question": "Does \\lim_{x \\to 0} (cos(mx - 1)/(x^2) = -(m^2)/2 for m = 2?",
-        "prediction": "12. Check if cos(1) equals -(2^2)/2 = -2",
+        "prediction": false,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Does \\lim_{x \\to 0} (cos(mx - 1)/(x^2) = -(m^2)/2 for m = 2?\n Consider the reasoning steps: \n 2. Rewrite cos(mx - 1) as cos(2x - 1) and then use the limit definition of the derivative to find the derivative of cos(2x - 1) with respect to x, then substitute x = 0 to see if it equals -(2^2)/2 = -2.\n4. Expand cos(mx - 1) using the angle addition formula for cosine, simplify the expression, and then evaluate the limit as x approaches 0 to see if it equals -(2^2)/2 = -2.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Does \\lim_{x \\to 0} (cos(mx - 1)/(x^2) = -(m^2)/2 for m = 2?\nLet's think step by step.",
         "answer": true,
         "rationale": {
             "Question": "Does \\lim_{x \\to 0} (cos(mx - 1)/(x^2) = -(m^2)/2 for m = 2?",
@@ -408,14 +429,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "bool"
+        "answer_type": "bool",
+        "correct": false
     },
     {
         "id": "panlu/trapezoid1.json",
         "question": "RS is the midsegment of trapezoid MNOP. If MN = 10x+3, RS=9x-1, and PO = 4x+7, what is the length of RS?",
-        "prediction": "26 units",
+        "prediction": 26,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: RS is the midsegment of trapezoid MNOP. If MN = 10x+3, RS=9x-1, and PO = 4x+7, what is the length of RS?\n Consider the reasoning steps: \n 2. Use the fact that RS is the midsegment of the trapezoid to set up an equation involving RS, MN, and PO, and solve for RS.\n3. Substitute the given expressions for MN and PO into the equation for the midsegment RS, and solve for x. Once x is found, substitute it back into the expression for RS to find its length.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: RS is the midsegment of trapezoid MNOP. If MN = 10x+3, RS=9x-1, and PO = 4x+7, what is the length of RS?\nLet's think step by step.",
         "answer": 26,
         "rationale": {
             "Question": "RS is the midsegment of trapezoid MNOP. If MN = 10x+3, RS=9x-1, and PO = 4x+7, what is the length of RS?",
@@ -429,14 +451,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "integer"
+        "answer_type": "integer",
+        "correct": true
     },
     {
         "id": "mingyin/integral-theorem2.json",
         "question": "What is the value of the integral $\\int_0^{\\pi/2} 1/(1+(tan(x))^{\\sqrt{2}}) dx$?",
-        "prediction": "$0$",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: What is the value of the integral $\\int_0^{\\pi/2} 1/(1+(tan(x))^{\\sqrt{2}}) dx$?\n Consider the reasoning steps: \n 1. Use the substitution method by letting $u = \\tan(x)$ and then finding $du$ in terms of $dx$ to simplify the integral.\n3. Use trigonometric identities to simplify the expression before applying the substitution method.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: What is the value of the integral $\\int_0^{\\pi/2} 1/(1+(tan(x))^{\\sqrt{2}}) dx$?\nLet's think step by step.",
         "answer": 0.78539815,
         "rationale": {
             "Question": "What is the value of the integral $\\int_0^{\\pi/2} 1/(1+(tan(x))^{\\sqrt{2}}) dx$?",
@@ -450,14 +473,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "wenhuchen/curvature1.json",
         "question": "Find the curvature for r(t) = 5cos(t)i + 4sin(t)j + 3tk, t=4\\pi/3.",
-        "prediction": "9. Substitute t=4π/3 into the expressions for r'(t), T(t), and T'(t) to find the curvature at t=4π/3",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Find the curvature for r(t) = 5cos(t)i + 4sin(t)j + 3tk, t=4\\pi/3.\n Consider the reasoning steps: \n 2. Use the formula for curvature: |T'(t)| / |r'(t)|. Calculate the derivatives of T(t) and r(t) and plug in the value of t=4π/3 to find the curvature.\n3. Calculate the derivatives of r(t) = 5cos(t)i + 4sin(t)j + 3tk to find r'(t), then calculate the derivatives of T(t) to find T'(t), and finally plug in the value of t=4π/3 to find the curvature.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Find the curvature for r(t) = 5cos(t)i + 4sin(t)j + 3tk, t=4\\pi/3.\nLet's think step by step.",
         "answer": 0.16,
         "rationale": {
             "Question": "Find the curvature for r(t) = 5cos(t)i + 4sin(t)j + 3tk, t=4\\pi/3.",
@@ -471,14 +495,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "mingyin/double-integral1.json",
         "question": "suppose I=[0,1]\\times[0,1], where exp is the exponential function. What is the numeric of the double integral of the function f(x,y)=x*y^3 exp^{x^2+y^2} over I?",
-        "prediction": "12. Evaluate the final integral to get the numeric value of the double integral of the function f(x,y)=x*y^3 exp^{x^2+y^2} over the region I=[0,1]\\times[0,1]",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: suppose I=[0,1]\\times[0,1], where exp is the exponential function. What is the numeric of the double integral of the function f(x,y)=x*y^3 exp^{x^2+y^2} over I?\n Consider the reasoning steps: \n 2. Use polar coordinates to simplify the integral, as the exponential function and the terms involving x and y can be expressed more simply in terms of r and theta.\n4. Substitute the expressions for x and y in the function f(x,y) into the double integral in polar coordinates and evaluate the integral over the region I=[0,1]\\times[0,1].\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: suppose I=[0,1]\\times[0,1], where exp is the exponential function. What is the numeric of the double integral of the function f(x,y)=x*y^3 exp^{x^2+y^2} over I?\nLet's think step by step.",
         "answer": 0.4295,
         "rationale": {
             "Question": "suppose I=[0,1]\\times[0,1], where exp is the exponential function. What is the numeric of the double integral of the function f(x,y)=x*y^3 exp^{x^2+y^2} over I?",
@@ -492,14 +517,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "wenhuchen/differential_equation1.json",
         "question": "is the following function $f(t, y) = \\frac{t^3+t^2y+ty+y^3}{t^3 + ty^2}$ scale invariant function",
-        "prediction": "scale invariant",
+        "prediction": true,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: is the following function $f(t, y) = \\frac{t^3+t^2y+ty+y^3}{t^3 + ty^2}$ scale invariant function\n Consider the reasoning steps: \n 1. Substitute $t$ and $y$ with $kt$ and $ky$ respectively, where $k$ is a constant, and simplify the function to see if it remains unchanged. \n2. After substituting $t$ and $y$ with $kt$ and $ky$ respectively, simplify the function and check if it can be written in the same form as the original function.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: is the following function $f(t, y) = \\frac{t^3+t^2y+ty+y^3}{t^3 + ty^2}$ scale invariant function\nLet's think step by step.",
         "answer": true,
         "rationale": {
             "Question": "is the following function $f(t, y) = \\frac{t^3+t^2y+ty+y^3}{t^3 + ty^2}$ scale invariant function",
@@ -513,14 +539,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "bool"
+        "answer_type": "bool",
+        "correct": true
     },
     {
         "id": "elainewan/math_real_analysis_additional_3.json",
         "question": "Let x \\in R with 0 < x < 1 and n \\in N. Is (1 - x)^n >= 1/(1+nx)?",
-        "prediction": "11. Hence, by induction, we have shown that (1 - x)^n >= 1/(1+nx) for all n \\in N",
+        "prediction": true,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Let x \\in R with 0 < x < 1 and n \\in N. Is (1 - x)^n >= 1/(1+nx)?\n Consider the reasoning steps: \n 2. Use induction to prove the inequality (1 - x)^n >= 1/(1+nx) for all n \\in N.\n2. Assume the inequality holds for some k \\in N, i.e., (1 - x)^k >= 1/(1 + kx). Now, we need to show that it also holds for k + 1.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Let x \\in R with 0 < x < 1 and n \\in N. Is (1 - x)^n >= 1/(1+nx)?\nLet's think step by step.",
         "answer": false,
         "rationale": {
             "Question": "Let x \\in R with 0 < x < 1 and n \\in N. Is (1 - x)^n >= 1/(1+nx)?",
@@ -534,14 +561,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "bool"
+        "answer_type": "bool",
+        "correct": false
     },
     {
         "id": "wenhuchen/green1.json",
         "question": "Use Green's Theorem to evaluate $\\oint_{C} xy dx + x^2y^3dy$ where $C$ is the triangle with vertices (0,0), (1,0), (1,2) with positive orientation",
-        "prediction": "13. Calculate the final result to find the value of the line integral over the triangle $C$",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Use Green's Theorem to evaluate $\\oint_{C} xy dx + x^2y^3dy$ where $C$ is the triangle with vertices (0,0), (1,0), (1,2) with positive orientation\n Consider the reasoning steps: \n 2. Parametrize the triangle and set up the double integral over the region enclosed by the triangle, then apply Green's Theorem to evaluate the line integral.\n4. Parametrize the triangle by letting $x = t$, $y = 2t(1-t)$ for $0 \\leq t \\leq 1$, then set up the double integral $\\iint_R \\left(\\frac{\\partial Q}{\\partial x} - \\frac{\\partial P}{\\partial y}\\right) dA$ where $P = xy$ and $Q = x^2y^3$.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Use Green's Theorem to evaluate $\\oint_{C} xy dx + x^2y^3dy$ where $C$ is the triangle with vertices (0,0), (1,0), (1,2) with positive orientation\nLet's think step by step.",
         "answer": 0.6667,
         "rationale": {
             "Question": "Use Green's Theorem to evaluate $\\oint_{C} xy dx + x^2y^3dy$ where $C$ is the triangle with vertices (0,0), (1,0), (1,2) with positive orientation",
@@ -555,14 +583,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "mingyin/taylor-expansion1.json",
         "question": "Suppose that $X_1,X_2,...$ are real numbers between 0 and 1 that are chosen independently and uniformly at random. Let $S=\\sum_{i=1}^k X_i/2^i$, where $k$ is the least positive integer such that $X_k<X_{k+1}$, or $k=\\infty$ if there is no such integer. Find the expected value of S.",
-        "prediction": "$1/2$",
+        "prediction": 0.5,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Suppose that $X_1,X_2,...$ are real numbers between 0 and 1 that are chosen independently and uniformly at random. Let $S=\\sum_{i=1}^k X_i/2^i$, where $k$ is the least positive integer such that $X_k<X_{k+1}$, or $k=\\infty$ if there is no such integer. Find the expected value of S.\n Consider the reasoning steps: \n 2. Use the linearity of expectation to find the expected value of $S$ by calculating the expected value of each $X_i/2^i$ separately and then summing them up.\n4. Recognize that $X_i/2^i$ is a geometric random variable with parameter $p=1/2$. Use the formula for the expected value of a geometric random variable $E(X) = 1/p$ to find the expected value of $X_i/2^i$ for each $i$, and then sum them up to find the expected value of $S$.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Suppose that $X_1,X_2,...$ are real numbers between 0 and 1 that are chosen independently and uniformly at random. Let $S=\\sum_{i=1}^k X_i/2^i$, where $k$ is the least positive integer such that $X_k<X_{k+1}$, or $k=\\infty$ if there is no such integer. Find the expected value of S.\nLet's think step by step.",
         "answer": 0.29744254,
         "rationale": {
             "Question": "Suppose that $X_1,X_2,...$ are real numbers between 0 and 1 that are chosen independently and uniformly at random. Let $S=\\sum_{i=1}^k X_i/2^i$, where $k$ is the least positive integer such that $X_k<X_{k+1}$, or $k=\\infty$ if there is no such integer. Find the expected value of S.",
@@ -576,14 +605,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "wenhuchen/taylor_expansion1.json",
         "question": "Let $P_5(x)$ be the fifth-degree Taylor polynomial approximation for f(x)=sin(x), centered at x=0. What is the Lagrange error of the polynomial approximation to sin(1)?.",
-        "prediction": "10. Use the Lagrange error formula for Taylor polynomials to find the error in the approximation of sin(1) using the fifth-degree Taylor polynomial",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Let $P_5(x)$ be the fifth-degree Taylor polynomial approximation for f(x)=sin(x), centered at x=0. What is the Lagrange error of the polynomial approximation to sin(1)?.\n Consider the reasoning steps: \n 2. Use the Taylor series expansion for sin(x) to find the exact value of sin(1), and then compare it to the value obtained from the fifth-degree Taylor polynomial approximation to determine the Lagrange error.\n4. Use the Lagrange error formula for Taylor polynomials to calculate the error in the approximation of sin(1) using the fifth-degree Taylor polynomial.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Let $P_5(x)$ be the fifth-degree Taylor polynomial approximation for f(x)=sin(x), centered at x=0. What is the Lagrange error of the polynomial approximation to sin(1)?.\nLet's think step by step.",
         "answer": 0.000198,
         "rationale": {
             "Question": "Let $P_5(x)$ be the fifth-degree Taylor polynomial approximation for f(x)=sin(x), centered at x=0. What is the Lagrange error of the polynomial approximation to sin(1)?.",
@@ -597,14 +627,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "wenhuchen/derivative2.json",
         "question": "Does the function $y=xe^{-x^2/2}$, does it satisfy the equation $xy' = (1 - x^2)y$",
-        "prediction": "equal, the function $y=xe^{-x^2/2}$ satisfies the equation $xy' = (1 - x^2)y$",
+        "prediction": 1,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Does the function $y=xe^{-x^2/2}$, does it satisfy the equation $xy' = (1 - x^2)y$\n Consider the reasoning steps: \n 2. Substitute $y=xe^{-x^2/2}$ into both sides of the equation $xy' = (1 - x^2)y$ and simplify to see if the equation holds.\n4. Simplify the equation $xy' = (1 - x^2)y$ first, then substitute $y=xe^{-x^2/2}$ into the simplified equation to check if it holds.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Does the function $y=xe^{-x^2/2}$, does it satisfy the equation $xy' = (1 - x^2)y$\nLet's think step by step.",
         "answer": true,
         "rationale": {
             "Question": "Does the function $y=xe^{-x^2/2}$, does it satisfy the equation $xy' = (1 - x^2)y$",
@@ -618,14 +649,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "bool"
+        "answer_type": "bool",
+        "correct": true
     },
     {
         "id": "elainewan/math_calculus_2_10.json",
         "question": "Suppose g(x) is the horizontal asymptote of function f(x) = (3^x)/(1+3^{-x}). What are possible values of g(2023)?",
-        "prediction": "1",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Suppose g(x) is the horizontal asymptote of function f(x) = (3^x)/(1+3^{-x}). What are possible values of g(2023)?\n Consider the reasoning steps: \n 2. Rewrite f(x) as a fraction with a common base of 3, simplify, and then find the horizontal asymptote g(x). Finally, evaluate g(2023).\n1. Rewrite f(x) as (3^x)/(3^x + 1) and simplify to find the horizontal asymptote g(x). Then, evaluate g(2023).\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Suppose g(x) is the horizontal asymptote of function f(x) = (3^x)/(1+3^{-x}). What are possible values of g(2023)?\nLet's think step by step.",
         "answer": 0,
         "rationale": {
             "Question": "Suppose g(x) is the horizontal asymptote of function f(x) = (3^x)/(1+3^{-x}). What are possible values of g(2023)?",
@@ -639,14 +671,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "integer"
+        "answer_type": "integer",
+        "correct": true
     },
     {
         "id": "elainewan/math_calculus_9_2.json",
         "question": "Find the arc length of y = (1/4)x^4 over the interval [1,2] using the Trapezoidal Rule T_5.",
-        "prediction": "8. Substitute the values into the formula and calculate the arc length",
+        "prediction": 0.25,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Find the arc length of y = (1/4)x^4 over the interval [1,2] using the Trapezoidal Rule T_5.\n Consider the reasoning steps: \n 2. Use the Trapezoidal Rule formula T_5 to calculate the arc length by summing up the lengths of the trapezoids formed by the points calculated in the previous step.\n4. Divide the interval [1,2] into 5 subintervals of equal width (0.2), calculate the values of y at the endpoints of each subinterval using the function y = (1/4)x^4, and then use the Trapezoidal Rule formula T_5 to find the arc length over the interval [1,2].\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Find the arc length of y = (1/4)x^4 over the interval [1,2] using the Trapezoidal Rule T_5.\nLet's think step by step.",
         "answer": 3.958,
         "rationale": {
             "Question": "Find the arc length of y = (1/4)x^4 over the interval [1,2] using the Trapezoidal Rule T_5.",
@@ -660,14 +693,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "xueguangma/rolle_theorem.json",
         "question": "For the function $f(x)=|x|−1$ defined on $[-1,1]$. Does it meet the criteria of Rolle's Theorem? Answer true or false.",
-        "prediction": "false",
+        "prediction": true,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: For the function $f(x)=|x|−1$ defined on $[-1,1]$. Does it meet the criteria of Rolle's Theorem? Answer true or false.\n Consider the reasoning steps: \n 2. Check if the function satisfies the conditions of Rolle's Theorem, which requires the function to be continuous on the closed interval $[-1,1]$ and differentiable on the open interval $(-1,1)$.\n2. Check if the function is continuous on the closed interval $[-1,1]$ by evaluating the function at the endpoints $x=-1$ and $x=1$.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: For the function $f(x)=|x|−1$ defined on $[-1,1]$. Does it meet the criteria of Rolle's Theorem? Answer true or false.\nLet's think step by step.",
         "answer": false,
         "rationale": {
             "Question": "For the function $f(x)=|x|−1$ defined on $[-1,1]$. Does it meet the criteria of Rolle's Theorem? Answer true or false.",
@@ -681,14 +715,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "bool"
+        "answer_type": "bool",
+        "correct": false
     },
     {
         "id": "mingyin/integral-theorem1.json",
         "question": "As shown in ./mingyin/integral1.png line $y=c$, $x=0$, and parabola $y=2x-3x^3$ splits the plane into the two shaded regions. Suppose two regions have the same areas. What is the value $c$?",
-        "prediction": "9. Set the area of one shaded region equal to the area of the other shaded region and solve for $c$ to find the value of $c$ that satisfies the condition of equal areas",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: As shown in ./mingyin/integral1.png line $y=c$, $x=0$, and parabola $y=2x-3x^3$ splits the plane into the two shaded regions. Suppose two regions have the same areas. What is the value $c$?\n Consider the reasoning steps: \n 2. Use the symmetry of the problem to find the area of one shaded region and then set it equal to the area of the other shaded region to solve for $c$.\n4. Integrate the function $2x-3x^3$ with respect to $x$ over the limits of integration determined by the points of intersection found in step 3 to find the area of one shaded region. Set this area equal to the area of the other shaded region and solve for $c$.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: As shown in ./mingyin/integral1.png line $y=c$, $x=0$, and parabola $y=2x-3x^3$ splits the plane into the two shaded regions. Suppose two regions have the same areas. What is the value $c$?\nLet's think step by step.",
         "answer": 0.444444,
         "rationale": {
             "Question": "As shown in ./mingyin/integral1.png line $y=c$, $x=0$, and parabola $y=2x-3x^3$ splits the plane into the two shaded regions. Suppose two regions have the same areas. What is the value $c$?",
@@ -702,14 +737,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "xueguangma/differential_product_rule.json",
         "question": "For $p(x)=f(x)g(x)$, if $f(2)=3$, $f'(2)=-4$, $g(2)=1$, and $g'(2)=6$, what is $p'(2)$?",
-        "prediction": "Therefore, $p'(2) = 14$",
+        "prediction": 14,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: For $p(x)=f(x)g(x)$, if $f(2)=3$, $f'(2)=-4$, $g(2)=1$, and $g'(2)=6$, what is $p'(2)$?\n Consider the reasoning steps: \n 2. Use the given values of $f(2)$, $f'(2)$, $g(2)$, and $g'(2)$ to calculate $p'(2)$ directly without finding the derivative of $p(x)$.\n2. Use the formula for the derivative of a product $p'(x) = f'(x)g(x) + f(x)g'(x)$, then evaluate it at $x=2$ to find $p'(2)$.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: For $p(x)=f(x)g(x)$, if $f(2)=3$, $f'(2)=-4$, $g(2)=1$, and $g'(2)=6$, what is $p'(2)$?\nLet's think step by step.",
         "answer": 14,
         "rationale": {
             "Question": "For $p(x)=f(x)g(x)$, if $f(2)=3$, $f'(2)=-4$, $g(2)=1$, and $g'(2)=6$, what is $p'(2)$?",
@@ -723,14 +759,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "integer"
+        "answer_type": "integer",
+        "correct": true
     },
     {
         "id": "wenhuchen/ODE3.json",
         "question": "Find the solutions to the second order boundary-value problem. y''-2y'+2y=0, y(0)=0, y(\\pi/2) = 1. What is y(\\pi/4)?",
-        "prediction": "y(\\pi/4) = e^{\\pi/4-\\pi/2}sin(\\pi/4) = e^{-\\pi/4}sin(\\pi/4) = e^{-\\pi/4}(\\sqrt{2}/2) = \\sqrt{2}/(2e^{\\pi/4})",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Find the solutions to the second order boundary-value problem. y''-2y'+2y=0, y(0)=0, y(\\pi/2) = 1. What is y(\\pi/4)?\n Consider the reasoning steps: \n 1. Use the characteristic equation to find the general solution of the differential equation, then apply the boundary conditions to find the specific solution.\n2. Substitute y(0)=0 and y(\\pi/2)=1 into the general solution to find the values of the constants in the specific solution.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Find the solutions to the second order boundary-value problem. y''-2y'+2y=0, y(0)=0, y(\\pi/2) = 1. What is y(\\pi/4)?\nLet's think step by step.",
         "answer": 0.322,
         "rationale": {
             "Question": "Find the solutions to the second order boundary-value problem. y''-2y'+2y=0, y(0)=0, y(\\pi/2) = 1. What is y(\\pi/4)?",
@@ -744,14 +781,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "wenhuchen/divergence2.json",
         "question": "Use divergence therem to evaluate $\\iint_S \\vec{F} \\cdot d \\vec{S}$ where $\\vec{F} = yx^2 \\vec{i} + (xy^2 - 3z^4)\\vec{j} + (x^3+y^3)\\vec{k}$ and the surface $S$ consists of the sphere of radius 4 with $z \\le 0$ and $y \\le 0$. Note all three surfaces of this solid are included in $S$.",
-        "prediction": "14. Compare the results obtained from the surface integral and the triple integral to verify the application of the divergence theorem in this context",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Use divergence therem to evaluate $\\iint_S \\vec{F} \\cdot d \\vec{S}$ where $\\vec{F} = yx^2 \\vec{i} + (xy^2 - 3z^4)\\vec{j} + (x^3+y^3)\\vec{k}$ and the surface $S$ consists of the sphere of radius 4 with $z \\le 0$ and $y \\le 0$. Note all three surfaces of this solid are included in $S$.\n Consider the reasoning steps: \n 2. Use spherical coordinates to parameterize the sphere of radius 4 with $z \\le 0$ and $y \\le 0$. Then calculate the normal vector to the surface $S$ and set up the surface integral $\\iint_S \\vec{F} \\cdot d \\vec{S}$ using the parameterization.\n4. Use the parameterization in spherical coordinates to express the normal vector $d\\vec{S}$ in terms of the parameters. Then calculate the dot product $\\vec{F} \\cdot d\\vec{S}$ and set up the double integral over the parameter domain to evaluate the surface integral.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Use divergence therem to evaluate $\\iint_S \\vec{F} \\cdot d \\vec{S}$ where $\\vec{F} = yx^2 \\vec{i} + (xy^2 - 3z^4)\\vec{j} + (x^3+y^3)\\vec{k}$ and the surface $S$ consists of the sphere of radius 4 with $z \\le 0$ and $y \\le 0$. Note all three surfaces of this solid are included in $S$.\nLet's think step by step.",
         "answer": 0.0,
         "rationale": {
             "Question": "Use divergence therem to evaluate $\\iint_S \\vec{F} \\cdot d \\vec{S}$ where $\\vec{F} = yx^2 \\vec{i} + (xy^2 - 3z^4)\\vec{j} + (x^3+y^3)\\vec{k}$ and the surface $S$ consists of the sphere of radius 4 with $z \\le 0$ and $y \\le 0$. Note all three surfaces of this solid are included in $S$.",
@@ -765,14 +803,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": true
     },
     {
         "id": "elainewan/math_calculus_5_5.json",
         "question": "A survey shows that a mayoral candidate is gaining votes at a rate of 2000t + 1000 votes per day, where t is the number of days since she announced her candidacy. How many supporters will the candidate have after 60 days, assuming that she had no supporters at t = 0?",
-        "prediction": "10. Therefore, the mayoral candidate will have 3,660,000 supporters after 60 days, assuming she had no supporters at t = 0",
+        "prediction": 3660000,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: A survey shows that a mayoral candidate is gaining votes at a rate of 2000t + 1000 votes per day, where t is the number of days since she announced her candidacy. How many supporters will the candidate have after 60 days, assuming that she had no supporters at t = 0?\n Consider the reasoning steps: \n 2. Another possible next step is to first find the total number of votes gained after 60 days by integrating the rate of gaining votes over time from t = 0 to t = 60.\n4. Another possible next step is to calculate the definite integral of the rate equation from t = 0 to t = 60 to find the total number of votes gained after 60 days.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: A survey shows that a mayoral candidate is gaining votes at a rate of 2000t + 1000 votes per day, where t is the number of days since she announced her candidacy. How many supporters will the candidate have after 60 days, assuming that she had no supporters at t = 0?\nLet's think step by step.",
         "answer": 3660000,
         "rationale": {
             "Question": "A survey shows that a mayoral candidate is gaining votes at a rate of 2000t + 1000 votes per day, where t is the number of days since she announced her candidacy. How many supporters will the candidate have after 60 days, assuming that she had no supporters at t = 0?",
@@ -786,14 +825,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "integer"
+        "answer_type": "integer",
+        "correct": true
     },
     {
         "id": "wenhuchen/trapezoidal_rule1.json",
         "question": "Use the Trapezoidal Rule with to approximate $\\int_0^{\\pi} sin^2(x)dx$. Return the approximated demical value.",
-        "prediction": "10. Return the decimal value of the approximation",
+        "prediction": 1.5708,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Use the Trapezoidal Rule with to approximate $\\int_0^{\\pi} sin^2(x)dx$. Return the approximated demical value.\n Consider the reasoning steps: \n 2. Use the Trapezoidal Rule formula: $\\int_a^b f(x)dx \\approx \\frac{1}{2} \\Delta x [f(a) + 2f(x_1) + 2f(x_2) + ... + 2f(x_{n-1}) + f(b)]$ where $x_i = a + i\\Delta x$.\n4. Substitute $f(x) = \\sin^2(x)$ into the Trapezoidal Rule formula and calculate the approximate value of the integral using the given interval and function.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Use the Trapezoidal Rule with to approximate $\\int_0^{\\pi} sin^2(x)dx$. Return the approximated demical value.\nLet's think step by step.",
         "answer": 1.570796,
         "rationale": {
             "Question": "Use the Trapezoidal Rule with to approximate $\\int_0^{\\pi} sin^2(x)dx$. Return the approximated demical value.",
@@ -807,14 +847,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": true
     },
     {
         "id": "elainewan/math_calculus_10.json",
         "question": "A cylindrical tank of height 4 m and radius 1 m is filled with water. Water drains through a square hole of side 2 cm in the bottom. How long does it take for the tank to go from full to empty?",
-        "prediction": "9. Convert the time from seconds to minutes or hours for a more practical understanding of how long it takes for the tank to go from full to empty",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: A cylindrical tank of height 4 m and radius 1 m is filled with water. Water drains through a square hole of side 2 cm in the bottom. How long does it take for the tank to go from full to empty?\n Consider the reasoning steps: \n 2. Calculate the area of the square hole, then determine the flow rate of water through the hole, and finally calculate the time it takes to empty the tank based on the volume of water in the tank.\n2. Calculate the volume of water in the tank by using the formula for the volume of a cylinder (V = πr^2h). Then, determine the flow rate of water through the hole by multiplying the area of the hole by the velocity of the water draining out. Finally, calculate the time it takes to empty the tank by dividing the volume of water in the tank by the flow rate.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: A cylindrical tank of height 4 m and radius 1 m is filled with water. Water drains through a square hole of side 2 cm in the bottom. How long does it take for the tank to go from full to empty?\nLet's think step by step.",
         "answer": 7142,
         "rationale": {
             "Question": "A cylindrical tank of height 4 m and radius 1 m is filled with water. Water drains through a square hole of side 2 cm in the bottom. How long does it take for the tank to go from full to empty?",
@@ -828,14 +869,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "integer"
+        "answer_type": "integer",
+        "correct": false
     },
     {
         "id": "xueguangma/maclaurin_series.json",
         "question": "If $|x|$ is less than 0.7, then if we use fifth Maclaurin polynomial approximate $sin(x)$ the error is less than 0.0001. Is this correct? Answer True or False.",
-        "prediction": "greater than 0.0001",
+        "prediction": false,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: If $|x|$ is less than 0.7, then if we use fifth Maclaurin polynomial approximate $sin(x)$ the error is less than 0.0001. Is this correct? Answer True or False.\n Consider the reasoning steps: \n 1. Calculate the fifth Maclaurin polynomial for $sin(x)$ and determine the error for $|x| < 0.7$ to verify if it is indeed less than 0.0001.\n2. Use the Lagrange error bound formula to calculate the maximum error for the fifth Maclaurin polynomial approximation of $sin(x)$ for $|x| < 0.7$.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: If $|x|$ is less than 0.7, then if we use fifth Maclaurin polynomial approximate $sin(x)$ the error is less than 0.0001. Is this correct? Answer True or False.\nLet's think step by step.",
         "answer": true,
         "rationale": {
             "Question": "If $|x|$ is less than 0.7, then if we use fifth Maclaurin polynomial approximate $sin(x)$ the error is less than 0.0001. Is this correct? Answer True or False.",
@@ -849,14 +891,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "bool"
+        "answer_type": "bool",
+        "correct": false
     },
     {
         "id": "elainewan/math_calculus_5.json",
         "question": "What is \\int_{-3}^1 (7x^2 + x +1)dx?",
-        "prediction": "[(7/3)(1)^3 + (1/2)(1)^2 + 1 + C] - [(7/3)(-3)^3 + (1/2)(-3)^2 + (-3) + C]",
+        "prediction": 59.833333333333336,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: What is \\int_{-3}^1 (7x^2 + x +1)dx?\n Consider the reasoning steps: \n 2. Use the Fundamental Theorem of Calculus to evaluate the definite integral: \n3. Find the antiderivative of each term in the integrand: ∫(7x^2 + x + 1)dx = (7/3)x^3 + (1/2)x^2 + x + C, where C is the constant of integration.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: What is \\int_{-3}^1 (7x^2 + x +1)dx?\nLet's think step by step.",
         "answer": 65.333,
         "rationale": {
             "Question": "What is \\int_{-3}^1 (7x^2 + x +1)dx?",
@@ -870,14 +913,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "mingyin/Fundamental-Theorem-of-Calculus4.json",
         "question": "Let $F_0(x)=log(x)$. For $n\\geq 0$ and $x>0$, let $F_{n+1}(x)=\\int_0^x F_n(t)dt$. Evaluate $\\lim _{n \\rightarrow \\infty} (n! F_n(1))/(log(n))$.",
-        "prediction": "10. After simplifying and using properties of logarithms and factorials, we can find the value of the limit",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Let $F_0(x)=log(x)$. For $n\\geq 0$ and $x>0$, let $F_{n+1}(x)=\\int_0^x F_n(t)dt$. Evaluate $\\lim _{n \\rightarrow \\infty} (n! F_n(1))/(log(n))$.\n Consider the reasoning steps: \n 2. Apply the Fundamental Theorem of Calculus to find an explicit formula for $F_n(x)$ in terms of $F_0(x)$ and then evaluate the limit using properties of logarithms and factorials.\n4. Use the fact that $F_n(x) = \\int_0^x F_{n-1}(t) dt$ to rewrite the expression inside the limit as a product of integrals, and then simplify using properties of logarithms and factorials.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Let $F_0(x)=log(x)$. For $n\\geq 0$ and $x>0$, let $F_{n+1}(x)=\\int_0^x F_n(t)dt$. Evaluate $\\lim _{n \\rightarrow \\infty} (n! F_n(1))/(log(n))$.\nLet's think step by step.",
         "answer": -1.0,
         "rationale": {
             "Question": "Let $F_0(x)=log(x)$. For $n\\geq 0$ and $x>0$, let $F_{n+1}(x)=\\int_0^x F_n(t)dt$. Evaluate $\\lim _{n \\rightarrow \\infty} (n! F_n(1))/(log(n))$.",
@@ -891,14 +935,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "wenhuchen/stoke's_theorem2.json",
         "question": "Use Stoke's Theorem to evaluate $\\int_C \\vec{F} \\cdot d \\vec{r}$ where $\\vec{F} = z^2 \\vec{i} + y^2 \\vec{j} + x \\vec{k}$ and $C$ is the triangle with vertices (1,0,0), (0,1,0) and (0,0,1) with counter-clockwise rotation.",
-        "prediction": "9. Evaluate the double integral to get the final result of $\\frac{1}{2} \\int_{0}^{1} (1 - 2x) \\, dx = \\frac{1}{2} \\left[x - x^2\\right]_{0}^{1} = \\frac{1}{2}$",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Use Stoke's Theorem to evaluate $\\int_C \\vec{F} \\cdot d \\vec{r}$ where $\\vec{F} = z^2 \\vec{i} + y^2 \\vec{j} + x \\vec{k}$ and $C$ is the triangle with vertices (1,0,0), (0,1,0) and (0,0,1) with counter-clockwise rotation.\n Consider the reasoning steps: \n 2. Use Stoke's Theorem to rewrite the line integral as a surface integral over the region bounded by $C$, and then evaluate the surface integral.\n3. Calculate the curl of $\\vec{F}$, which is $\\nabla \\times \\vec{F} = -2y \\vec{i} - 2z \\vec{j} + 1 \\vec{k}$.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Use Stoke's Theorem to evaluate $\\int_C \\vec{F} \\cdot d \\vec{r}$ where $\\vec{F} = z^2 \\vec{i} + y^2 \\vec{j} + x \\vec{k}$ and $C$ is the triangle with vertices (1,0,0), (0,1,0) and (0,0,1) with counter-clockwise rotation.\nLet's think step by step.",
         "answer": -0.166,
         "rationale": {
             "Question": "Use Stoke's Theorem to evaluate $\\int_C \\vec{F} \\cdot d \\vec{r}$ where $\\vec{F} = z^2 \\vec{i} + y^2 \\vec{j} + x \\vec{k}$ and $C$ is the triangle with vertices (1,0,0), (0,1,0) and (0,0,1) with counter-clockwise rotation.",
@@ -912,14 +957,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "elainewan/math_calculus_2_7.json",
         "question": "\\lim_{x \\to c} |f(x)| = 0. What is \\lim_{x \\to c} f(x)?",
-        "prediction": "0",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: \\lim_{x \\to c} |f(x)| = 0. What is \\lim_{x \\to c} f(x)?\n Consider the reasoning steps: \n 2. Use the definition of the absolute value function to rewrite |f(x)| as \\sqrt{f(x)^2}. Then, apply the limit properties to find that the limit of \\sqrt{f(x)^2} as x approaches c is equal to the absolute value of the limit of f(x) as x approaches c. Since the limit of |f(x)| is 0, the limit of f(x) must also be 0.\n4. Apply the squeeze theorem by noting that 0 ≤ |f(x)| ≤ |f(x)| for all x in the domain. Since the limit of |f(x)| is 0 as x approaches c, and the limit of |f(x)| is always greater than or equal to 0, the limit of f(x) must also be 0.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: \\lim_{x \\to c} |f(x)| = 0. What is \\lim_{x \\to c} f(x)?\nLet's think step by step.",
         "answer": 0,
         "rationale": {
             "Question": "\\lim_{x \\to c} |f(x)| = 0. What is \\lim_{x \\to c} f(x)?",
@@ -933,14 +979,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "integer"
+        "answer_type": "integer",
+        "correct": true
     },
     {
         "id": "wenhuchen/Simpson's_rule1.json",
         "question": "Using n=6 approximate the value of $\\int_{-1}^2 \\sqrt{e^{-x^2} + 1} dx$ using the Simpson's rule.",
-        "prediction": "6. Substitute the calculated function values into the formula and compute the approximate value of the integral",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Using n=6 approximate the value of $\\int_{-1}^2 \\sqrt{e^{-x^2} + 1} dx$ using the Simpson's rule.\n Consider the reasoning steps: \n 1. Divide the interval [-1, 2] into 6 subintervals of equal width, calculate the function values at the endpoints and midpoints of each subinterval, and then apply Simpson's rule formula to approximate the integral.\n2. Apply Simpson's rule formula to approximate the integral by summing the values of the function at the endpoints, midpoints, and the average of each subinterval.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Using n=6 approximate the value of $\\int_{-1}^2 \\sqrt{e^{-x^2} + 1} dx$ using the Simpson's rule.\nLet's think step by step.",
         "answer": 3.70358145,
         "rationale": {
             "Question": "Using n=6 approximate the value of $\\int_{-1}^2 \\sqrt{e^{-x^2} + 1} dx$ using the Simpson's rule.",
@@ -954,14 +1001,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "mingyin/double-integral2.json",
         "question": "Suppose $f(x, y)= \\begin{cases}1-x-y, & x+y \\leqslant 1 \\ 0, & x+y>1\\end{cases}$. What is the integral of f(x,y) over the region I=[0,1]\\times[0,1]?",
-        "prediction": "0",
+        "prediction": 0.5,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Suppose $f(x, y)= \\begin{cases}1-x-y, & x+y \\leqslant 1 \\ 0, & x+y>1\\end{cases}$. What is the integral of f(x,y) over the region I=[0,1]\\times[0,1]?\n Consider the reasoning steps: \n 2. Use the definition of the integral to find the integral of f(x,y) over the region I=[0,1]\\times[0,1] by setting up a double integral and evaluating it over the given region.\n3. Set up the double integral of f(x,y) over the region I=[0,1]\\times[0,1] by integrating f(x,y) with respect to x and y separately, and then evaluate the integral over the given region.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Suppose $f(x, y)= \\begin{cases}1-x-y, & x+y \\leqslant 1 \\ 0, & x+y>1\\end{cases}$. What is the integral of f(x,y) over the region I=[0,1]\\times[0,1]?\nLet's think step by step.",
         "answer": 0.16667,
         "rationale": {
             "Question": "Suppose $f(x, y)= \\begin{cases}1-x-y, & x+y \\leqslant 1 \\ 0, & x+y>1\\end{cases}$. What is the integral of f(x,y) over the region I=[0,1]\\times[0,1]?",
@@ -975,14 +1023,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "mingyin/double-integral5.json",
         "question": "Let $I(R)=\\iint_{x^2+y^2 \\leq R^2}(\\frac{1+2 x^2}{1+x^4+6x^2y^2+y^4}-\\frac{1+y^2}{2+x^4+y^4}) dx dy$. What is the limit of $I(R)$ as $R$ goes to infinity?",
-        "prediction": "0",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Let $I(R)=\\iint_{x^2+y^2 \\leq R^2}(\\frac{1+2 x^2}{1+x^4+6x^2y^2+y^4}-\\frac{1+y^2}{2+x^4+y^4}) dx dy$. What is the limit of $I(R)$ as $R$ goes to infinity?\n Consider the reasoning steps: \n 1. Rewrite the integrand in polar coordinates to simplify the calculation and then evaluate the limit of $I(R)$ as $R$ goes to infinity.\n2. Simplify the integrand in polar coordinates by expressing $x^2$ and $y^2$ in terms of $r$ and $\\theta$, and then evaluate the limit of $I(R)$ as $R$ goes to infinity.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Let $I(R)=\\iint_{x^2+y^2 \\leq R^2}(\\frac{1+2 x^2}{1+x^4+6x^2y^2+y^4}-\\frac{1+y^2}{2+x^4+y^4}) dx dy$. What is the limit of $I(R)$ as $R$ goes to infinity?\nLet's think step by step.",
         "answer": 1.53978589,
         "rationale": {
             "Question": "Let $I(R)=\\iint_{x^2+y^2 \\leq R^2}(\\frac{1+2 x^2}{1+x^4+6x^2y^2+y^4}-\\frac{1+y^2}{2+x^4+y^4}) dx dy$. What is the limit of $I(R)$ as $R$ goes to infinity?",
@@ -996,14 +1045,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "elainewan/math_calculus_7_2.json",
         "question": "What's the value of a > 0, such that the tangent line to the graph of f(x) = (x^2) (e^(-x)) at x = a passes through the origin?",
-        "prediction": "8. Verify that the point of intersection found in step 7 lies on the graph of f(x) = (x^2) (e^(-x)) to ensure the correctness of the solution",
+        "prediction": 2,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: What's the value of a > 0, such that the tangent line to the graph of f(x) = (x^2) (e^(-x)) at x = a passes through the origin?\n Consider the reasoning steps: \n 2. Calculate the derivative of f(x) to find the slope of the tangent line at x = a, then use the point-slope form of a line to find the equation of the tangent line passing through the origin.\n3. Set the equation of the tangent line equal to y = 0 and solve for x to find the x-coordinate where the tangent line passes through the origin.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: What's the value of a > 0, such that the tangent line to the graph of f(x) = (x^2) (e^(-x)) at x = a passes through the origin?\nLet's think step by step.",
         "answer": 1,
         "rationale": {
             "Question": "What's the value of a > 0, such that the tangent line to the graph of f(x) = (x^2) (e^(-x)) at x = a passes through the origin?",
@@ -1017,14 +1067,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "integer"
+        "answer_type": "integer",
+        "correct": false
     },
     {
         "id": "wenhuchen/trapezoidal_rule2.json",
         "question": "A function f(x) is given by f(0)=3, f(2)=7, f(4)=11, f(6)=9, f(8)=3. Approximate the area under the curve y=f(x) between x=0 and x=8 using Trapezoidal rule with n=4 subintervals.",
-        "prediction": "10. Simplify the expression to find the approximate area under the curve using the Trapezoidal rule",
+        "prediction": 60,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: A function f(x) is given by f(0)=3, f(2)=7, f(4)=11, f(6)=9, f(8)=3. Approximate the area under the curve y=f(x) between x=0 and x=8 using Trapezoidal rule with n=4 subintervals.\n Consider the reasoning steps: \n 2. Use the Trapezoidal rule formula to calculate the area under the curve by summing up the areas of the trapezoids formed by each pair of consecutive points (0,3), (2,7), (4,11), (6,9), and (8,3).\n4. Use the Trapezoidal rule formula A = h/2 * (f(x0) + 2*f(x1) + 2*f(x2) + 2*f(x3) + f(x4)) to calculate the area under the curve by plugging in the values of f(x) at each point and the width of each subinterval.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: A function f(x) is given by f(0)=3, f(2)=7, f(4)=11, f(6)=9, f(8)=3. Approximate the area under the curve y=f(x) between x=0 and x=8 using Trapezoidal rule with n=4 subintervals.\nLet's think step by step.",
         "answer": 60.0,
         "rationale": {
             "Question": "A function f(x) is given by f(0)=3, f(2)=7, f(4)=11, f(6)=9, f(8)=3. Approximate the area under the curve y=f(x) between x=0 and x=8 using Trapezoidal rule with n=4 subintervals.",
@@ -1038,14 +1089,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": true
     },
     {
         "id": "wenhuchen/differential_equation5.json",
         "question": "Is the differential equation $2tyy' + 2t + ty^2 = 0$ the total derivative of the potential function $\\phi(t, y) = t^2 + ty^2$?",
-        "prediction": "not the total derivative of $\\phi(t, y)$",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Is the differential equation $2tyy' + 2t + ty^2 = 0$ the total derivative of the potential function $\\phi(t, y) = t^2 + ty^2$?\n Consider the reasoning steps: \n 2. Use the method of finding the total derivative of a potential function to verify if the given differential equation is indeed the total derivative of $\\phi(t, y)$.\n2. Differentiate the potential function $\\phi(t, y)$ with respect to $t$ and $y$ separately, and then use the partial derivatives to construct the total derivative. Compare the total derivative with the given differential equation to determine if they are equivalent.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Is the differential equation $2tyy' + 2t + ty^2 = 0$ the total derivative of the potential function $\\phi(t, y) = t^2 + ty^2$?\nLet's think step by step.",
         "answer": false,
         "rationale": {
             "Question": "Is the differential equation $2tyy' + 2t + ty^2 = 0$ the total derivative of the potential function $\\phi(t, y) = t^2 + ty^2$?",
@@ -1059,14 +1111,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "bool"
+        "answer_type": "bool",
+        "correct": true
     },
     {
         "id": "wenhuchen/trapezoidal_rule3.json",
         "question": "Approximate the area under the curve y=2^{x} between x=-1 and x=3 using the Trapezoidal rule with n=4 subintervals.",
-        "prediction": "8.25",
+        "prediction": 12.5,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Approximate the area under the curve y=2^{x} between x=-1 and x=3 using the Trapezoidal rule with n=4 subintervals.\n Consider the reasoning steps: \n 1. Calculate the width of each subinterval by dividing the total interval length (4) by the number of subintervals (4) to get a width of 1. Then, calculate the area of each trapezoid using the formula A = (b1 + b2) * h / 2, where b1 and b2 are the lengths of the two bases of the trapezoid and h is the height (width of the subinterval).\n3. Calculate the values of y=2^{x} at the endpoints of each subinterval (-1, 0, 1, 2, 3) and use these values to calculate the area under the curve using the Trapezoidal rule formula.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Approximate the area under the curve y=2^{x} between x=-1 and x=3 using the Trapezoidal rule with n=4 subintervals.\nLet's think step by step.",
         "answer": 11.25,
         "rationale": {
             "Question": "Approximate the area under the curve y=2^{x} between x=-1 and x=3 using the Trapezoidal rule with n=4 subintervals.",
@@ -1080,14 +1133,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "elainewan/math_calculus_11.json",
         "question": "What is the limit of the sequence a_n = n/(\\sqrt{n^2 + 1})?",
-        "prediction": "1",
+        "prediction": 1,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: What is the limit of the sequence a_n = n/(\\sqrt{n^2 + 1})?\n Consider the reasoning steps: \n 2. Another possible next step is to divide both the numerator and denominator by n, which will simplify the expression and allow us to evaluate the limit as n approaches infinity.\n3. After dividing both the numerator and denominator by n, we get a_n = 1/(\\sqrt{1 + 1/n^2}). We can now evaluate the limit as n approaches infinity by letting 1/n approach 0.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: What is the limit of the sequence a_n = n/(\\sqrt{n^2 + 1})?\nLet's think step by step.",
         "answer": 1,
         "rationale": {
             "Question": "What is the limit of the sequence a_n = n/(\\sqrt{n^2 + 1})?",
@@ -1101,14 +1155,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "integer"
+        "answer_type": "integer",
+        "correct": true
     },
     {
         "id": "elainewan/math_calculus_2_4.json",
         "question": "What is \\lim_{x \\to 1} ((x - 1) sin((\\pi)/(x - 1))?",
-        "prediction": "equal to 0",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: What is \\lim_{x \\to 1} ((x - 1) sin((\\pi)/(x - 1))?\n Consider the reasoning steps: \n 1. Use L'Hopital's Rule to find the limit as x approaches 1.\n3. Use the fact that sin((\\pi)/(x - 1)) is bounded between -1 and 1 to simplify the expression and evaluate the limit directly.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: What is \\lim_{x \\to 1} ((x - 1) sin((\\pi)/(x - 1))?\nLet's think step by step.",
         "answer": 0,
         "rationale": {
             "Question": "What is \\lim_{x \\to 1} ((x - 1) sin((\\pi)/(x - 1))?",
@@ -1122,14 +1177,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "integer"
+        "answer_type": "integer",
+        "correct": true
     },
     {
         "id": "wenhuchen/green2.json",
         "question": "Use Green's Theorem to evaluate $\\oiint_{s} y^3 dx + x^3dy$ where $C$ is the positively oriented circle of radius 2 centered at origin.",
-        "prediction": "13. Integrate with respect to $r$ first, then with respect to $\\theta$ to find the final result",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Use Green's Theorem to evaluate $\\oiint_{s} y^3 dx + x^3dy$ where $C$ is the positively oriented circle of radius 2 centered at origin.\n Consider the reasoning steps: \n 2. Parametrize the circle $C$ using polar coordinates and then apply Green's Theorem to evaluate the line integral over the circle.\n4. Express the line integral as a double integral over the region enclosed by the circle $C$, then apply Green's Theorem to convert it into a double integral over the region and evaluate the integral using polar coordinates.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Use Green's Theorem to evaluate $\\oiint_{s} y^3 dx + x^3dy$ where $C$ is the positively oriented circle of radius 2 centered at origin.\nLet's think step by step.",
         "answer": -75.396,
         "rationale": {
             "Question": "Use Green's Theorem to evaluate $\\oiint_{s} y^3 dx + x^3dy$ where $C$ is the positively oriented circle of radius 2 centered at origin.",
@@ -1143,14 +1199,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "wenhuchen/taylor_expansion2.json",
         "question": "Is the Taylor Series for $f$ at x=5 where $f(x)=\\sum_{n=0}^{\\infty}\\frac{x^n}{n!} absolutely converging?",
-        "prediction": "absolutely converging for all real numbers",
+        "prediction": true,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Is the Taylor Series for $f$ at x=5 where $f(x)=\\sum_{n=0}^{\\infty}\\frac{x^n}{n!} absolutely converging?\n Consider the reasoning steps: \n 1. Calculate the radius of convergence of the Taylor Series for $f$ at x=5 by using the ratio test or the root test.\n2. Determine the interval of convergence by checking the endpoints of the interval found in step 1.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Is the Taylor Series for $f$ at x=5 where $f(x)=\\sum_{n=0}^{\\infty}\\frac{x^n}{n!} absolutely converging?\nLet's think step by step.",
         "answer": 1.0,
         "rationale": {
             "Question": "Is the Taylor Series for $f$ at x=5 where $f(x)=\\sum_{n=0}^{\\infty}\\frac{x^n}{n!} absolutely converging?",
@@ -1164,14 +1221,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": true
     },
     {
         "id": "wenhuchen/differential_equation2.json",
         "question": "Is (t-y)y' - 2y +3t + y^2/t = 0 an Euler homogeneous equation?",
-        "prediction": "an Euler homogeneous equation",
+        "prediction": false,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Is (t-y)y' - 2y +3t + y^2/t = 0 an Euler homogeneous equation?\n Consider the reasoning steps: \n 2. Simplify the equation and check if it can be written in the form F(t,y,y') = 0 to determine if it is an Euler homogeneous equation.\n2. Divide the entire equation by t and then substitute y = vt to see if it can be written in the form F(t,v,v') = 0.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Is (t-y)y' - 2y +3t + y^2/t = 0 an Euler homogeneous equation?\nLet's think step by step.",
         "answer": true,
         "rationale": {
             "Question": "Is (t-y)y' - 2y +3t + y^2/t = 0 an Euler homogeneous equation?",
@@ -1185,14 +1243,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "bool"
+        "answer_type": "bool",
+        "correct": false
     },
     {
         "id": "elainewan/math_calculus_2_13.json",
         "question": "What is \\lim_{x \\to 0} (x \\lfloor 1/x \rfloor)?",
-        "prediction": "1 * 0 = 0",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: What is \\lim_{x \\to 0} (x \\lfloor 1/x \rfloor)?\n Consider the reasoning steps: \n 2. Rewrite the expression as x * (1/x) * floor(1/x) and simplify before evaluating the limit as x approaches 0.\n2. Rewrite the expression as x * (1/x) * floor(1/x) = 1 * floor(1/x) and evaluate the limit as x approaches 0.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: What is \\lim_{x \\to 0} (x \\lfloor 1/x \rfloor)?\nLet's think step by step.",
         "answer": 1,
         "rationale": {
             "Question": "What is \\lim_{x \\to 0} (x \\lfloor 1/x \rfloor)?",
@@ -1206,14 +1265,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "integer"
+        "answer_type": "integer",
+        "correct": false
     },
     {
         "id": "elainewan/math_calculus_16.json",
         "question": "Let rectangle R = [1, 2.5] * [1, 2]. Calculate the Riemann Sum S_{3,2} for \\int \\int_{R} xy dA for the integral, using the lower-left vertex of rectangles as sample points.",
-        "prediction": "11. Multiply the value of xy at the lower-left vertex of each rectangle by the area of that rectangle and sum up all these values to find the Riemann Sum S_{3,2} for the integral \\int \\int_{R} xy dA",
+        "prediction": 2.8125,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Let rectangle R = [1, 2.5] * [1, 2]. Calculate the Riemann Sum S_{3,2} for \\int \\int_{R} xy dA for the integral, using the lower-left vertex of rectangles as sample points.\n Consider the reasoning steps: \n 2. Calculate the area of each rectangle in the grid and multiply it by the value of the function xy at the lower-left vertex of each rectangle. Sum up all these values to find the Riemann Sum S_{3,2}.\n2. Calculate the width and height of each rectangle in the grid, then find the lower-left vertex coordinates for each rectangle.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Let rectangle R = [1, 2.5] * [1, 2]. Calculate the Riemann Sum S_{3,2} for \\int \\int_{R} xy dA for the integral, using the lower-left vertex of rectangles as sample points.\nLet's think step by step.",
         "answer": 2.812,
         "rationale": {
             "Question": "Let rectangle R = [1, 2.5] * [1, 2]. Calculate the Riemann Sum S_{3,2} for \\int \\int_{R} xy dA for the integral, using the lower-left vertex of rectangles as sample points.",
@@ -1227,14 +1287,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": true
     },
     {
         "id": "wenhuchen/area.json",
         "question": "Compute the are of that part of the helicoid z = arctan(y/x) which lies in the first octant between the cylinder $x^2+y^2 = 1^2$ and $x^2+y^2 = 2^2$.",
-        "prediction": "11. Evaluate the integral to find the area of the region between the two cylinders and the helicoid in the first octant",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Compute the are of that part of the helicoid z = arctan(y/x) which lies in the first octant between the cylinder $x^2+y^2 = 1^2$ and $x^2+y^2 = 2^2$.\n Consider the reasoning steps: \n 2. Set up a double integral in polar coordinates to find the area of the region between the two cylinders and the helicoid.\n4. Integrate the double integral with respect to r and θ to find the area of the region between the two cylinders and the helicoid.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Compute the are of that part of the helicoid z = arctan(y/x) which lies in the first octant between the cylinder $x^2+y^2 = 1^2$ and $x^2+y^2 = 2^2$.\nLet's think step by step.",
         "answer": 2.843,
         "rationale": {
             "Question": "Compute the are of that part of the helicoid z = arctan(y/x) which lies in the first octant between the cylinder $x^2+y^2 = 1^2$ and $x^2+y^2 = 2^2$.",
@@ -1248,14 +1309,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "elainewan/math_calculus_2_5.json",
         "question": "What is \\lim_{x \\to (\\pi)/2} (cos(x)cos(tan(x)))?",
-        "prediction": "equal to 1",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: What is \\lim_{x \\to (\\pi)/2} (cos(x)cos(tan(x)))?\n Consider the reasoning steps: \n 1. Use the trigonometric identity cos(x) = sin((pi)/2 - x) to rewrite the expression as sin((pi)/2 - x)cos(tan(x)), then apply the limit definition to find the limit.\n2. Use the trigonometric identity tan(x) = sin(x)/cos(x) to rewrite the expression as sin((pi)/2 - x)cos(sin(x)/cos(x)), then apply the limit definition to find the limit.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: What is \\lim_{x \\to (\\pi)/2} (cos(x)cos(tan(x)))?\nLet's think step by step.",
         "answer": 0,
         "rationale": {
             "Question": "What is \\lim_{x \\to (\\pi)/2} (cos(x)cos(tan(x)))?",
@@ -1269,14 +1331,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "integer"
+        "answer_type": "integer",
+        "correct": true
     },
     {
         "id": "mingyin/Fundamental-Theorem-of-Calculus1.json",
         "question": "what is the value of $\\int_{0}^\\pi (sin(123*x/2)/sin(x/2))^2dx$? Round the answer to the thousands decimal.",
-        "prediction": "14. Evaluate the integral at the limits of integration to find the final value of the integral",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: what is the value of $\\int_{0}^\\pi (sin(123*x/2)/sin(x/2))^2dx$? Round the answer to the thousands decimal.\n Consider the reasoning steps: \n 2. Use the substitution method by letting $u = x/2$ to simplify the integrand and then integrate with respect to $u$.\n4. Use the trigonometric identity $\\sin(2\\theta) = 2\\sin(\\theta)\\cos(\\theta)$ to simplify the integrand further before integrating.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: what is the value of $\\int_{0}^\\pi (sin(123*x/2)/sin(x/2))^2dx$? Round the answer to the thousands decimal.\nLet's think step by step.",
         "answer": 386.4158898,
         "rationale": {
             "Question": "what is the value of $\\int_{0}^\\pi (sin(123*x/2)/sin(x/2))^2dx$? Round the answer to the thousands decimal.",
@@ -1290,14 +1353,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "elainewan/math_calculus_3_3.json",
         "question": "Let g(x) = 1 / (1 + x^{3/2}), what is g'(x) when x = 1?",
-        "prediction": "-3/8",
+        "prediction": -0.375,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Let g(x) = 1 / (1 + x^{3/2}), what is g'(x) when x = 1?\n Consider the reasoning steps: \n 2. Rewrite g(x) as (1 + x^{3/2})^{-1} and then use the chain rule to find the derivative of g(x) with respect to x, then evaluate the derivative at x = 1.\n3. Apply the chain rule by first finding the derivative of the inner function, x^{3/2}, which is (3/2)x^{1/2}, then multiply by the derivative of the outer function, -(1 + x^{3/2})^{-2}, to get g'(x).\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Let g(x) = 1 / (1 + x^{3/2}), what is g'(x) when x = 1?\nLet's think step by step.",
         "answer": -0.375,
         "rationale": {
             "Question": "Let g(x) = 1 / (1 + x^{3/2}), what is g'(x) when x = 1?",
@@ -1311,14 +1375,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": true
     },
     {
         "id": "elainewan/math_real_analysis_additional_1.json",
         "question": "Let (x_n) be a sequence defined by x_1 = 2 and x_{n+1} = 1 + 1/(1 + x_n). If (x_n) converges, what must its limit be in decimals?",
-        "prediction": "1",
+        "prediction": 1,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Let (x_n) be a sequence defined by x_1 = 2 and x_{n+1} = 1 + 1/(1 + x_n). If (x_n) converges, what must its limit be in decimals?\n Consider the reasoning steps: \n 2. Use the recursive definition of the sequence to set up an equation for the limit L, where L = 1 + 1/(1 + L), and solve for L.\n3. Substitute L into the equation L = 1 + 1/(1 + L) and solve for L algebraically.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Let (x_n) be a sequence defined by x_1 = 2 and x_{n+1} = 1 + 1/(1 + x_n). If (x_n) converges, what must its limit be in decimals?\nLet's think step by step.",
         "answer": 1.414,
         "rationale": {
             "Question": "Let (x_n) be a sequence defined by x_1 = 2 and x_{n+1} = 1 + 1/(1 + x_n). If (x_n) converges, what must its limit be in decimals?",
@@ -1332,14 +1397,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "elainewan/math_calculus_15.json",
         "question": "Use the linear approximation to estimate (3.99)^3 (1.01)^4 (1.98)^{-1}.",
-        "prediction": "approximately 33.38",
+        "prediction": 32.01,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Use the linear approximation to estimate (3.99)^3 (1.01)^4 (1.98)^{-1}.\n Consider the reasoning steps: \n 2. Use the properties of exponents to simplify the expression before applying the linear approximation.\n2. Use the properties of exponents to rewrite the expression as a sum of logarithms before applying the linear approximation.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Use the linear approximation to estimate (3.99)^3 (1.01)^4 (1.98)^{-1}.\nLet's think step by step.",
         "answer": 33.36,
         "rationale": {
             "Question": "Use the linear approximation to estimate (3.99)^3 (1.01)^4 (1.98)^{-1}.",
@@ -1353,14 +1419,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "wenhuchen/curvature2.json",
         "question": "Find the curvature for f(x) = \\sqrt{4x - x^2}, x = 2.",
-        "prediction": "8/(27sqrt{2})",
+        "prediction": 0.75,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Find the curvature for f(x) = \\sqrt{4x - x^2}, x = 2.\n Consider the reasoning steps: \n 2. Use the formula for curvature, which is |f''(x)| / (1 + (f'(x))^2)^(3/2), to directly find the curvature at x = 2.\n4. Use the properties of square roots to simplify the function f(x) = \\sqrt{4x - x^2} before finding the first and second derivatives, and then substitute x = 2 into the curvature formula to find the curvature at x = 2.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Find the curvature for f(x) = \\sqrt{4x - x^2}, x = 2.\nLet's think step by step.",
         "answer": 0.5,
         "rationale": {
             "Question": "Find the curvature for f(x) = \\sqrt{4x - x^2}, x = 2.",
@@ -1374,14 +1441,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "wenhuchen/Rolle's_theorem.json",
         "question": "for a given function f(x)=x^2*sin(x). Is there a value $x$ between 10pi and 11pi such that $f'(x) = 0$?",
-        "prediction": "a value of x where f'(x) = 0 in the interval [10pi, 11pi], then that value represents a local extremum for the function f(x)=x^2*sin(x)",
+        "prediction": false,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: for a given function f(x)=x^2*sin(x). Is there a value $x$ between 10pi and 11pi such that $f'(x) = 0$?\n Consider the reasoning steps: \n 2. Use the first derivative test to determine if there is a value of x between 10pi and 11pi where the derivative is equal to 0.\n2. Use the first derivative test to analyze the sign of the derivative around the critical points found in the interval [10pi, 11pi] to determine if there is a value of x where f'(x) = 0.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: for a given function f(x)=x^2*sin(x). Is there a value $x$ between 10pi and 11pi such that $f'(x) = 0$?\nLet's think step by step.",
         "answer": true,
         "rationale": {
             "Question": "for a given function f(x)=x^2*sin(x). Is there a value $x$ between 10pi and 11pi such that $f'(x) = 0$?",
@@ -1395,14 +1463,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "bool"
+        "answer_type": "bool",
+        "correct": false
     },
     {
         "id": "elainewan/math_calculus_1_2.json",
         "question": "Is cos(\\pi/8) equal to (\\sqrt{2+\\sqrt{2}})/2?",
-        "prediction": "not equal to (√(2+√2))/2",
+        "prediction": true,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Is cos(\\pi/8) equal to (\\sqrt{2+\\sqrt{2}})/2?\n Consider the reasoning steps: \n 2. Use the half-angle formula for cosine to express cos(\\pi/8) in terms of cos(\\pi/4) and cos(\\pi/8).\n3. Use the double angle formula for cosine to express cos(\\pi/4) in terms of cos(\\pi/2) and simplify the expression for cos(\\pi/8) accordingly.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Is cos(\\pi/8) equal to (\\sqrt{2+\\sqrt{2}})/2?\nLet's think step by step.",
         "answer": true,
         "rationale": {
             "Question": "Is cos(\\pi/8) equal to (\\sqrt{2+\\sqrt{2}})/2?",
@@ -1416,14 +1485,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "bool"
+        "answer_type": "bool",
+        "correct": true
     },
     {
         "id": "elainewan/math_calculus_1.json",
         "question": "Does f (x) = x2 + cx + 1 have a real root when c=0?",
-        "prediction": "always non-negative), f(x) = x^2 + 1 does not have a real root when c=0",
+        "prediction": false,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Does f (x) = x2 + cx + 1 have a real root when c=0?\n Consider the reasoning steps: \n 1. Calculate the discriminant of the quadratic equation to determine if it has real roots when c=0.\n2. Set c=0 in the quadratic equation f(x) = x^2 + cx + 1 and solve for x to determine if there is a real root.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Does f (x) = x2 + cx + 1 have a real root when c=0?\nLet's think step by step.",
         "answer": false,
         "rationale": {
             "Question": "Does f (x) = x2 + cx + 1 have a real root when c=0?",
@@ -1437,14 +1507,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "bool"
+        "answer_type": "bool",
+        "correct": true
     },
     {
         "id": "wenhuchen/differential_equation3.json",
         "question": "Find the solutions y of the differential equation y'=(t^2+3y^2)/2ty with y(1) = 1. What is y(2)?",
-        "prediction": "10. Display or output the value of y(2) as the solution to the differential equation",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Find the solutions y of the differential equation y'=(t^2+3y^2)/2ty with y(1) = 1. What is y(2)?\n Consider the reasoning steps: \n 2. Use numerical methods such as Euler's method or Runge-Kutta method to approximate the solution y(t) and then find y(2) based on the approximation.\n2. Use a computer software or programming language to solve the differential equation numerically and find the value of y(2) accurately.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Find the solutions y of the differential equation y'=(t^2+3y^2)/2ty with y(1) = 1. What is y(2)?\nLet's think step by step.",
         "answer": 3.464,
         "rationale": {
             "Question": "Find the solutions y of the differential equation y'=(t^2+3y^2)/2ty with y(1) = 1. What is y(2)?",
@@ -1458,14 +1529,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "xueguangma/taylors_approximation_theorem.json",
         "question": "Using Taylor's Approximation Theorem to show: What is $\\lim_{x \\to 0} \\frac{e^\\frac{x^4}{2}-\\cos(x^2)}{x^4}$",
-        "prediction": "8. Thus, $\\lim_{x \\to 0} \\frac{e^\\frac{x^4}{2}-\\cos(x^2)}{x^4} = \\frac{1}{2}$",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Using Taylor's Approximation Theorem to show: What is $\\lim_{x \\to 0} \\frac{e^\\frac{x^4}{2}-\\cos(x^2)}{x^4}$\n Consider the reasoning steps: \n 1. Use Taylor's series expansion for $e^x$ and $\\cos(x)$ to approximate $e^\\frac{x^4}{2}$ and $\\cos(x^2)$, then simplify the expression and take the limit as $x$ approaches 0.\n1. Expand $e^\\frac{x^4}{2}$ and $\\cos(x^2)$ using their respective Taylor series expansions up to the necessary degree, then simplify the expression and take the limit as $x$ approaches 0.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Using Taylor's Approximation Theorem to show: What is $\\lim_{x \\to 0} \\frac{e^\\frac{x^4}{2}-\\cos(x^2)}{x^4}$\nLet's think step by step.",
         "answer": 1.0,
         "rationale": {
             "Question": "Using Taylor's Approximation Theorem to show: What is $\\lim_{x \\to 0} \\frac{e^\\frac{x^4}{2}-\\cos(x^2)}{x^4}$",
@@ -1479,14 +1551,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "elainewan/math_calculus_3_4.json",
         "question": "Let h(x) = (x^{-1/2} + 2x)(7 - x^{-1}). What is h'(x) when x = 4?",
-        "prediction": "h'(4) = 25/16",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Let h(x) = (x^{-1/2} + 2x)(7 - x^{-1}). What is h'(x) when x = 4?\n Consider the reasoning steps: \n 1. To solve this question, we can first find the derivative of h(x) using the product rule and then substitute x = 4 to find h'(4).\n1. Find the derivative of h(x) by applying the product rule: h'(x) = (1/2)x^(-3/2) + 2 - 7x^(-2) + 2x^(-1). \n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Let h(x) = (x^{-1/2} + 2x)(7 - x^{-1}). What is h'(x) when x = 4?\nLet's think step by step.",
         "answer": 13.609,
         "rationale": {
             "Question": "Let h(x) = (x^{-1/2} + 2x)(7 - x^{-1}). What is h'(x) when x = 4?",
@@ -1500,14 +1573,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "wenhuchen/stoke's_theorem1.json",
         "question": "Use Stoke's Theorem to evaluate $\\iint_S curl \\vec{F} \\cdot d \\vec{r}$ where $\\vec{F} = z^2 \\vec{i} - 3xy \\vec{j} + x^3y^3 \\vec{k}$ and $S$ is the part of $z = 5 - x^2 - y^2$ above the plane $z$=1. Assume that S is oriented upwards.",
-        "prediction": "the evaluation of the given surface integral using Stoke's Theorem",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Use Stoke's Theorem to evaluate $\\iint_S curl \\vec{F} \\cdot d \\vec{r}$ where $\\vec{F} = z^2 \\vec{i} - 3xy \\vec{j} + x^3y^3 \\vec{k}$ and $S$ is the part of $z = 5 - x^2 - y^2$ above the plane $z$=1. Assume that S is oriented upwards.\n Consider the reasoning steps: \n 2. Use Stoke's Theorem to rewrite the given surface integral as a line integral around the boundary of the surface $S$.\n4. Use the parametric equations $x = r\\cos(\\theta)$, $y = r\\sin(\\theta)$, $z = 5 - r^2$ to parameterize the boundary curve of $S$ and then evaluate the line integral $\\int_C \\vec{F} \\cdot d\\vec{r}$ around this curve.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Use Stoke's Theorem to evaluate $\\iint_S curl \\vec{F} \\cdot d \\vec{r}$ where $\\vec{F} = z^2 \\vec{i} - 3xy \\vec{j} + x^3y^3 \\vec{k}$ and $S$ is the part of $z = 5 - x^2 - y^2$ above the plane $z$=1. Assume that S is oriented upwards.\nLet's think step by step.",
         "answer": 0.0,
         "rationale": {
             "Question": "Use Stoke's Theorem to evaluate $\\iint_S curl \\vec{F} \\cdot d \\vec{r}$ where $\\vec{F} = z^2 \\vec{i} - 3xy \\vec{j} + x^3y^3 \\vec{k}$ and $S$ is the part of $z = 5 - x^2 - y^2$ above the plane $z$=1. Assume that S is oriented upwards.",
@@ -1521,14 +1595,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": true
     },
     {
         "id": "wenhuchen/ODE1.json",
         "question": "Derive the solution y = f(t) to the following IVP. $ty' - 2y = t^5sin(2t) - t^3 + 4t^4$, where $y(\\pi) = 3\\pi^4/2$. What is y(t) when $t=pi/2$.",
-        "prediction": "28. To find $y(\\frac{\\pi}{2})$, substitute $t = \\frac{\\pi}{2}$ into the final solution and solve for $y$",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Derive the solution y = f(t) to the following IVP. $ty' - 2y = t^5sin(2t) - t^3 + 4t^4$, where $y(\\pi) = 3\\pi^4/2$. What is y(t) when $t=pi/2$.\n Consider the reasoning steps: \n 2. Rewrite the equation in standard form and then solve using an integrating factor.\n4. Integrate both sides of the equation after multiplying by the integrating factor to solve for y(t).\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Derive the solution y = f(t) to the following IVP. $ty' - 2y = t^5sin(2t) - t^3 + 4t^4$, where $y(\\pi) = 3\\pi^4/2$. What is y(t) when $t=pi/2$.\nLet's think step by step.",
         "answer": 19.095,
         "rationale": {
             "Question": "Derive the solution y = f(t) to the following IVP. $ty' - 2y = t^5sin(2t) - t^3 + 4t^4$, where $y(\\pi) = 3\\pi^4/2$. What is y(t) when $t=pi/2$.",
@@ -1542,14 +1617,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "elainewan/math_calculus_14.json",
         "question": "Does r(t) = [8 - 4t^3, 2 + 5t^2, 9t^3] parametrize a line?",
-        "prediction": "6. Compare the given r(t) = [8 - 4t^3, 2 + 5t^2, 9t^3] to the vector form of a line to see if they match. If they do not match, it further confirms that r(t) does not parametrize a line",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Does r(t) = [8 - 4t^3, 2 + 5t^2, 9t^3] parametrize a line?\n Consider the reasoning steps: \n 1. Calculate the derivative of r(t) and see if it is a constant vector, which would indicate that r(t) parametrizes a line.\n2. Set up the equation of a line in vector form and compare it to the given r(t) to see if they match, indicating that r(t) parametrizes a line.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Does r(t) = [8 - 4t^3, 2 + 5t^2, 9t^3] parametrize a line?\nLet's think step by step.",
         "answer": false,
         "rationale": {
             "Question": "Does r(t) = [8 - 4t^3, 2 + 5t^2, 9t^3] parametrize a line?",
@@ -1563,14 +1639,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "bool"
+        "answer_type": "bool",
+        "correct": true
     },
     {
         "id": "wenhuchen/ODE2.json",
         "question": "Use Euler's Method to calculate the approximation of y(0.2) where y(x) is the solution of the initial-value problem that is as follows. y''+xy'+y=0 and y(0)=2 and y'(0) = 3.",
-        "prediction": "7. Compare the approximation of y(0.2) obtained using Euler's Method with the actual solution of the initial-value problem to evaluate the accuracy of the approximation",
+        "prediction": 0.2,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Use Euler's Method to calculate the approximation of y(0.2) where y(x) is the solution of the initial-value problem that is as follows. y''+xy'+y=0 and y(0)=2 and y'(0) = 3.\n Consider the reasoning steps: \n 2. Break down the differential equation into a system of first-order differential equations, then use Euler's Method to approximate the values of y and y' at each step until reaching y(0.2).\n2. Use Euler's Method to approximate the values of y and y' at smaller intervals, such as x=0.05, x=0.1, x=0.15, and finally x=0.2, to improve the accuracy of the approximation for y(0.2).\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Use Euler's Method to calculate the approximation of y(0.2) where y(x) is the solution of the initial-value problem that is as follows. y''+xy'+y=0 and y(0)=2 and y'(0) = 3.\nLet's think step by step.",
         "answer": 2.58,
         "rationale": {
             "Question": "Use Euler's Method to calculate the approximation of y(0.2) where y(x) is the solution of the initial-value problem that is as follows. y''+xy'+y=0 and y(0)=2 and y'(0) = 3.",
@@ -1584,14 +1661,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "elainewan/math_calculus_2_9.json",
         "question": "Suppose g(x) is the horizontal asymptote of function f(x) = (\\sqrt{36 x^2 + 7}) / (9x + 4). What are possible values of g(2023)?",
-        "prediction": "2/3",
+        "prediction": 224.7778,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Suppose g(x) is the horizontal asymptote of function f(x) = (\\sqrt{36 x^2 + 7}) / (9x + 4). What are possible values of g(2023)?\n Consider the reasoning steps: \n 2. Simplify the function f(x) by dividing both the numerator and denominator by the highest power of x to determine the horizontal asymptote g(x).\n2. Use the properties of limits to evaluate the limit of f(x) as x approaches infinity and find the horizontal asymptote g(x).\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Suppose g(x) is the horizontal asymptote of function f(x) = (\\sqrt{36 x^2 + 7}) / (9x + 4). What are possible values of g(2023)?\nLet's think step by step.",
         "answer": [
             0.6667,
             -0.6667
@@ -1611,14 +1689,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "list of float"
+        "answer_type": "list of float",
+        "correct": false
     },
     {
         "id": "mingyin/stokes-theorem1.json",
         "question": "compute the integral $\\iint_{\\Sigma} x^3 dy*dz +y^3 dz*dx+z^3 dx*dy$, where is the outward of the ellipsoid x^2+y^2+z^2/4=1. Round the answer to the thousands decimal.",
-        "prediction": "9. Evaluating this triple integral will give the final answer to the original surface integral over the ellipsoid",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: compute the integral $\\iint_{\\Sigma} x^3 dy*dz +y^3 dz*dx+z^3 dx*dy$, where is the outward of the ellipsoid x^2+y^2+z^2/4=1. Round the answer to the thousands decimal.\n Consider the reasoning steps: \n 2. Use the divergence theorem to convert the surface integral into a triple integral over the region enclosed by the ellipsoid, and then evaluate the triple integral.\n4. Use the equation of the ellipsoid to set up the limits of integration for the triple integral, and then evaluate the triple integral to find the final answer.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: compute the integral $\\iint_{\\Sigma} x^3 dy*dz +y^3 dz*dx+z^3 dx*dy$, where is the outward of the ellipsoid x^2+y^2+z^2/4=1. Round the answer to the thousands decimal.\nLet's think step by step.",
         "answer": 30.15928896,
         "rationale": {
             "Question": "compute the integral $\\iint_{\\Sigma} x^3 dy*dz +y^3 dz*dx+z^3 dx*dy$, where is the outward of the ellipsoid x^2+y^2+z^2/4=1. Round the answer to the thousands decimal.",
@@ -1632,14 +1711,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "xueguangma/extreme_value_theorem.json",
         "question": "Let $f(x) = 1/x$ on $(0, 1]$ and $f(x) = 3$ if $x = 0$. Is there a global maximum on interval $[0, 1]$?",
-        "prediction": "a global maximum on the interval $[0, 1]$ by considering the behavior of $f(x)$ at the critical points and the endpoints of the interval",
+        "prediction": true,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Let $f(x) = 1/x$ on $(0, 1]$ and $f(x) = 3$ if $x = 0$. Is there a global maximum on interval $[0, 1]$?\n Consider the reasoning steps: \n 2. Use the first and second derivative tests to analyze the behavior of the function $f(x)$ on the interval $[0, 1]$ and determine if there is a global maximum.\n4. Use the first and second derivative tests to analyze the critical points found in step 3 and determine if there is a global maximum on the interval $[0, 1]$.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Let $f(x) = 1/x$ on $(0, 1]$ and $f(x) = 3$ if $x = 0$. Is there a global maximum on interval $[0, 1]$?\nLet's think step by step.",
         "answer": false,
         "rationale": {
             "Question": "Let $f(x) = 1/x$ on $(0, 1]$ and $f(x) = 3$ if $x = 0$. Is there a global maximum on interval $[0, 1]$?",
@@ -1653,14 +1733,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "bool"
+        "answer_type": "bool",
+        "correct": false
     },
     {
         "id": "elainewan/math_calculus_2.json",
         "question": "What is \\lim_{x \to 9} ((x - 9)/(\\sqrt{x} - 3))?",
-        "prediction": "Therefore, \\lim_{x \\to 9} ((x - 9)/(\\sqrt{x} - 3)) = 12",
+        "prediction": 6,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: What is \\lim_{x \to 9} ((x - 9)/(\\sqrt{x} - 3))?\n Consider the reasoning steps: \n 1. Rationalize the denominator by multiplying both the numerator and denominator by the conjugate of the denominator, which is (\\sqrt{x} + 3).\n3. Substitute x = 9 into the simplified expression to find the limit.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: What is \\lim_{x \to 9} ((x - 9)/(\\sqrt{x} - 3))?\nLet's think step by step.",
         "answer": 6,
         "rationale": {
             "Question": "What is \\lim_{x \to 9} ((x - 9)/(\\sqrt{x} - 3))?",
@@ -1674,14 +1755,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "integer"
+        "answer_type": "integer",
+        "correct": true
     },
     {
         "id": "wenhuchen/Simpson's_rule2.json",
         "question": "Using n=8 approximate the value of $\\int_{0}^4 cos(1 + \\sqrt{x}) dx$ using the Simpson's rule.",
-        "prediction": "12. Add up the results from each pair of subintervals to obtain the final approximation of the integral $\\int_{0}^4 cos(1 + \\sqrt{x}) dx$ using Simpson's rule with n=8",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Using n=8 approximate the value of $\\int_{0}^4 cos(1 + \\sqrt{x}) dx$ using the Simpson's rule.\n Consider the reasoning steps: \n 2. Apply Simpson's rule formula to approximate the value of the integral by summing the values of the function at the endpoints and midpoints of the subintervals.\n4. Calculate the width of each subinterval, determine the values of the function at the endpoints and midpoints of each subinterval, and then apply Simpson's rule formula to approximate the value of the integral.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Using n=8 approximate the value of $\\int_{0}^4 cos(1 + \\sqrt{x}) dx$ using the Simpson's rule.\nLet's think step by step.",
         "answer": -2.47160136,
         "rationale": {
             "Question": "Using n=8 approximate the value of $\\int_{0}^4 cos(1 + \\sqrt{x}) dx$ using the Simpson's rule.",
@@ -1695,14 +1777,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "elainewan/math_calculus_7_5.json",
         "question": "What is the value of the inflection point of f(x) =(10 ln(x))/(x^2)?",
-        "prediction": "10. Calculate the value of y to get f(2) = 5 ln(2) / 2",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: What is the value of the inflection point of f(x) =(10 ln(x))/(x^2)?\n Consider the reasoning steps: \n 1. Find the second derivative of f(x) and set it equal to 0 to solve for the x-value of the inflection point.\n2. Once the x-value of the inflection point is found, substitute it back into the original function f(x) to find the corresponding y-value.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: What is the value of the inflection point of f(x) =(10 ln(x))/(x^2)?\nLet's think step by step.",
         "answer": 2.301,
         "rationale": {
             "Question": "What is the value of the inflection point of f(x) =(10 ln(x))/(x^2)?",
@@ -1716,14 +1799,19 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "wenhuchen/curvature3.json",
         "question": "If r(t) = (6t+2)i + 5t^2j - 8tk, find the Binormal vector as [xi, yj, zk]. What are x, y, z? Return them as a list.",
-        "prediction": "9. Write the components of the Binormal vector as [xi, yj, zk] and return x, y, z as a list",
+        "prediction": [
+            -8,
+            0,
+            -6
+        ],
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: If r(t) = (6t+2)i + 5t^2j - 8tk, find the Binormal vector as [xi, yj, zk]. What are x, y, z? Return them as a list.\n Consider the reasoning steps: \n 2. Use the formula for the Binormal vector directly by finding the cross product of the Tangent and Normal vectors: B = (T x N) / ||T x N||.\n1. Calculate the Tangent vector by finding the derivative of r(t) with respect to t.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: If r(t) = (6t+2)i + 5t^2j - 8tk, find the Binormal vector as [xi, yj, zk]. What are x, y, z? Return them as a list.\nLet's think step by step.",
         "answer": [
             0.8,
             0.0,
@@ -1745,14 +1833,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "list of float"
+        "answer_type": "list of float",
+        "correct": false
     },
     {
         "id": "elainewan/math_real_analysis_additional_2.json",
         "question": "Define f(x)=(4x+5)/(9-3x), is the function continuous at x=-1?",
-        "prediction": "continuous at x=-1",
+        "prediction": true,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Define f(x)=(4x+5)/(9-3x), is the function continuous at x=-1?\n Consider the reasoning steps: \n 2. Determine if the function is continuous at x=-1 by checking if the limit of the function as x approaches -1 exists and is equal to the value of the function at x=-1.\n1. Calculate the limit of the function as x approaches -1 by plugging in -1 for x and simplifying the expression.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Define f(x)=(4x+5)/(9-3x), is the function continuous at x=-1?\nLet's think step by step.",
         "answer": true,
         "rationale": {
             "Question": "Define f(x)=(4x+5)/(9-3x), is the function continuous at x=-1?",
@@ -1766,14 +1855,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "bool"
+        "answer_type": "bool",
+        "correct": true
     },
     {
         "id": "mingyin/Fundamental-Theorem-of-Calculus2.json",
         "question": "what is the limit of (2n)!!/(2n+1)!! as n goes to infinity?",
-        "prediction": "0",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: what is the limit of (2n)!!/(2n+1)!! as n goes to infinity?\n Consider the reasoning steps: \n 2. Apply Stirling's approximation to the factorials in the expression and evaluate the limit.\n3. Rewrite the expression using Stirling's approximation for factorials: (2n)!/(2n+1)! = (2n)!/(2n+1)(2n)!. \n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: what is the limit of (2n)!!/(2n+1)!! as n goes to infinity?\nLet's think step by step.",
         "answer": 0.0,
         "rationale": {
             "Question": "what is the limit of (2n)!!/(2n+1)!! as n goes to infinity?",
@@ -1787,14 +1877,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": true
     },
     {
         "id": "elainewan/math_calculus_3_6.json",
         "question": "Find acceleration in m/(min^2) at time t = 5 min of a helicopter whose height is s(t) = 300t - 4t^3 m.",
-        "prediction": "-120 m/(min^2)",
+        "prediction": -120,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Find acceleration in m/(min^2) at time t = 5 min of a helicopter whose height is s(t) = 300t - 4t^3 m.\n Consider the reasoning steps: \n 1. Calculate the velocity function by finding the derivative of the height function with respect to time, s'(t).\n3. Calculate the acceleration function by finding the derivative of the velocity function with respect to time, v'(t), and then substitute t = 5 min to find the acceleration at t = 5 min, a(5).\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Find acceleration in m/(min^2) at time t = 5 min of a helicopter whose height is s(t) = 300t - 4t^3 m.\nLet's think step by step.",
         "answer": -120,
         "rationale": {
             "Question": "Find acceleration in m/(min^2) at time t = 5 min of a helicopter whose height is s(t) = 300t - 4t^3 m.",
@@ -1808,14 +1899,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "integer"
+        "answer_type": "integer",
+        "correct": true
     },
     {
         "id": "elainewan/math_calculus_2_6.json",
         "question": "What is \\lim_{x \\to 0} (csc(x) - cot(x))?",
-        "prediction": "undefined",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: What is \\lim_{x \\to 0} (csc(x) - cot(x))?\n Consider the reasoning steps: \n 2. Combine the fractions to get a common denominator and simplify the expression further before evaluating the limit as x approaches 0.\n3. Rewrite csc(x) as 1/sin(x) and cot(x) as cos(x)/sin(x), then combine the fractions to get a common denominator and simplify the expression further before evaluating the limit as x approaches 0.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: What is \\lim_{x \\to 0} (csc(x) - cot(x))?\nLet's think step by step.",
         "answer": 0,
         "rationale": {
             "Question": "What is \\lim_{x \\to 0} (csc(x) - cot(x))?",
@@ -1829,14 +1921,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "integer"
+        "answer_type": "integer",
+        "correct": true
     },
     {
         "id": "wenhuchen/double_integral2.json",
         "question": "Compute the integral $\\iint_D xy^2 dA$, where $D$ is the rectangle defined by 0 <= x <= 2 and 0 <= y <= 1.",
-        "prediction": "$\\frac{2}{3}$",
+        "prediction": 0.6666666666666666,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Compute the integral $\\iint_D xy^2 dA$, where $D$ is the rectangle defined by 0 <= x <= 2 and 0 <= y <= 1.\n Consider the reasoning steps: \n 1. Convert the double integral into iterated integrals by integrating first with respect to y and then with respect to x.\n2. Integrate first with respect to y: $\\int_0^1 \\int_0^2 xy^2 dx dy$\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Compute the integral $\\iint_D xy^2 dA$, where $D$ is the rectangle defined by 0 <= x <= 2 and 0 <= y <= 1.\nLet's think step by step.",
         "answer": 0.66667,
         "rationale": {
             "Question": "Compute the integral $\\iint_D xy^2 dA$, where $D$ is the rectangle defined by 0 <= x <= 2 and 0 <= y <= 1.",
@@ -1850,14 +1943,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": true
     },
     {
         "id": "wenhuchen/double_integral1.json",
         "question": "Passing to polar coordinates, calculate the double integral $\\iint_S ydxdy$ with $y$ > 0, where S is a semicircle of a diameter 1 with center at point C(1/2, 0) above the X axis.",
-        "prediction": "equal to 0",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Passing to polar coordinates, calculate the double integral $\\iint_S ydxdy$ with $y$ > 0, where S is a semicircle of a diameter 1 with center at point C(1/2, 0) above the X axis.\n Consider the reasoning steps: \n 2. Express $y$ in terms of $r$ and $\\theta$ in polar coordinates, and then set up the double integral in polar coordinates with the appropriate limits of integration for $r$ and $\\theta$ to cover the semicircle.\n3. Substitute $y = r\\sin(\\theta)$ into the integral, and then set up the double integral in polar coordinates with the limits of integration for $r$ from 0 to 1 and for $\\theta$ from 0 to $\\pi$ to cover the semicircle.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Passing to polar coordinates, calculate the double integral $\\iint_S ydxdy$ with $y$ > 0, where S is a semicircle of a diameter 1 with center at point C(1/2, 0) above the X axis.\nLet's think step by step.",
         "answer": 0.0833,
         "rationale": {
             "Question": "Passing to polar coordinates, calculate the double integral $\\iint_S ydxdy$ with $y$ > 0, where S is a semicircle of a diameter 1 with center at point C(1/2, 0) above the X axis.",
@@ -1871,14 +1965,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "wenhuchen/divergence1.json",
         "question": "Use divergence therem to evaluate $\\iint_S \\vec{F} \\cdot d \\vec{S}$ where $\\vec{F} = xy \\vec{i} - \\frac{1}{2}y^2\\vec{j} + z\\vec{k}$ and the surface $S$ consists of the three surfaces, $z=4 - 3*x^2 - 3y^2, 1 \\le z \\le 1$ on the sides and $z=0$ on the bottom.",
-        "prediction": "0",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Use divergence therem to evaluate $\\iint_S \\vec{F} \\cdot d \\vec{S}$ where $\\vec{F} = xy \\vec{i} - \\frac{1}{2}y^2\\vec{j} + z\\vec{k}$ and the surface $S$ consists of the three surfaces, $z=4 - 3*x^2 - 3y^2, 1 \\le z \\le 1$ on the sides and $z=0$ on the bottom.\n Consider the reasoning steps: \n 2. Apply the divergence theorem, which states that $\\iint_S \\vec{F} \\cdot d \\vec{S} = \\iiint_V \\nabla \\cdot \\vec{F} dV$, where $V$ is the region enclosed by the surface $S$.\n4. Set up the triple integral $\\iiint_V \\nabla \\cdot \\vec{F} dV$ over the region $V$ enclosed by the surface $S$, using the given limits of integration for $z$ and the surface equations for $x$ and $y$.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Use divergence therem to evaluate $\\iint_S \\vec{F} \\cdot d \\vec{S}$ where $\\vec{F} = xy \\vec{i} - \\frac{1}{2}y^2\\vec{j} + z\\vec{k}$ and the surface $S$ consists of the three surfaces, $z=4 - 3*x^2 - 3y^2, 1 \\le z \\le 1$ on the sides and $z=0$ on the bottom.\nLet's think step by step.",
         "answer": 7.853,
         "rationale": {
             "Question": "Use divergence therem to evaluate $\\iint_S \\vec{F} \\cdot d \\vec{S}$ where $\\vec{F} = xy \\vec{i} - \\frac{1}{2}y^2\\vec{j} + z\\vec{k}$ and the surface $S$ consists of the three surfaces, $z=4 - 3*x^2 - 3y^2, 1 \\le z \\le 1$ on the sides and $z=0$ on the bottom.",
@@ -1892,14 +1987,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "elainewan/math_calculus_3_5.json",
         "question": "Let h(x) = 1/(\\sqrt{x} + 1). What is h''(x) when x = 1?",
-        "prediction": "10. Finally, evaluate h''(1) by substituting x = 1 into the expression for h''(x) to get the second derivative at x = 1",
+        "prediction": 0.0625,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Let h(x) = 1/(\\sqrt{x} + 1). What is h''(x) when x = 1?\n Consider the reasoning steps: \n 2. Use the quotient rule to find h''(x) directly by taking the second derivative of h(x) with respect to x, and then evaluate h''(1).\n2. Simplify the expression for h(x) by rationalizing the denominator before finding the second derivative.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Let h(x) = 1/(\\sqrt{x} + 1). What is h''(x) when x = 1?\nLet's think step by step.",
         "answer": 0.125,
         "rationale": {
             "Question": "Let h(x) = 1/(\\sqrt{x} + 1). What is h''(x) when x = 1?",
@@ -1913,14 +2009,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "wenhuchen/chain_rule2.json",
         "question": "If z = \\frac{1 + e^{-2x}}{x + tan(12x)}, what's the derivative of $\\frac{\\partial z}{\\partial x}$ at $x = 1$.",
-        "prediction": "6. Evaluate z' at x = 1 to find the derivative of z with respect to x at x = 1",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: If z = \\frac{1 + e^{-2x}}{x + tan(12x)}, what's the derivative of $\\frac{\\partial z}{\\partial x}$ at $x = 1$.\n Consider the reasoning steps: \n 2. Rewrite the expression for z using properties of exponentials and trigonometric functions to simplify the differentiation process, then find the derivative at x = 1.\n1. Rewrite the expression for z as z = (1 + e^(-2x))/(x + tan(12x)) = (1 + e^(-2x))/(x + sin(12x)/cos(12x)), then find the derivative at x = 1.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: If z = \\frac{1 + e^{-2x}}{x + tan(12x)}, what's the derivative of $\\frac{\\partial z}{\\partial x}$ at $x = 1$.\nLet's think step by step.",
         "answer": -153.59,
         "rationale": {
             "Question": "If z = \\frac{1 + e^{-2x}}{x + tan(12x)}, what's the derivative of $\\frac{\\partial z}{\\partial x}$ at $x = 1$.",
@@ -1934,14 +2031,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "xueguangma/fubini_theorem.json",
         "question": "Compute the double integrals over indicated rectangles $\\iint\\limits_{R}{{2x - 4{y^3}\\,dA}}$, $R = [-5,4] \\times [0, 3]",
-        "prediction": "54",
+        "prediction": -606,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Compute the double integrals over indicated rectangles $\\iint\\limits_{R}{{2x - 4{y^3}\\,dA}}$, $R = [-5,4] \\times [0, 3]\n Consider the reasoning steps: \n 2. Use the properties of double integrals to split the given integral into two separate integrals, one for 2x and one for -4y^3, and then evaluate each integral separately over the rectangle R.\n3. For the integral of 2x over R, we can first integrate with respect to x from -5 to 4, and then integrate the result with respect to y from 0 to 3.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Compute the double integrals over indicated rectangles $\\iint\\limits_{R}{{2x - 4{y^3}\\,dA}}$, $R = [-5,4] \\times [0, 3]\nLet's think step by step.",
         "answer": -756,
         "rationale": {
             "Question": "Compute the double integrals over indicated rectangles $\\iint\\limits_{R}{{2x - 4{y^3}\\,dA}}$, $R = [-5,4] \\times [0, 3]",
@@ -1955,14 +2053,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "integer"
+        "answer_type": "integer",
+        "correct": false
     },
     {
         "id": "wenhuchen/line_integral1.json",
         "question": "The position of a point for any time t (t>0) s defined by the equations: x=2t, y=ln(t), z = t^2. Find the mean velocity of motion between times t=1 and t=10.",
-        "prediction": "- Mean velocity = (2, ln(10)/9, 11)",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: The position of a point for any time t (t>0) s defined by the equations: x=2t, y=ln(t), z = t^2. Find the mean velocity of motion between times t=1 and t=10.\n Consider the reasoning steps: \n 2. Differentiate the position equations with respect to time to find the velocity vector, then calculate the average velocity between times t=1 and t=10.\n3. Integrate the velocity vector over the interval t=1 to t=10 and divide by the length of the interval to find the mean velocity.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: The position of a point for any time t (t>0) s defined by the equations: x=2t, y=ln(t), z = t^2. Find the mean velocity of motion between times t=1 and t=10.\nLet's think step by step.",
         "answer": 11.25,
         "rationale": {
             "Question": "The position of a point for any time t (t>0) s defined by the equations: x=2t, y=ln(t), z = t^2. Find the mean velocity of motion between times t=1 and t=10.",
@@ -1976,14 +2075,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "wenhuchen/chain_rule1.json",
         "question": "If z = arctan(e^{1 + (1 + x)^2}), what's the derivative of $\\frac{\\partial z}{\\partial x}$ at x = 0.",
-        "prediction": "$\\frac{2e^2}{1 + e^4}$",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: If z = arctan(e^{1 + (1 + x)^2}), what's the derivative of $\\frac{\\partial z}{\\partial x}$ at x = 0.\n Consider the reasoning steps: \n 2. Rewrite the expression for z in terms of x, then find the derivative directly and evaluate at x = 0.\n2. Use the chain rule to find the derivative of z with respect to x, then evaluate at x = 0.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: If z = arctan(e^{1 + (1 + x)^2}), what's the derivative of $\\frac{\\partial z}{\\partial x}$ at x = 0.\nLet's think step by step.",
         "answer": 0.3017,
         "rationale": {
             "Question": "If z = arctan(e^{1 + (1 + x)^2}), what's the derivative of $\\frac{\\partial z}{\\partial x}$ at x = 0.",
@@ -1997,14 +2097,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "elainewan/math_real_analysis_additional_4.json",
         "question": "Consider the set S:= {2^{-m} + n^{-1}: m, n \\in N}. What is the maximum of S?",
-        "prediction": "8. Compare the values obtained to determine the maximum value of the set S",
+        "prediction": 1.5,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Consider the set S:= {2^{-m} + n^{-1}: m, n \\in N}. What is the maximum of S?\n Consider the reasoning steps: \n 2. Another approach could be to analyze the behavior of the function as x approaches infinity and determine if there is a maximum value that can be reached.\n3. Calculate the derivative of the function with respect to x and set it equal to zero to find critical points.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Consider the set S:= {2^{-m} + n^{-1}: m, n \\in N}. What is the maximum of S?\nLet's think step by step.",
         "answer": false,
         "rationale": {
             "Question": "Consider the set S:= {2^{-m} + n^{-1}: m, n \\in N}. What is the maximum of S?",
@@ -2018,14 +2119,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "bool"
+        "answer_type": "bool",
+        "correct": false
     },
     {
         "id": "elainewan/math_calculus_2_12.json",
         "question": "Does 2^x +1/x = -4 have a solution?",
-        "prediction": "no real solutions for the equation 2^x + 1/x = -4",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Does 2^x +1/x = -4 have a solution?\n Consider the reasoning steps: \n 2. Use algebraic manipulation to simplify the equation and see if it can be rearranged to show that there are no solutions.\n2. Substitute different values of x into the equation to see if any value satisfies the equation.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Does 2^x +1/x = -4 have a solution?\nLet's think step by step.",
         "answer": true,
         "rationale": {
             "Question": "Does 2^x +1/x = -4 have a solution?",
@@ -2039,14 +2141,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "bool"
+        "answer_type": "bool",
+        "correct": false
     },
     {
         "id": "elainewan/math_calculus_2_2.json",
         "question": "\\lim_{x \\to 1}(1/(x - 1) - c/(x^3 - 1)) exists. What is the value of c?",
-        "prediction": "determined by solving the equation obtained in the previous step",
+        "prediction": false,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: \\lim_{x \\to 1}(1/(x - 1) - c/(x^3 - 1)) exists. What is the value of c?\n Consider the reasoning steps: \n 2. Use L'Hopital's Rule to evaluate the limit by taking the derivative of the numerator and denominator separately.\n2. Factor the denominator of the expression as (x - 1)(x^2 + x + 1) to simplify the expression before applying L'Hopital's Rule.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: \\lim_{x \\to 1}(1/(x - 1) - c/(x^3 - 1)) exists. What is the value of c?\nLet's think step by step.",
         "answer": 3,
         "rationale": {
             "Question": "\\lim_{x \\to 1}(1/(x - 1) - c/(x^3 - 1)) exists. What is the value of c?",
@@ -2060,14 +2163,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "integer"
+        "answer_type": "integer",
+        "correct": false
     },
     {
         "id": "elainewan/math_calculus_12.json",
         "question": "A model rocket follows the trajectory c(t) = (80t, 200t - 4.9t^2) until it hits the ground, with t in seconds and distance in meters. Find the rocket's maximum height in meters.",
-        "prediction": "the maximum height of the rocket in meters",
+        "prediction": 1628.8,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: A model rocket follows the trajectory c(t) = (80t, 200t - 4.9t^2) until it hits the ground, with t in seconds and distance in meters. Find the rocket's maximum height in meters.\n Consider the reasoning steps: \n 2. Another approach could be to set up the equation for the height function h(t) = 200t - 4.9t^2 and then find the vertex of the parabola, which represents the maximum height of the rocket.\n4. Use the fact that the maximum height occurs when the vertical velocity of the rocket is zero, and solve for the time t when the vertical velocity is zero.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: A model rocket follows the trajectory c(t) = (80t, 200t - 4.9t^2) until it hits the ground, with t in seconds and distance in meters. Find the rocket's maximum height in meters.\nLet's think step by step.",
         "answer": 2041,
         "rationale": {
             "Question": "A model rocket follows the trajectory c(t) = (80t, 200t - 4.9t^2) until it hits the ground, with t in seconds and distance in meters. Find the rocket's maximum height in meters.",
@@ -2081,14 +2185,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "integer"
+        "answer_type": "integer",
+        "correct": false
     },
     {
         "id": "wenhuchen/derivative3.json",
         "question": "If $x=4*cost(t)$ and $y=8*sin(x)$, what is $y{''}_{xx}$ at t=pi/3?",
-        "prediction": "d^2y/dx^2 = -16*sin(2) - 16√3*cos(2)",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: If $x=4*cost(t)$ and $y=8*sin(x)$, what is $y{''}_{xx}$ at t=pi/3?\n Consider the reasoning steps: \n 2. Use the chain rule to find dy/dx and d^2y/dx^2, then substitute x=4*cost(t) and t=pi/3 to find the value at t=pi/3.\n3. Calculate dy/dx by finding the derivative of y with respect to x, then find d^2y/dx^2 by taking the derivative of dy/dx. Finally, substitute x=4*cost(pi/3) into the equation to find the value of d^2y/dx^2 at t=pi/3.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: If $x=4*cost(t)$ and $y=8*sin(x)$, what is $y{''}_{xx}$ at t=pi/3?\nLet's think step by step.",
         "answer": -4.0,
         "rationale": {
             "Question": "If $x=4*cost(t)$ and $y=8*sin(x)$, what is $y{''}_{xx}$ at t=pi/3?",
@@ -2102,14 +2207,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "mingyin/Fundamental-Theorem-of-Calculus3.json",
         "question": "what is the value of \\int_a^b \\frac{dx}{\\sqrt{(x-a)(b-x)}}? Round the answer to the thousands decimal.",
-        "prediction": "11. Round the answer to the thousands decimal",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: what is the value of \\int_a^b \\frac{dx}{\\sqrt{(x-a)(b-x)}}? Round the answer to the thousands decimal.\n Consider the reasoning steps: \n 2. Another possible next step is to use the method of partial fractions to simplify the integrand before integrating.\n4. Another possible next step is to use trigonometric substitution, such as letting $x = \\frac{a+b}{2} + \\frac{b-a}{2}\\sin^2(u)$, to simplify the integrand before integrating.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: what is the value of \\int_a^b \\frac{dx}{\\sqrt{(x-a)(b-x)}}? Round the answer to the thousands decimal.\nLet's think step by step.",
         "answer": 3.1415926,
         "rationale": {
             "Question": "what is the value of \\int_a^b \\frac{dx}{\\sqrt{(x-a)(b-x)}}? Round the answer to the thousands decimal.",
@@ -2123,14 +2229,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     },
     {
         "id": "wenhuchen/L'Hôpital_rule1.json",
         "question": "What is (sin(2x) / x)^(1+x) when x is approaching 0?",
-        "prediction": "6. Take the limit as x approaches 0 to get the final result",
+        "prediction": 2,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: What is (sin(2x) / x)^(1+x) when x is approaching 0?\n Consider the reasoning steps: \n 2. Expand the expression using the Maclaurin series for sin(2x) and simplify before taking the limit as x approaches 0.\n2. Rewrite the expression as (2x - (2x)^3/3! + (2x)^5/5! - ...) / x and simplify before taking the limit as x approaches 0.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: What is (sin(2x) / x)^(1+x) when x is approaching 0?\nLet's think step by step.",
         "answer": 2.0,
         "rationale": {
             "Question": "What is (sin(2x) / x)^(1+x) when x is approaching 0?",
@@ -2144,14 +2251,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": true
     },
     {
         "id": "wenhuchen/differential_equation4.json",
         "question": "Is differential equation $sin(t)y' + t^2e^yy' - y' = -ycos(t) - 2te^y$ exact or not?",
-        "prediction": "7. Solve the exact differential equation to find the solution to the original differential equation",
+        "prediction": false,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Is differential equation $sin(t)y' + t^2e^yy' - y' = -ycos(t) - 2te^y$ exact or not?\n Consider the reasoning steps: \n 2. Try to simplify the equation by rearranging terms and see if it can be transformed into an exact differential equation.\n2. If the equation is not exact, try to find an integrating factor that can make it exact. This can be done by multiplying the entire equation by a function of either x or y, depending on which makes the equation exact.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Is differential equation $sin(t)y' + t^2e^yy' - y' = -ycos(t) - 2te^y$ exact or not?\nLet's think step by step.",
         "answer": true,
         "rationale": {
             "Question": "Is differential equation $sin(t)y' + t^2e^yy' - y' = -ycos(t) - 2te^y$ exact or not?",
@@ -2165,14 +2273,15 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "bool"
+        "answer_type": "bool",
+        "correct": false
     },
     {
         "id": "wenhuchen/divergence3.json",
         "question": "Use divergence therem to evaluate $\\iint_S \\vec{F} \\cdot d \\vec{S}$ where $\\vec{F} = sin(\\pi x) \\vec{i} + (z y^3)\\vec{j} + (z^2 + 4x)\\vec{k}$ and $S$ is the suface of the box with $-1 \\le x \\le 2, 0 \\le y \\le 1$ and $1 \\le z \\le 4$. Note that all six sides of the box are included in $S$.",
-        "prediction": "47",
+        "prediction": 0,
         "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
-        "llm_user_prompt": "Question: Use divergence therem to evaluate $\\iint_S \\vec{F} \\cdot d \\vec{S}$ where $\\vec{F} = sin(\\pi x) \\vec{i} + (z y^3)\\vec{j} + (z^2 + 4x)\\vec{k}$ and $S$ is the suface of the box with $-1 \\le x \\le 2, 0 \\le y \\le 1$ and $1 \\le z \\le 4$. Note that all six sides of the box are included in $S$.\n Consider the reasoning steps: \n 2. Apply the divergence theorem, which states that $\\iint_S \\vec{F} \\cdot d \\vec{S} = \\iiint_V \\nabla \\cdot \\vec{F} dV$, where $V$ is the region enclosed by the surface $S$.\n4. Integrate the divergence over the region $V$ enclosed by the surface $S$, which in this case is the box defined by $-1 \\le x \\le 2, 0 \\le y \\le 1$ and $1 \\le z \\le 4$.\n\nWrite the continuation steps line by line.",
+        "llm_user_prompt": "Question: Use divergence therem to evaluate $\\iint_S \\vec{F} \\cdot d \\vec{S}$ where $\\vec{F} = sin(\\pi x) \\vec{i} + (z y^3)\\vec{j} + (z^2 + 4x)\\vec{k}$ and $S$ is the suface of the box with $-1 \\le x \\le 2, 0 \\le y \\le 1$ and $1 \\le z \\le 4$. Note that all six sides of the box are included in $S$.\nLet's think step by step.",
         "answer": 67.5,
         "rationale": {
             "Question": "Use divergence therem to evaluate $\\iint_S \\vec{F} \\cdot d \\vec{S}$ where $\\vec{F} = sin(\\pi x) \\vec{i} + (z y^3)\\vec{j} + (z^2 + 4x)\\vec{k}$ and $S$ is the suface of the box with $-1 \\le x \\le 2, 0 \\le y \\le 1$ and $1 \\le z \\le 4$. Note that all six sides of the box are included in $S$.",
@@ -2186,6 +2295,7 @@
             "subfield": "Calculus",
             "field": "Math"
         },
-        "answer_type": "float"
+        "answer_type": "float",
+        "correct": false
     }
 ]

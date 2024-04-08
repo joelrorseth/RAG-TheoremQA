@@ -188,6 +188,7 @@ def _parse_and_write_pdf_textbook_contents(
         chapter_content = []
 
     # Verify that the expected number of chapters were read
+    # TODO: Also check that last chapter has expected number of sections
     num_chapters = len(textbook_outline_dict["chapters"])
     if len(contents) < num_chapters:
         raise ValueError(

@@ -1,0 +1,155 @@
+[
+    {
+        "id": "mingyin/Bounded-variation1.json",
+        "question": "Let f be a real function on [0,1]. If the bounded variation of f on [0,1] equals f(1)-f(0), then: (a) f is increasing on [0,1]; (b) f is decreasing on [0,1]; (c) None of the above. Which one is correct?",
+        "prediction": "(c) None of the above",
+        "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
+        "llm_user_prompt": "Question: Let f be a real function on [0,1]. If the bounded variation of f on [0,1] equals f(1)-f(0), then: (a) f is increasing on [0,1]; (b) f is decreasing on [0,1]; (c) None of the above. Which one is correct?\nLet's think step by step.",
+        "answer": "(a)",
+        "rationale": {
+            "Question": "Let f be a real function on [0,1]. If the bounded variation of f on [0,1] equals f(1)-f(0), then: (a) f is increasing on [0,1]; (b) f is decreasing on [0,1]; (c) None of the above. Which one is correct?",
+            "Answer": "(a)",
+            "Picture": null,
+            "Answer_type": "option",
+            "source": "real analysis: 5.2 thinking 11",
+            "id": "mingyin/Bounded-variation1.json",
+            "explanation": "NONE",
+            "theorem": "bounded variation",
+            "subfield": "Real analysis",
+            "field": "Math"
+        },
+        "answer_type": "option"
+    },
+    {
+        "id": "mingyin/Lebesgue-measure3.json",
+        "question": "Let I=[0,1]\\times[0,1]. Suppose $E={(x, y) \\in I: sin(x)<\\frac{1}{2}, cos(x+y) is irrational}$, what is the Lebesgue measure of E?",
+        "prediction": "arcsin(1/2) * 2π",
+        "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
+        "llm_user_prompt": "Question: Let I=[0,1]\\times[0,1]. Suppose $E={(x, y) \\in I: sin(x)<\\frac{1}{2}, cos(x+y) is irrational}$, what is the Lebesgue measure of E?\nLet's think step by step.",
+        "answer": 0.5235987667,
+        "rationale": {
+            "Question": "Let I=[0,1]\\times[0,1]. Suppose $E={(x, y) \\in I: sin(x)<\\frac{1}{2}, cos(x+y) is irrational}$, what is the Lebesgue measure of E?",
+            "Answer": 0.5235987667,
+            "Picture": null,
+            "Answer_type": "float",
+            "source": "real analysis: chapter 2 exercise 2 question 6",
+            "id": "mingyin/Lebesgue-measure3.json",
+            "explanation": "solutions/mingyin_Lebesgue-measure3.txt",
+            "theorem": "lebesgue measure",
+            "subfield": "Real analysis",
+            "field": "Math"
+        },
+        "answer_type": "float"
+    },
+    {
+        "id": "mingyin/cantor-set1.json",
+        "question": "is 1/4 belongs to Cantor set? Is 1/13 belongs to Cantor set? Return the two answers as a list with 1 for yes and 0 for no. For example, if you think both belong to Cantor set, return [1,1]",
+        "prediction": "[1, 0]",
+        "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
+        "llm_user_prompt": "Question: is 1/4 belongs to Cantor set? Is 1/13 belongs to Cantor set? Return the two answers as a list with 1 for yes and 0 for no. For example, if you think both belong to Cantor set, return [1,1]\nLet's think step by step.",
+        "answer": [
+            1,
+            1
+        ],
+        "rationale": {
+            "Question": "is 1/4 belongs to Cantor set? Is 1/13 belongs to Cantor set? Return the two answers as a list with 1 for yes and 0 for no. For example, if you think both belong to Cantor set, return [1,1]",
+            "Answer": [
+                1,
+                1
+            ],
+            "Picture": null,
+            "Answer_type": "list of integer",
+            "source": "real analysis: thinking 1.5.2",
+            "id": "mingyin/cantor-set1.json",
+            "explanation": "NONE",
+            "theorem": "cantor set",
+            "subfield": "Real analysis",
+            "field": "Math"
+        },
+        "answer_type": "list of integer"
+    },
+    {
+        "id": "mingyin/Lebesgue-measure4.json",
+        "question": "Suppose $E \\subset(0,2 \\pi) is a measurable set. \\left\\{\\xi_n\right\\}$ is an arbitrary sequence of real numbers. If the Lebesgue measure of E is 2, what is $\\lim _{n \rightarrow \\infty} \\int_E \\cos ^2 (n x+\\xi_n ) dx$? Return the numeric.",
+        "prediction": "$\\boxed{1}$",
+        "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
+        "llm_user_prompt": "Question: Suppose $E \\subset(0,2 \\pi) is a measurable set. \\left\\{\\xi_n\right\\}$ is an arbitrary sequence of real numbers. If the Lebesgue measure of E is 2, what is $\\lim _{n \rightarrow \\infty} \\int_E \\cos ^2 (n x+\\xi_n ) dx$? Return the numeric.\nLet's think step by step.",
+        "answer": 1.0,
+        "rationale": {
+            "Question": "Suppose $E \\subset(0,2 \\pi) is a measurable set. \\left\\{\\xi_n\right\\}$ is an arbitrary sequence of real numbers. If the Lebesgue measure of E is 2, what is $\\lim _{n \rightarrow \\infty} \\int_E \\cos ^2 (n x+\\xi_n ) dx$? Return the numeric.",
+            "Answer": 1.0,
+            "Picture": null,
+            "Answer_type": "float",
+            "source": "real analysis: chapter 4 exercise 2 question 17",
+            "id": "mingyin/Lebesgue-measure4.json",
+            "explanation": "NONE",
+            "theorem": "lebesgue measure",
+            "subfield": "Real analysis",
+            "field": "Math"
+        },
+        "answer_type": "float"
+    },
+    {
+        "id": "mingyin/Vitali-cover-theorem1.json",
+        "question": "the monotone function f on [0,1] is differentiable almost everywhere. This can be proved by: (a) Fubini Theorem; (b) Tonelli Theorem; (c) Vitali Cover Theorem; (d) None of the above. Which option is correct?",
+        "prediction": "(d) None of the above",
+        "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
+        "llm_user_prompt": "Question: the monotone function f on [0,1] is differentiable almost everywhere. This can be proved by: (a) Fubini Theorem; (b) Tonelli Theorem; (c) Vitali Cover Theorem; (d) None of the above. Which option is correct?\nLet's think step by step.",
+        "answer": "(c)",
+        "rationale": {
+            "Question": "the monotone function f on [0,1] is differentiable almost everywhere. This can be proved by: (a) Fubini Theorem; (b) Tonelli Theorem; (c) Vitali Cover Theorem; (d) None of the above. Which option is correct?",
+            "Answer": "(c)",
+            "Picture": null,
+            "Answer_type": "option",
+            "source": "real analysis: theorem 5.2",
+            "id": "mingyin/Vitali-cover-theorem1.json",
+            "explanation": "NONE",
+            "theorem": "vitali cover theorem",
+            "subfield": "Real analysis",
+            "field": "Math"
+        },
+        "answer_type": "option"
+    },
+    {
+        "id": "mingyin/Lebesgue-measure1.json",
+        "question": "Let $A=\\{n+\\sum_{p=1}^{\\infty} a_p 2^{-2p}: n \\in \\mathbf{Z}, a_p=0 or 1 \\}$. What is the Lebesgue measure of A?",
+        "prediction": "$\\infty$",
+        "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
+        "llm_user_prompt": "Question: Let $A=\\{n+\\sum_{p=1}^{\\infty} a_p 2^{-2p}: n \\in \\mathbf{Z}, a_p=0 or 1 \\}$. What is the Lebesgue measure of A?\nLet's think step by step.",
+        "answer": 0.0,
+        "rationale": {
+            "Question": "Let $A=\\{n+\\sum_{p=1}^{\\infty} a_p 2^{-2p}: n \\in \\mathbf{Z}, a_p=0 or 1 \\}$. What is the Lebesgue measure of A?",
+            "Answer": 0.0,
+            "Picture": null,
+            "Answer_type": "float",
+            "source": "real analysis: 2.4 example 3",
+            "id": "mingyin/Lebesgue-measure1.json",
+            "explanation": "NONE",
+            "theorem": "lebesgue measure",
+            "subfield": "Real analysis",
+            "field": "Math"
+        },
+        "answer_type": "float"
+    },
+    {
+        "id": "mingyin/Lebesgue-measure2.json",
+        "question": "Denote m(\\cdot) to be Lebesgue measure. Given a point set E. Suppose for any closed set F and open set G with F \\subset E \\subset G, it holds $\\sup _F {m(F)}<\\inf _G {m(G)}$. Is set E Lebesgue measurable? Answer 1 for yes and 0 for no. Return the number",
+        "prediction": "1",
+        "llm_system_prompt": "You are a mathematician, you are supposed to answer the given question. You need to output the answer in your final sentence like \"Therefore, the answer is ...\". The answer can only be one of the following forms:\n1. a numerical value like 0.1, no symbol and no unit at all.\n2. a list of number like [2, 3, 4].\n3. True/False.\n4. an option like (a), (b), (c), (d)\n",
+        "llm_user_prompt": "Question: Denote m(\\cdot) to be Lebesgue measure. Given a point set E. Suppose for any closed set F and open set G with F \\subset E \\subset G, it holds $\\sup _F {m(F)}<\\inf _G {m(G)}$. Is set E Lebesgue measurable? Answer 1 for yes and 0 for no. Return the number\nLet's think step by step.",
+        "answer": 0.0,
+        "rationale": {
+            "Question": "Denote m(\\cdot) to be Lebesgue measure. Given a point set E. Suppose for any closed set F and open set G with F \\subset E \\subset G, it holds $\\sup _F {m(F)}<\\inf _G {m(G)}$. Is set E Lebesgue measurable? Answer 1 for yes and 0 for no. Return the number",
+            "Answer": 0.0,
+            "Picture": null,
+            "Answer_type": "float",
+            "source": "real analysis: 2.5 thinking 5",
+            "id": "mingyin/Lebesgue-measure2.json",
+            "explanation": "solutions/mingyin_Lebesgue-measure2.txt",
+            "theorem": "lebesgue measure",
+            "subfield": "Real analysis",
+            "field": "Math"
+        },
+        "answer_type": "float"
+    }
+]

@@ -1,6 +1,6 @@
 import re
 from run_gpt import run_tot_gpt
-from src.prompting.tot import get_tot_propose_prompt, get_tot_sample_prompt, get_tot_vote_prompt
+from src.prompting.tot import build_tot_propose_prompt, build_tot_sample_prompt, build_tot_vote_prompt
 
 
 # Given gpt output with votes, take out the vote result
@@ -41,7 +41,7 @@ def run_tot(entry, step_limit: int, breadth_limit: int, generate_method="sample"
             if step == step_limit - 1:
                 stop = None 
             for node in nodes:
-                sample_prompt = get_tot_sample_prompt(question, node, answer_type)
+                sample_prompt = build_tot_sample_prompt(question, node, answer_type)
                 samples = run_tot_gpt("gpt-3.5-turbo", sample_prompt, n_sample=n_sample, stop=stop)
                 # new nodes are original nodes augmented with new samples
                 new_nodes.extend([node + sample + '\n' for sample in samples])
@@ -50,19 +50,19 @@ def run_tot(entry, step_limit: int, breadth_limit: int, generate_method="sample"
             if step == step_limit - 1:
                 # Sample the answer if this is the last step, this helps the final answer to be in an indicated format
                 for node in nodes:
-                    sample_prompt = get_tot_sample_prompt(question, node, answer_type)
+                    sample_prompt = build_tot_sample_prompt(question, node, answer_type)
                     samples = run_tot_gpt("gpt-3.5-turbo", sample_prompt, n_sample=n_propose, stop=None)
                     new_nodes.extend([node + sample + '\n' for sample in samples])
             else:
                 for node in nodes:
-                    proposal_prompt = get_tot_propose_prompt(question, node, n_propose)
+                    proposal_prompt = build_tot_propose_prompt(question, node, n_propose)
                     proposals = run_tot_gpt("gpt-3.5-turbo", proposal_prompt, n_sample=1, stop=None)[0].split('\n')
                     new_nodes.extend([node + p + '\n' for p in proposals])
 
         # Evaluate the generated outputs, here we only consider the method of "vote across states".
         # Then greedy selecting the first {breadth_limit} nodes to retain
         n_evaluate = 3    # Number of votes 
-        vote_prompt = get_tot_vote_prompt(entry['Question'], new_nodes)
+        vote_prompt = build_tot_vote_prompt(entry['Question'], new_nodes)
         vote_outputs = run_tot_gpt("gpt-3.5-turbo", vote_prompt, n_sample=n_evaluate, stop=None)
         votes = unwrap_vote(vote_outputs, len(new_nodes))
 

@@ -12,7 +12,8 @@ from src.evaluation.theoremqa import (
     build_theoremqa_prediction_obj,
     evaluate_theoremqa_predictions,
     get_theoremqa_questions_for_subfield,
-    write_theoremqa_predictions
+    write_theoremqa_predictions,
+    evaluate_majority_predictions,
 )
 from src.indexing.vector import load_index
 from src.inference.chatgpt import prompt_llm
@@ -20,6 +21,7 @@ from src.prompting.basic import build_basic_prompt
 from src.prompting.cot import build_cot_prompt
 from src.prompting.rag import build_rag_prompt
 from src.retrieval.vector import retrieve_top_k_documents
+from src.prompting.tot import run_tot
 
 
 def _get_experiment_prompt(
@@ -47,7 +49,7 @@ def _get_experiment_prompt(
 
     if experiment.prompting_strategy == PromptingStrategy.Basic:
         return build_basic_prompt(question, answer_type)
-    elif experiment.prompting_strategy == PromptingStrategy.COT:
+    elif experiment.prompting_strategy in [PromptingStrategy.COT, PromptingStrategy.COT_SC]:
         return build_cot_prompt(question, answer_type)
     elif experiment.prompting_strategy == PromptingStrategy.RAG_TOP5_NEARBY500:
         return _get_experiment_rag_prompt(5, RetrievalStrategy.Nearby, 500)
@@ -105,10 +107,29 @@ def _generate_theoremqa_predictions(
         # Get prediction
         question: str = question_obj["Question"]
         actual_answer_type: str = question_obj["Answer_type"]
-        prompt = _get_experiment_prompt(
-            experiment, question, actual_answer_type
-        )
-        llm_answer = _prompt_experiment_llm(experiment, prompt)
+
+        # Get Prediction based on type of prompt strategy
+        if experiment.prompting_strategy == PromptingStrategy.COT_SC:
+            n_generate = 9    # number of cot generation
+            prompt = build_cot_prompt(question, actual_answer_type)
+            llm_answers = []
+            for _ in range(n_generate):
+                answer = _prompt_experiment_llm(experiment, prompt)
+                llm_answers.append(answer)
+            index, llm_answer = evaluate_majority_predictions(llm_answers, actual_answer_type, subfield)
+
+        elif experiment.prompting_strategy == PromptingStrategy.TOT:
+            step_limit = 3             # The number of steps for the evaluation tree
+            breadth_limit = 1          # The number of new nodes to select at each step
+            prompt, llm_answer = run_tot(question, actual_answer_type, step_limit, breadth_limit, subfield=subfield)
+
+        else:
+            prompt = _get_experiment_prompt(
+                experiment, question, actual_answer_type
+            )
+            llm_answer = _prompt_experiment_llm(experiment, prompt)
+
+
         prediction_objects.append(
             build_theoremqa_prediction_obj(
                 question_obj,

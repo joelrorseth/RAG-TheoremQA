@@ -9,6 +9,8 @@ SUBFIELD = "combinatorics"
 experiments = [
     Experiment(
         llm=LLM.ChatGPT35,
+        prompting_strategy=PromptingStrategy.COT_SC,
+        index_config=None,
         prompting_strategy=PromptingStrategy.Basic,
         index_config=IndexConfig(
             indexing_strategy=IndexingStrategy.Subject,
@@ -18,6 +20,8 @@ experiments = [
     ),
     Experiment(
         llm=LLM.ChatGPT35,
+        prompting_strategy=PromptingStrategy.TOT,
+        index_config=None,
         prompting_strategy=PromptingStrategy.COT,
         index_config=IndexConfig(
             indexing_strategy=IndexingStrategy.Subject,

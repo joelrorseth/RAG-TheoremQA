@@ -83,24 +83,37 @@ def _parse_and_write_pdf_textbook_contents(
     """
     Parse a PDF textbook from page files, saving the result into contents.jsonl
     """
-    def alpha_only(mystr: str) -> str:
+    def trim_until_first_alpha(s: str) -> str:
+        # Find the index of the first alpha character
+        for i, c in enumerate(s):
+            if c.isalpha():
+                return s[i:]
+        return ""
+
+    def no_digits_only(mystr: str) -> str:
         return ''.join(
             char
             for char in mystr
-            if char.isalpha() and char.lower() in "abcdefghijklmnopqrstuvwxyz"
+            if not char.isdigit()
         )
 
     def is_header(depth: int, target_header_title: str, target_header_number: str, line: str) -> bool:
         if not line.startswith(f"{'#' * depth} "):
             return False
         alpha_only_target = target_header_title.lower().strip()
-        alpha_only_cur_line = alpha_only(line.lower().strip())
+        alpha_only_cur_line = no_digits_only(line.lower().strip())
         alpha_only_cur_line = alpha_only_cur_line.replace("chapter", "")
+        alpha_only_cur_line = alpha_only_cur_line.replace("#", "").strip()
         is_close_alpha_match = len(get_close_matches(
             alpha_only_target,
             [alpha_only_cur_line],
             cutoff=0.9
         )) > 0
+
+        # if "review exercises" in alpha_only_cur_line:
+        #     print(f"Target: {alpha_only_target}")
+        #     print(f"Line: {alpha_only_cur_line}")
+
         is_section_num_match = line.startswith(
             f"{'#' * depth} {target_header_number} ")
         is_new_section = is_section_num_match or is_close_alpha_match

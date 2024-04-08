@@ -2,6 +2,9 @@ import logging
 from config import LLM, EvaluationDataset, Experiment, IndexConfig, IndexingStrategy, PromptingStrategy
 from src.evaluation.experiment import run_theoremqa_experiment
 
+# SUBFIELD = "calculus"
+SUBFIELD = "combinatorics"
+
 
 experiments = [
     Experiment(
@@ -9,7 +12,7 @@ experiments = [
         prompting_strategy=PromptingStrategy.Basic,
         index_config=IndexConfig(
             indexing_strategy=IndexingStrategy.Subject,
-            index_name="calculus"
+            index_name=SUBFIELD
         ),
         evaluation_dataset=EvaluationDataset.TheoremQA
     ),
@@ -18,7 +21,7 @@ experiments = [
         prompting_strategy=PromptingStrategy.COT,
         index_config=IndexConfig(
             indexing_strategy=IndexingStrategy.Subject,
-            index_name="calculus"
+            index_name=SUBFIELD
         ),
         evaluation_dataset=EvaluationDataset.TheoremQA
     ),
@@ -27,7 +30,7 @@ experiments = [
         prompting_strategy=PromptingStrategy.RAG_TOP1_NEARBY200,
         index_config=IndexConfig(
             indexing_strategy=IndexingStrategy.Subject,
-            index_name="calculus"
+            index_name=SUBFIELD
         ),
         evaluation_dataset=EvaluationDataset.TheoremQA
     ),
@@ -36,7 +39,7 @@ experiments = [
         prompting_strategy=PromptingStrategy.RAG_TOP2_NEARBY200,
         index_config=IndexConfig(
             indexing_strategy=IndexingStrategy.Subject,
-            index_name="calculus"
+            index_name=SUBFIELD
         ),
         evaluation_dataset=EvaluationDataset.TheoremQA
     ),
@@ -45,7 +48,7 @@ experiments = [
         prompting_strategy=PromptingStrategy.RAG_TOP2_NEARBY500,
         index_config=IndexConfig(
             indexing_strategy=IndexingStrategy.Subject,
-            index_name="calculus"
+            index_name=SUBFIELD
         ),
         evaluation_dataset=EvaluationDataset.TheoremQA
     ),
@@ -55,7 +58,7 @@ experiments = [
     #     prompting_strategy=PromptingStrategy.RAG_TOP1_SECTION,
     #     index_config=IndexConfig(
     #         indexing_strategy=IndexingStrategy.Subject,
-    #         index_name="calculus"
+    #         index_name=SUBFIELD
     #     ),
     #     evaluation_dataset=EvaluationDataset.TheoremQA
     # )
@@ -65,7 +68,7 @@ experiments = [
     #     prompting_strategy=PromptingStrategy.RAG_TOP5_NEARBY500,
     #     index_config=IndexConfig(
     #         indexing_strategy=IndexingStrategy.Subject,
-    #         index_name="calculus"
+    #         index_name=SUBFIELD
     #     ),
     #     evaluation_dataset=EvaluationDataset.TheoremQA
     # )
@@ -73,4 +76,4 @@ experiments = [
 
 for experiment in experiments:
     logging.info(f"Running experiment: {experiment.to_string()}")
-    run_theoremqa_experiment(experiment, "calculus", False)
+    run_theoremqa_experiment(experiment, SUBFIELD, False)

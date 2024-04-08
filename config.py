@@ -107,6 +107,16 @@ REFERENCE_PDF_TEXTBOOKS = [
     #     source_url="https://www.markhuberdatascience.org/_files/ugd/c2b9b6_8e0fbc80cfa64a0aa0c393840b0d50f8.pdf",
     #     subject="probability"
     # )
+    TextbookIdentifier(
+        name="austin",
+        source_url="https://scholarworks.gvsu.edu/cgi/viewcontent.cgi?article=1026&context=books",
+        subject="algebra"
+    ),
+    TextbookIdentifier(
+        name="boyd",
+        source_url="https://web.stanford.edu/~boyd/vmls/vmls.pdf",
+        subject="algebra"
+    )
 ]
 
 

@@ -1,7 +1,6 @@
 import logging
 import faiss
 import shutil
-from pathlib import Path
 from typing import List
 from llama_index.core import (
     Document,
@@ -13,30 +12,22 @@ from llama_index.core import (
 from llama_index.vector_stores.faiss import FaissVectorStore
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from config import (
-    HF_EMBEDDING_MODEL_DIM,
-    HF_EMBEDDING_MODEL_NAME,
-    INDEX_DATA_PATH,
-    IndexingStrategy
+    EMBEDDING_MODELS,
+    EmbeddingModel,
+    IndexingStrategy,
+    get_index_path
 )
 from src.indexing.strategy import get_index_textbook_groupings
 from src.preprocessing.textbook import PreprocessedTextbook
 
-logging.info("Configuring HuggingFaceEmbedding globally")
-Settings.embed_model = HuggingFaceEmbedding(
-    model_name=HF_EMBEDDING_MODEL_NAME
-)
 
-
-def get_index_path(index_name: str, indexing_strategy: IndexingStrategy) -> Path:
-    return INDEX_DATA_PATH / indexing_strategy.value / index_name
-
-
-def build_index(index_name: str, strategy: IndexingStrategy,
-                textbooks: List[PreprocessedTextbook], overwrite: bool = False):
+def build_index(index_name: str, embedding_model: EmbeddingModel,
+                strategy: IndexingStrategy, textbooks: List[PreprocessedTextbook],
+                overwrite: bool = False):
     """
     Build a FAISS VectorStoreIndex for a set of textbooks.
     """
-    index_path = get_index_path(index_name, strategy)
+    index_path = get_index_path(index_name, embedding_model, strategy)
 
     # Handle existing index
     if index_path.exists() and index_path.is_dir():
@@ -52,8 +43,13 @@ def build_index(index_name: str, strategy: IndexingStrategy,
         index_path.mkdir(parents=True, exist_ok=True)
         logging.info(f"Building '{strategy.value}/{index_name}' index")
 
+    logging.info(f"Configuring HuggingFaceEmbedding for {embedding_model.model}")
+    Settings.embed_model = HuggingFaceEmbedding(
+        model_name=embedding_model.model
+    )
+
     logging.info("Initializing IndexFlatL2")
-    faiss_index = faiss.IndexFlatL2(HF_EMBEDDING_MODEL_DIM)
+    faiss_index = faiss.IndexFlatL2(embedding_model.dim)
 
     documents = [
         Document(
@@ -88,31 +84,39 @@ def build_index(index_name: str, strategy: IndexingStrategy,
     logging.info("Successfully created index!")
 
 
-def build_all_indexes_for_strategy(
-    strategy: IndexingStrategy, all_textbooks: List[PreprocessedTextbook],
-    overwrite: bool = False
+def build_all_vector_indexes_for_strategy(
+    embedding_model: EmbeddingModel, strategy: IndexingStrategy,
+    all_textbooks: List[PreprocessedTextbook], overwrite: bool = False
 ):
-    logging.info(f"Building all indexes for '{strategy.value}' strategy")
+    logging.info(
+        f"Building all {embedding_model.model} indexes for '{strategy.value}' strategy")
     index_name_textbook_dict = get_index_textbook_groupings(
         strategy, all_textbooks
     )
     for index_name, index_textbooks in index_name_textbook_dict.items():
-        build_index(index_name, strategy, index_textbooks, overwrite)
+        build_index(index_name, embedding_model,
+                    strategy, index_textbooks, overwrite)
 
 
-def build_all_indexes_for_all_strategies(
+def build_all_vector_indexes(
     all_textbooks: List[PreprocessedTextbook], overwrite: bool = False
 ):
-    logging.info("Building all indexes for all strategies")
-    for strategy in IndexingStrategy:
-        build_all_indexes_for_strategy(strategy, all_textbooks, overwrite)
+    logging.info("Building all indexes")
+    for embedding_model in EMBEDDING_MODELS:
+        for strategy in IndexingStrategy:
+            build_all_vector_indexes_for_strategy(
+                embedding_model, strategy, all_textbooks, overwrite
+            )
 
 
-def load_index(index_name: str, strategy: IndexingStrategy) -> VectorStoreIndex:
+def load_index(index_name: str, embedding_model: EmbeddingModel, strategy: IndexingStrategy) -> VectorStoreIndex:
     """
     Load a FAISS VectorStoreIndex.
     """
-    index_path = get_index_path(index_name, strategy)
+    Settings.embed_model = HuggingFaceEmbedding(
+        model_name=embedding_model.model
+    )
+    index_path = get_index_path(index_name, embedding_model, strategy)
     vector_store = FaissVectorStore.from_persist_dir(index_path)
     storage_context = StorageContext.from_defaults(
         vector_store=vector_store, persist_dir=index_path

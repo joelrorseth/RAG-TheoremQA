@@ -1,0 +1,335 @@
+{
+    "startpage": 13,
+    "endpage": 445,
+    "chapters": [
+        {
+            "title": "Vectors",
+            "sections": [
+                {
+                    "title": "Vectors"
+                },
+                {
+                    "title": "Vector addition"
+                },
+                {
+                    "title": "Scalar-vector multiplication"
+                },
+                {
+                    "title": "Inner product"
+                },
+                {
+                    "title": "Complexity of vector computations"
+                }
+            ]
+        },
+        {
+            "title": "Linear functions",
+            "sections": [
+                {
+                    "title": "Linear functions"
+                },
+                {
+                    "title": "Taylor approximation"
+                },
+                {
+                    "title": "Regression model"
+                }
+            ]
+        },
+        {
+            "title": "Norm and distance",
+            "sections": [
+                {
+                    "title": "Norm"
+                },
+                {
+                    "title": "Distance"
+                },
+                {
+                    "title": "Standard deviation"
+                },
+                {
+                    "title": "Angle"
+                },
+                {
+                    "title": "Complexity"
+                }
+            ]
+        },
+        {
+            "title": "Clustering",
+            "sections": [
+                {
+                    "title": "Clustering"
+                },
+                {
+                    "title": "A clustering objective"
+                },
+                {
+                    "title": "The k-means algorithm"
+                },
+                {
+                    "title": "Examples"
+                },
+                {
+                    "title": "Applications"
+                }
+            ]
+        },
+        {
+            "title": "Linear independence",
+            "sections": [
+                {
+                    "title": "Linear dependence"
+                },
+                {
+                    "title": "Basis"
+                },
+                {
+                    "title": "Orthonormal vectors"
+                },
+                {
+                    "title": "Gram-Schmidt algorithm"
+                }
+            ]
+        },
+        {
+            "title": "Matrices",
+            "sections": [
+                {
+                    "title": "Matrices"
+                },
+                {
+                    "title": "Zero and identity matrices"
+                },
+                {
+                    "title": "Transpose, addition, and norm"
+                },
+                {
+                    "title": "Matrix-vector multiplication"
+                },
+                {
+                    "title": "Complexity"
+                }
+            ]
+        },
+        {
+            "title": "Matrix examples",
+            "sections": [
+                {
+                    "title": "Geometric transformations"
+                },
+                {
+                    "title": "Selectors"
+                },
+                {
+                    "title": "Incidence matrix"
+                },
+                {
+                    "title": "Convolution"
+                }
+            ]
+        },
+        {
+            "title": "Linear equations",
+            "sections": [
+                {
+                    "title": "Linear and affine functions"
+                },
+                {
+                    "title": "Linear function models"
+                },
+                {
+                    "title": "Systems of linear equations"
+                }
+            ]
+        },
+        {
+            "title": "Linear dynamical systems",
+            "sections": [
+                {
+                    "title": "Linear dynamical systems"
+                },
+                {
+                    "title": "Population dynamics"
+                },
+                {
+                    "title": "Epidemic dynamics"
+                },
+                {
+                    "title": "Motion of a mass"
+                },
+                {
+                    "title": "Supply chain dynamics"
+                }
+            ]
+        },
+        {
+            "title": "Matrix multiplication",
+            "sections": [
+                {
+                    "title": "Matrix-matrix multiplication"
+                },
+                {
+                    "title": "Composition of linear functions"
+                },
+                {
+                    "title": "Matrix power"
+                },
+                {
+                    "title": "QR factorization"
+                }
+            ]
+        },
+        {
+            "title": "Matrix inverses",
+            "sections": [
+                {
+                    "title": "Left and right inverses"
+                },
+                {
+                    "title": "Inverse"
+                },
+                {
+                    "title": "Solving linear equations"
+                },
+                {
+                    "title": "Examples"
+                },
+                {
+                    "title": "Pseudo-inverse"
+                }
+            ]
+        },
+        {
+            "title": "Least squares",
+            "sections": [
+                {
+                    "title": "Least squares problem"
+                },
+                {
+                    "title": "Solution"
+                },
+                {
+                    "title": "Solving least squares problems"
+                },
+                {
+                    "title": "Examples"
+                }
+            ]
+        },
+        {
+            "title": "Least squares data fitting",
+            "sections": [
+                {
+                    "title": "Least squares data fitting"
+                },
+                {
+                    "title": "Validation"
+                },
+                {
+                    "title": "Feature engineering"
+                }
+            ]
+        },
+        {
+            "title": "Least squares classification",
+            "sections": [
+                {
+                    "title": "Classification"
+                },
+                {
+                    "title": "Least squares classifier"
+                },
+                {
+                    "title": "Multi-class classifiers"
+                }
+            ]
+        },
+        {
+            "title": "Multi-objective least squares",
+            "sections": [
+                {
+                    "title": "Multi-objective least squares"
+                },
+                {
+                    "title": "Control"
+                },
+                {
+                    "title": "Estimation and inversion"
+                },
+                {
+                    "title": "Regularized data fitting"
+                },
+                {
+                    "title": "Complexity"
+                }
+            ]
+        },
+        {
+            "title": "Constrained least squares",
+            "sections": [
+                {
+                    "title": "Constrained least squares problem"
+                },
+                {
+                    "title": "Solution"
+                },
+                {
+                    "title": "Solving constrained least squares problems"
+                }
+            ]
+        },
+        {
+            "title": "Constrained least squares applications",
+            "sections": [
+                {
+                    "title": "Portfolio optimization"
+                },
+                {
+                    "title": "Linear quadratic control"
+                },
+                {
+                    "title": "Linear quadratic state estimation"
+                }
+            ]
+        },
+        {
+            "title": "Nonlinear least squares",
+            "sections": [
+                {
+                    "title": "Nonlinear equations and least squares"
+                },
+                {
+                    "title": "Gauss-Newton algorithm"
+                },
+                {
+                    "title": "Levenberg-Marquardt algorithm"
+                },
+                {
+                    "title": "Nonlinear model fitting"
+                },
+                {
+                    "title": "Nonlinear least squares classification"
+                }
+            ]
+        },
+        {
+            "title": "Constrained nonlinear least squares",
+            "sections": [
+                {
+                    "title": "Constrained nonlinear least squares"
+                },
+                {
+                    "title": "Penalty algorithm"
+                },
+                {
+                    "title": "Augmented Lagrangian algorithm"
+                },
+                {
+                    "title": "Nonlinear control"
+                }
+            ]
+        }
+    ]
+}

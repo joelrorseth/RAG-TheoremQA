@@ -1,0 +1,241 @@
+{
+    "startpage": 13,
+    "endpage": 1080,
+    "chapters": [
+        {
+            "title": "Relations and Functions",
+            "sections": [
+                {
+                    "title": "Sets of Real Numbers and the Cartesian Coordinate Plane"
+                },
+                {
+                    "title": "Relations"
+                },
+                {
+                    "title": "Introduction to Functions"
+                },
+                {
+                    "title": "Function Notation"
+                },
+                {
+                    "title": "Function Arithmetic"
+                },
+                {
+                    "title": "Graphs of Functions"
+                },
+                {
+                    "title": "Transformations"
+                }
+            ]
+        },
+        {
+            "title": "Linear and Quadratic Functions",
+            "sections": [
+                {
+                    "title": "Linear Functions"
+                },
+                {
+                    "title": "Absolute Value Functions"
+                },
+                {
+                    "title": "Quadratic Functions"
+                },
+                {
+                    "title": "Inequalities with Absolute Value and Quadratic Functions"
+                },
+                {
+                    "title": "Regression"
+                }
+            ]
+        },
+        {
+            "title": "Polynomial Functions",
+            "sections": [
+                {
+                    "title": "Graphs of Polynomials"
+                },
+                {
+                    "title": "The Factor Theorem and the Remainder Theorem"
+                },
+                {
+                    "title": "Real Zeros of Polynomials"
+                },
+                {
+                    "title": "Complex Zeros and the Fundamental Theorem of Algebra"
+                }
+            ]
+        },
+        {
+            "title": "Rational Functions",
+            "sections": [
+                {
+                    "title": "Introduction to Rational Functions"
+                },
+                {
+                    "title": "Graphs of Rational Functions"
+                },
+                {
+                    "title": "Rational Inequalities and Applications"
+                }
+            ]
+        },
+        {
+            "title": "Further Topics in Functions",
+            "sections": [
+                {
+                    "title": "Function Composition"
+                },
+                {
+                    "title": "Inverse Functions"
+                },
+                {
+                    "title": "Other Algebraic Functions"
+                }
+            ]
+        },
+        {
+            "title": "Exponential and Logarithmic Functions",
+            "sections": [
+                {
+                    "title": "Introduction to Exponential and Logarithmic Functions"
+                },
+                {
+                    "title": "Properties of Logarithms"
+                },
+                {
+                    "title": "Exponential Equations and Inequalities"
+                },
+                {
+                    "title": "Logarithmic Equations and Inequalities"
+                },
+                {
+                    "title": "Applications of Exponential and Logarithmic Functions"
+                }
+            ]
+        },
+        {
+            "title": "Hooked on Conics",
+            "sections": [
+                {
+                    "title": "Introduction to Conics"
+                },
+                {
+                    "title": "Circles"
+                },
+                {
+                    "title": "Parabolas"
+                },
+                {
+                    "title": "Ellipses"
+                },
+                {
+                    "title": "Hyperbolas"
+                }
+            ]
+        },
+        {
+            "title": "Systems of Equations and Matrices",
+            "sections": [
+                {
+                    "title": "Systems of Linear Equations: Gaussian Elimination"
+                },
+                {
+                    "title": "Systems of Linear Equations: Augmented Matrices"
+                },
+                {
+                    "title": "Matrix Arithmetic"
+                },
+                {
+                    "title": "Systems of Linear Equations: Matrix Inverses"
+                },
+                {
+                    "title": "Determinants and Cramer's Rule"
+                },
+                {
+                    "title": "Partial Fraction Decomposition"
+                },
+                {
+                    "title": "Systems of Non-Linear Equations and Inequalities"
+                }
+            ]
+        },
+        {
+            "title": "Sequences and the Binomial Theorem",
+            "sections": [
+                {
+                    "title": "Sequences"
+                },
+                {
+                    "title": "Summation Notation"
+                },
+                {
+                    "title": "Mathematical Induction"
+                },
+                {
+                    "title": "The Binomial Theorem"
+                }
+            ]
+        },
+        {
+            "title": "Foundations of Trigonometry",
+            "sections": [
+                {
+                    "title": "Angles and their Measure"
+                },
+                {
+                    "title": "The Unit Circle: Cosine and Sine"
+                },
+                {
+                    "title": "The Six Circular Functions and Fundamental Identities"
+                },
+                {
+                    "title": "Trigonometric Identities"
+                },
+                {
+                    "title": "Graphs of the Trigonometric Functions"
+                },
+                {
+                    "title": "The Inverse Trigonometric Functions"
+                },
+                {
+                    "title": "Trigonometric Equations and Inequalities"
+                }
+            ]
+        },
+        {
+            "title": "Applications of Trigonometry",
+            "sections": [
+                {
+                    "title": "Applications of Sinusoids"
+                },
+                {
+                    "title": "The Law of Sines"
+                },
+                {
+                    "title": "The Law of Cosines"
+                },
+                {
+                    "title": "Polar Coordinates"
+                },
+                {
+                    "title": "Graphs of Polar Equations"
+                },
+                {
+                    "title": "Hooked on Conics Again"
+                },
+                {
+                    "title": "Polar Form of Complex Numbers"
+                },
+                {
+                    "title": "Vectors"
+                },
+                {
+                    "title": "The Dot Product and Projection"
+                },
+                {
+                    "title": "Parametric Equations"
+                }
+            ]
+        }
+    ]
+}

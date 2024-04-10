@@ -40,9 +40,6 @@ OUTPUTS_DATA_PATH.mkdir(exist_ok=True)
 RESULTS_DATA_PATH = DATA_PATH / "results"
 RESULTS_DATA_PATH.mkdir(exist_ok=True)
 
-HF_EMBEDDING_MODEL_NAME = "BAAI/bge-small-en-v1.5"
-HF_EMBEDDING_MODEL_DIM = 384
-
 INDEX_CHUNK_SIZE = 256
 
 HF_OCR_MODEL_NAME = "facebook/nougat-small"
@@ -61,17 +58,23 @@ REFERENCE_PDF_PAGE_FILENAME_PREFIX = "page"
 REFERENCE_PDF_PAGE_FILENAME_SUFFIX = ".mmd"
 
 
+class TextbookSubfield(Enum):
+    Algebra = "algebra"
+    Calculus = "calculus"
+    Combinatorics = "combinatorics"
+
+
 class TextbookIdentifier(BaseModel):
     name: str
     source_url: str
-    subject: str
+    subfield: str
 
 
 REFERENCE_HTML_TEXTBOOKS = [
     TextbookIdentifier(
         name="openstax",
         source_url="https://openstax.org/books/prealgebra-2e/pages/1-introduction",
-        subject="algebra"
+        subfield=TextbookSubfield.Algebra.value
     )
 ]
 
@@ -80,48 +83,58 @@ REFERENCE_PDF_TEXTBOOKS = [
     TextbookIdentifier(
         name="stitz",
         source_url="https://stitz-zeager.com/szprecalculus07042013.pdf",
-        subject="calculus"
+        subfield=TextbookSubfield.Calculus.value
     ),
     TextbookIdentifier(
         name="guichard",
         source_url="https://www.whitman.edu/mathematics/multivariable/multivariable.pdf",
-        subject="calculus"
+        subfield=TextbookSubfield.Calculus.value
     ),
     TextbookIdentifier(
         name="adams",
         source_url="https://www.mathematicalgemstones.com/maria/OER/CountingRocks-Nov2023.pdf",
-        subject="combinatorics"
+        subfield=TextbookSubfield.Combinatorics.value
     ),
     TextbookIdentifier(
         name="keller",
         source_url="https://www.rellek.net/book-2017/app-comb-2017.pdf",
-        subject="combinatorics"
+        subfield=TextbookSubfield.Combinatorics.value
     ),
-    # TextbookIdentifier(
-    #     name="grinstead",
-    #     source_url="https://www.whitman.edu/mathematics/multivariable/multivariable.pdf",
-    #     subject="probability"
-    # ),
-    # TextbookIdentifier(
-    #     name="huber",
-    #     source_url="https://www.markhuberdatascience.org/_files/ugd/c2b9b6_8e0fbc80cfa64a0aa0c393840b0d50f8.pdf",
-    #     subject="probability"
-    # )
     TextbookIdentifier(
         name="austin",
         source_url="https://scholarworks.gvsu.edu/cgi/viewcontent.cgi?article=1026&context=books",
-        subject="algebra"
+        subfield=TextbookSubfield.Algebra.value
     ),
     TextbookIdentifier(
         name="boyd",
         source_url="https://web.stanford.edu/~boyd/vmls/vmls.pdf",
-        subject="algebra"
+        subfield=TextbookSubfield.Algebra.value
+    )
+]
+
+
+class EmbeddingModel(BaseModel):
+    model: str
+    name: str
+    dim: int
+
+
+EMBEDDING_MODELS = [
+    EmbeddingModel(
+        model="BAAI/bge-small-en-v1.5",
+        name="bge-small-en-v1.5",
+        dim=384
+    ),
+    EmbeddingModel(
+        model="BAAI/bge-large-en-v1.5",
+        name="bge-large-en-v1.5",
+        dim=1024
     )
 ]
 
 
 class IndexingStrategy(Enum):
-    Subject = "subject"
+    Subfield = "subfield"
     Textbook = "textbook"
 
 
@@ -135,12 +148,11 @@ class PromptingStrategy(Enum):
     COT = "cot"
     COT_SC = "cot_sc"
     TOT = "tot"
-    RAG_TOP5_NEARBY500 = "rag_top5_nearby500"
+    RAG_TOP5_NEARBY200 = "rag_top5_nearby200"
     RAG_TOP2_NEARBY500 = "rag_top2_nearby500"
     RAG_TOP2_NEARBY200 = "rag_top2_nearby200"
     RAG_TOP1_NEARBY500 = "rag_top1_nearby500"
     RAG_TOP1_NEARBY200 = "rag_top1_nearby200"
-    RAG_TOP1_SECTION = "rag_top1_section"
 
 
 class LLM(Enum):
@@ -158,6 +170,7 @@ class IndexConfig(BaseModel):
 
 class Experiment(BaseModel):
     llm: LLM
+    embedding_model: Optional[EmbeddingModel]
     prompting_strategy: PromptingStrategy
     index_config: Optional[IndexConfig]
     evaluation_dataset: EvaluationDataset
@@ -166,7 +179,7 @@ class Experiment(BaseModel):
         s1 = self.llm.value
         s2 = self.prompting_strategy.value
         s3 = (
-            f"{self.index_config.indexing_strategy.value}_{self.index_config.index_name}"
+            f"{self.index_config.indexing_strategy.value}_{self.index_config.index_name}_{self.embedding_model.name}"
             if self.index_config is not None
             else "noindex"
         )
@@ -180,3 +193,9 @@ class Prompt(BaseModel):
 
 class MultiRolePrompt(Prompt):
     system_prompt: str
+
+
+def get_index_path(
+    index_name: str, embedding_model: EmbeddingModel, indexing_strategy: IndexingStrategy
+) -> Path:
+    return INDEX_DATA_PATH / embedding_model.name / indexing_strategy.value / index_name

@@ -1,0 +1,459 @@
+{
+    "startpage": 27,
+    "endpage": 354,
+    "chapters": [
+        {
+            "title": "An Introduction to Combinatorics",
+            "sections": [
+                {
+                    "title": "Introduction"
+                },
+                {
+                    "title": "Enumeration"
+                },
+                {
+                    "title": "Combinatorics and Graph Theory"
+                },
+                {
+                    "title": "Combinatorics and Number Theory"
+                },
+                {
+                    "title": "Combinatorics and Geometry"
+                },
+                {
+                    "title": "Combinatorics and Optimization"
+                },
+                {
+                    "title": "Sudoku Puzzles"
+                },
+                {
+                    "title": "Discussion"
+                }
+            ]
+        },
+        {
+            "title": "Strings, Sets, and Binomial Coefficients",
+            "sections": [
+                {
+                    "title": "Strings: A First Look"
+                },
+                {
+                    "title": "Permutations"
+                },
+                {
+                    "title": "Combinations"
+                },
+                {
+                    "title": "Combinatorial Proofs"
+                },
+                {
+                    "title": "The Ubiquitous Nature of Binomial Coefficients"
+                },
+                {
+                    "title": "The Binomial Theorem"
+                },
+                {
+                    "title": "Multinomial Coefficients"
+                },
+                {
+                    "title": "Discussion"
+                },
+                {
+                    "title": "Exercises"
+                }
+            ]
+        },
+        {
+            "title": "Induction",
+            "sections": [
+                {
+                    "title": "Introduction"
+                },
+                {
+                    "title": "The Positive Integers are Well Ordered"
+                },
+                {
+                    "title": "The Meaning of Statements"
+                },
+                {
+                    "title": "Binomial Coefficients Revisited"
+                },
+                {
+                    "title": "Solving Combinatorial Problems Recursively"
+                },
+                {
+                    "title": "Mathematical Induction"
+                },
+                {
+                    "title": "Inductive Definitions"
+                },
+                {
+                    "title": "Proofs by Induction"
+                },
+                {
+                    "title": "Strong Induction"
+                },
+                {
+                    "title": "Discussion"
+                },
+                {
+                    "title": "Exercises"
+                }
+            ]
+        },
+        {
+            "title": "Combinatorial Basics",
+            "sections": [
+                {
+                    "title": "The Pigeon Hole Principle"
+                },
+                {
+                    "title": "An Introduction to Complexity Theory"
+                },
+                {
+                    "title": "The Big \"Oh\" and Little \"Oh\" Notations"
+                },
+                {
+                    "title": "Exact Versus Approximate"
+                },
+                {
+                    "title": "Discussion"
+                },
+                {
+                    "title": "Exercises"
+                }
+            ]
+        },
+        {
+            "title": "Graph Theory",
+            "sections": [
+                {
+                    "title": "Basic Notation and Terminology for Graphs"
+                },
+                {
+                    "title": "Multigraphs: Loops and Multiple Edges"
+                },
+                {
+                    "title": "Eulerian and Hamiltonian Graphs"
+                },
+                {
+                    "title": "Graph Coloring"
+                },
+                {
+                    "title": "Planar Graphs"
+                },
+                {
+                    "title": "Counting Labeled Trees"
+                },
+                {
+                    "title": "A Digression into Complexity Theory"
+                },
+                {
+                    "title": "Discussion"
+                },
+                {
+                    "title": "Exercises"
+                }
+            ]
+        },
+        {
+            "title": "Partially Ordered Sets",
+            "sections": [
+                {
+                    "title": "Basic Notation and Terminology"
+                },
+                {
+                    "title": "Additional Concepts for Posets"
+                },
+                {
+                    "title": "Dilworth's Chain Covering Theorem and its Dual"
+                },
+                {
+                    "title": "Linear Extensions of Partially Ordered Sets"
+                },
+                {
+                    "title": "The Subset Lattice"
+                },
+                {
+                    "title": "Interval Orders"
+                },
+                {
+                    "title": "Finding a Representation of an Interval Order"
+                },
+                {
+                    "title": "Dilworth's Theorem for Interval Orders"
+                },
+                {
+                    "title": "Discussion"
+                },
+                {
+                    "title": "Exercises"
+                }
+            ]
+        },
+
+
+        {
+            "title": "Inclusion-Exclusion",
+            "sections": [
+                {
+                    "title": "Introduction"
+                },
+                {
+                    "title": "The Inclusion-Exclusion Formula"
+                },
+                {
+                    "title": "Enumerating Surjections"
+                },
+                {
+                    "title": "Derangements"
+                },
+                {
+                    "title": "The Euler phi Function"
+                },
+                {
+                    "title": "Discussion"
+                },
+                {
+                    "title": "Exercises"
+                }
+            ]
+        },
+        {
+            "title": "Generating Functions",
+            "sections": [
+                {
+                    "title": "Basic Notation and Terminology"
+                },
+                {
+                    "title": "Another look at distributing apples or folders"
+                },
+                {
+                    "title": "Newton's Binomial Theorem"
+                },
+                {
+                    "title": "An Application of the Binomial Theorem"
+                },
+                {
+                    "title": "Partitions of an Integer"
+                },
+                {
+                    "title": "Exponential generating functions"
+                },
+                {
+                    "title": "Discussion"
+                },
+                {
+                    "title": "Exercises"
+                }
+            ]
+        },
+        {
+            "title": "Recurrence Equations",
+            "sections": [
+                {
+                    "title": "Introduction"
+                },
+                {
+                    "title": "Linear Recurrence Equations"
+                },
+                {
+                    "title": "Advancement Operators"
+                },
+                {
+                    "title": "Solving advancement operator equations"
+                },
+                {
+                    "title": "Formalizing our approach to recurrence equations"
+                },
+                {
+                    "title": "Using generating functions to solve recurrences"
+                },
+                {
+                    "title": "Solving a nonlinear recurrence"
+                },
+                {
+                    "title": "Discussion"
+                },
+                {
+                    "title": "Exercises"
+                }
+            ]
+        },
+        {
+            "title": "Probability",
+            "sections": [
+                {
+                    "title": "An Introduction to Probability"
+                },
+                {
+                    "title": "Conditional Probability and Independent Events"
+                },
+                {
+                    "title": "Bernoulli Trials"
+                },
+                {
+                    "title": "Discrete Random Variables"
+                },
+                {
+                    "title": "Central Tendency"
+                },
+                {
+                    "title": "Probability Spaces with Infinitely Many Outcomes"
+                },
+                {
+                    "title": "Discussion"
+                },
+                {
+                    "title": "Exercises"
+                }
+            ]
+        },
+        {
+            "title": "Applying Probability to Combinatorics",
+            "sections": [
+                {
+                    "title": "A First Taste of Ramsey Theory"
+                },
+                {
+                    "title": "Small Ramsey Numbers"
+                },
+                {
+                    "title": "Estimating Ramsey Numbers"
+                },
+                {
+                    "title": "Applying Probability to Ramsey Theory"
+                },
+                {
+                    "title": "Ramsey's Theorem"
+                },
+                {
+                    "title": "The Probabilistic Method"
+                },
+                {
+                    "title": "Discussion"
+                },
+                {
+                    "title": "Exercises"
+                }
+            ]
+        },
+        {
+            "title": "Graph Algorithms",
+            "sections": [
+                {
+                    "title": "Minimum Weight Spanning Trees"
+                },
+                {
+                    "title": "Digraphs"
+                },
+                {
+                    "title": "Dijkstra's Algorithm for Shortest Paths"
+                },
+                {
+                    "title": "Historical Notes"
+                },
+                {
+                    "title": "Exercises"
+                }
+            ]
+        },
+
+
+        {
+            "title": "Network Flows",
+            "sections": [
+                {
+                    "title": "Basic Notation and Terminology"
+                },
+                {
+                    "title": "Flows and Cuts"
+                },
+                {
+                    "title": "Augmenting Paths"
+                },
+                {
+                    "title": "The Ford-Fulkerson Labeling Algorithm"
+                },
+                {
+                    "title": "A Concrete Example"
+                },
+                {
+                    "title": "Integer Solutions of Linear Programming Problems"
+                },
+                {
+                    "title": "Exercises"
+                }
+            ]
+        },
+        {
+            "title": "Combinatorial Applications of Network Flows",
+            "sections": [
+                {
+                    "title": "Introduction"
+                },
+                {
+                    "title": "Matchings in Bipartite Graphs"
+                },
+                {
+                    "title": "Chain partitioning"
+                },
+                {
+                    "title": "Exercises"
+                }
+            ]
+        },
+        {
+            "title": "Pólya's Enumeration Theorem",
+            "sections": [
+                {
+                    "title": "Coloring the Vertices of a Square"
+                },
+                {
+                    "title": "Permutation Groups"
+                },
+                {
+                    "title": "Burnside's Lemma"
+                },
+                {
+                    "title": "Pólya's Theorem"
+                },
+                {
+                    "title": "Applications of Pólya's Enumeration Formula"
+                },
+                {
+                    "title": "Exercises"
+                }
+            ]
+        },
+        {
+            "title": "The Many Faces of Combinatorics",
+            "sections": [
+                {
+                    "title": "On-line algorithms"
+                },
+                {
+                    "title": "Extremal Set Theory"
+                },
+                {
+                    "title": "Markov Chains"
+                },
+                {
+                    "title": "The Stable Matching Theorem"
+                },
+                {
+                    "title": "Zero-One Matrices"
+                },
+                {
+                    "title": "Arithmetic Combinatorics"
+                },
+                {
+                    "title": "The Lovász Local Lemma"
+                },
+                {
+                    "title": "Applying the Local Lemma"
+                }
+            ]
+        }
+    ]
+}

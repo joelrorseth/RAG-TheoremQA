@@ -1,0 +1,430 @@
+{
+    "startpage": 15,
+    "endpage": 480,
+    "chapters": [
+        {
+            "title": "Analytic Geometry",
+            "sections": [
+                {
+                    "title": "Lines"
+                },
+                {
+                    "title": "Distance Between Two Points; Circles"
+                },
+                {
+                    "title": "Functions"
+                },
+                {
+                    "title": "Shifts and Dilations"
+                }
+            ]
+        },
+        {
+            "title": "Instantaneous Rate of Change: The Derivative",
+            "sections": [
+                {
+                    "title": "The slope of a function"
+                },
+                {
+                    "title": "An example"
+                },
+                {
+                    "title": "Limits"
+                },
+                {
+                    "title": "The Derivative Function"
+                },
+                {
+                    "title": "Properties of Functions"
+                }
+            ]
+        },
+        {
+            "title": "Rules for Finding Derivatives",
+            "sections": [
+                {
+                    "title": "The Power Rule"
+                },
+                {
+                    "title": "Linearity of the Derivative"
+                },
+                {
+                    "title": "The Product Rule"
+                },
+                {
+                    "title": "The Quotient Rule"
+                },
+                {
+                    "title": "The Chain Rule"
+                }
+            ]
+        },
+        {
+            "title": "Transcendental Functions",
+            "sections": [
+                {
+                    "title": "Trigonometric Functions"
+                },
+                {
+                    "title": "The Derivative of sin x"
+                },
+                {
+                    "title": "A hard limit"
+                },
+                {
+                    "title": "The Derivative of sin x, continued"
+                },
+                {
+                    "title": "Derivatives of the Trigonometric Functions"
+                },
+                {
+                    "title": "Exponential and Logarithmic functions"
+                },
+                {
+                    "title": "Derivatives of the exponential and logarithmic functions"
+                },
+                {
+                    "title": "Implicit Differentiation"
+                },
+                {
+                    "title": "Inverse Trigonometric Functions"
+                },
+                {
+                    "title": "Limits revisited"
+                },
+                {
+                    "title": "Hyperbolic Functions"
+                }
+            ]
+        },
+        {
+            "title": "Curve Sketching",
+            "sections": [
+                {
+                    "title": "Maxima and Minima"
+                },
+                {
+                    "title": "The first derivative test"
+                },
+                {
+                    "title": "The second derivative test"
+                },
+                {
+                    "title": "Concavity and inflection points"
+                },
+                {
+                    "title": "Asymptotes and Other Things to Look For"
+                }
+            ]
+        },
+        {
+            "title": "Applications of the Derivative",
+            "sections": [
+                {
+                    "title": "Optimization"
+                },
+                {
+                    "title": "Related Rates"
+                },
+                {
+                    "title": "Newton's Method"
+                },
+                {
+                    "title": "Linear Approximations"
+                },
+                {
+                    "title": "The Mean Value Theorem"
+                }
+            ]
+        },
+        {
+            "title": "Integration",
+            "sections": [
+                {
+                    "title": "Two examples"
+                },
+                {
+                    "title": "The Fundamental Theorem of Calculus"
+                },
+                {
+                    "title": "Some Properties of Integrals"
+                }
+            ]
+        },
+        {
+            "title": "Techniques of Integration",
+            "sections": [
+                {
+                    "title": "Substitution"
+                },
+                {
+                    "title": "Powers of sine and cosine"
+                },
+                {
+                    "title": "Trigonometric Substitutions"
+                },
+                {
+                    "title": "Integration by Parts"
+                },
+                {
+                    "title": "Rational Functions"
+                },
+                {
+                    "title": "Numerical Integration"
+                },
+                {
+                    "title": "Additional exercises"
+                }
+            ]
+        },
+        {
+            "title": "Applications of Integration",
+            "sections": [
+                {
+                    "title": "Area between curves"
+                },
+                {
+                    "title": "Distance Velocity Acceleration"
+                },
+                {
+                    "title": "Volume"
+                },
+                {
+                    "title": "Average value of a function"
+                },
+                {
+                    "title": "Work"
+                },
+                {
+                    "title": "Center of Mass"
+                },
+                {
+                    "title": "Kinetic energy; improper integrals"
+                },
+                {
+                    "title": "Probability"
+                },
+                {
+                    "title": "Arc Length"
+                },
+                {
+                    "title": "Surface Area"
+                }
+            ]
+        },
+        {
+            "title": "Polar Coordinates Parametric Equations",
+            "sections": [
+                {
+                    "title": "Polar Coordinates"
+                },
+                {
+                    "title": "Slopes in polar coordinates"
+                },
+                {
+                    "title": "Areas in polar coordinates"
+                },
+                {
+                    "title": "Parametric Equations"
+                },
+                {
+                    "title": "Calculus with Parametric Equations"
+                }
+            ]
+        },
+        {
+            "title": "Sequences and Series",
+            "sections": [
+                {
+                    "title": "Sequences"
+                },
+                {
+                    "title": "Series"
+                },
+                {
+                    "title": "The Integral Test"
+                },
+                {
+                    "title": "Alternating Series"
+                },
+                {
+                    "title": "Comparison Tests"
+                },
+                {
+                    "title": "Absolute Convergence"
+                },
+                {
+                    "title": "The Ratio and Root Tests"
+                },
+                {
+                    "title": "Power Series"
+                },
+                {
+                    "title": "Calculus with Power Series"
+                },
+                {
+                    "title": "Taylor Series"
+                },
+                {
+                    "title": "Taylor's Theorem"
+                },
+                {
+                    "title": "Additional exercises"
+                }
+            ]
+        },
+        {
+            "title": "Three Dimensions",
+            "sections": [
+                {
+                    "title": "The Coordinate System"
+                },
+                {
+                    "title": "Vectors"
+                },
+                {
+                    "title": "The Dot Product"
+                },
+                {
+                    "title": "The Cross Product"
+                },
+                {
+                    "title": "Lines and Planes"
+                },
+                {
+                    "title": "Other Coordinate Systems"
+                }
+            ]
+        },
+        {
+            "title": "Vector Functions",
+            "sections": [
+                {
+                    "title": "Space Curves"
+                },
+                {
+                    "title": "Calculus with vector functions"
+                },
+                {
+                    "title": "Arc length and curvature"
+                },
+                {
+                    "title": "Motion along a curve"
+                }
+            ]
+        },
+        {
+            "title": "Partial Differentiation",
+            "sections": [
+                {
+                    "title": "Functions of Several Variables"
+                },
+                {
+                    "title": "Limits and Continuity"
+                },
+                {
+                    "title": "Partial Differentiation"
+                },
+                {
+                    "title": "The Chain Rule"
+                },
+                {
+                    "title": "Directional Derivatives"
+                },
+                {
+                    "title": "Higher order derivatives"
+                },
+                {
+                    "title": "Maxima and minima"
+                },
+                {
+                    "title": "Lagrange Multipliers"
+                }
+            ]
+        },
+        {
+            "title": "Multiple Integration",
+            "sections": [
+                {
+                    "title": "Volume and Average Height"
+                },
+                {
+                    "title": "Double Integrals in Cylindrical Coordinates"
+                },
+                {
+                    "title": "Moment and Center of Mass"
+                },
+                {
+                    "title": "Surface Area"
+                },
+                {
+                    "title": "Triple Integrals"
+                },
+                {
+                    "title": "Cylindrical and Spherical Coordinates"
+                },
+                {
+                    "title": "Change of Variables"
+                }
+            ]
+        },
+        {
+            "title": "Vector Calculus",
+            "sections": [
+                {
+                    "title": "Vector Fields"
+                },
+                {
+                    "title": "Line Integrals"
+                },
+                {
+                    "title": "The Fundamental Theorem of Line Integrals"
+                },
+                {
+                    "title": "Green's Theorem"
+                },
+                {
+                    "title": "Divergence and Curl"
+                },
+                {
+                    "title": "Vector Functions for Surfaces"
+                },
+                {
+                    "title": "Surface Integrals"
+                },
+                {
+                    "title": "Stokes's Theorem"
+                },
+                {
+                    "title": "The Divergence Theorem"
+                }
+            ]
+        },
+        {
+            "title": "Differential Equations",
+            "sections": [
+                {
+                    "title": "First Order Differential Equations"
+                },
+                {
+                    "title": "First Order Homogeneous Linear Equations"
+                },
+                {
+                    "title": "First Order Linear Equations"
+                },
+                {
+                    "title": "Approximation"
+                },
+                {
+                    "title": "Second Order Homogeneous Equations"
+                },
+                {
+                    "title": "Second Order Linear Equations"
+                },
+                {
+                    "title": "Second Order Linear Equations, take two"
+                }
+            ]
+        }
+    ]
+}

@@ -160,8 +160,9 @@ cython_debug/
 #.idea/
 
 # Generated data
-data/reference
 data/index
+data/reference/*/*/*
+!data/reference/*/*/outline.json
 
 # Local scripts
-run.sh
+run*.sh

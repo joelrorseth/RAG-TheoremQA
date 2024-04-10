@@ -36,6 +36,7 @@ def _get_experiment_prompt(
         if experiment.index_config is not None:
             index = load_index(
                 experiment.index_config.index_name,
+                experiment.embedding_model,
                 experiment.index_config.indexing_strategy
             )
             documents = retrieve_top_k_documents(
@@ -51,8 +52,8 @@ def _get_experiment_prompt(
         return build_basic_prompt(question, answer_type)
     elif experiment.prompting_strategy in [PromptingStrategy.COT, PromptingStrategy.COT_SC]:
         return build_cot_prompt(question, answer_type)
-    elif experiment.prompting_strategy == PromptingStrategy.RAG_TOP5_NEARBY500:
-        return _get_experiment_rag_prompt(5, RetrievalStrategy.Nearby, 500)
+    elif experiment.prompting_strategy == PromptingStrategy.RAG_TOP5_NEARBY200:
+        return _get_experiment_rag_prompt(5, RetrievalStrategy.Nearby, 200)
     elif experiment.prompting_strategy == PromptingStrategy.RAG_TOP2_NEARBY500:
         return _get_experiment_rag_prompt(2, RetrievalStrategy.Nearby, 500)
     elif experiment.prompting_strategy == PromptingStrategy.RAG_TOP2_NEARBY200:
@@ -61,8 +62,6 @@ def _get_experiment_prompt(
         return _get_experiment_rag_prompt(1, RetrievalStrategy.Nearby, 500)
     elif experiment.prompting_strategy == PromptingStrategy.RAG_TOP1_NEARBY200:
         return _get_experiment_rag_prompt(1, RetrievalStrategy.Nearby, 200)
-    elif experiment.prompting_strategy == PromptingStrategy.RAG_TOP1_SECTION:
-        return _get_experiment_rag_prompt(1, RetrievalStrategy.Section)
     else:
         raise ValueError(
             f"Unexpected prompting strategy {experiment.prompting_strategy.value}"

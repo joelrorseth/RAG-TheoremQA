@@ -1,0 +1,312 @@
+{
+    "startpage": 9,
+    "endpage": 224,
+    "chapters": [
+        {
+            "title": "What is combinatorics",
+            "sections": [
+                {
+                    "title": "Introducing combinatorics with a handshake"
+                },
+                {
+                    "title": "Three classical counting formulas"
+                },
+                {
+                    "title": "Introduction to graphs"
+                },
+                {
+                    "title": "Introduction to SAGE"
+                },
+                {
+                    "title": "Theorems, Lemmas, and Propositions... oh my!"
+                }
+            ]
+        },
+        {
+            "title": "Counting principles",
+            "sections": [
+                {
+                    "title": "Motivation"
+                },
+                {
+                    "title": "The addition and subtraction principles"
+                },
+                {
+                    "title": "The multiplication and division principles"
+                },
+                {
+                    "title": "Combining the principles"
+                },
+                {
+                    "title": "Sets, subsets, and the number of subsets"
+                },
+                {
+                    "title": "Addition and subtraction from the perspective of set theory"
+                },
+                {
+                    "title": "Venn diagrams and the Principle of Inclusion-Exclusion"
+                },
+                {
+                    "title": "The multiplication principle from the perspective of set theory"
+                },
+                {
+                    "title": "Set partitions, the division principle, and equivalence relations"
+                },
+                {
+                    "title": "Additional problems for Chapter 2"
+                },
+                {
+                    "title": "Investigation: Divisors of a positive integer"
+                }
+            ]
+        },
+        {
+            "title": "Counting combinations",
+            "sections": [
+                {
+                    "title": "The types of combinations"
+                },
+                {
+                    "title": "Sequences"
+                },
+                {
+                    "title": "Permutations and other sequences with distinct entries"
+                },
+                {
+                    "title": "Sets: When order doesn't matter"
+                },
+                {
+                    "title": "Multisets: sets with repeats allowed"
+                },
+                {
+                    "title": "Summary"
+                },
+                {
+                    "title": "Additional problems for Chapter 3"
+                },
+                {
+                    "title": "Investigation: Counting problems in the game of poker"
+                }
+            ]
+        },
+        {
+            "title": "Pascal's triangle and the Binomial Theorem",
+            "sections": [
+                {
+                    "title": "Pascal's triangle"
+                },
+                {
+                    "title": "The Binomial Theorem"
+                },
+                {
+                    "title": "First identities in Pascal's triangle"
+                },
+                {
+                    "title": "Additional identities in Pascal's triangle"
+                },
+                {
+                    "title": "Counting anagrams with multinomial coefficients"
+                },
+                {
+                    "title": "Ordered set partitions and the multinomial theorem"
+                },
+                {
+                    "title": "Investigation: Combinatorial problems on a chessboard"
+                }
+            ]
+        },
+        {
+            "title": "Proof techniques in combinatorics",
+            "sections": [
+                {
+                    "title": "Why are proofs necessary?"
+                },
+                {
+                    "title": "Induction"
+                },
+                {
+                    "title": "Counting in two ways"
+                },
+                {
+                    "title": "Bijective proofs"
+                },
+                {
+                    "title": "Proof by contradiction"
+                },
+                {
+                    "title": "The Pigeonhole Principle"
+                },
+                {
+                    "title": "Additional problems for Chapter 5"
+                },
+                {
+                    "title": "Investigation: Pascal's triangle modulo 2 and Sierpinski's triangle"
+                }
+            ]
+        },
+        {
+            "title": "Recurrence relations",
+            "sections": [
+                {
+                    "title": "Fibonacci numbers"
+                },
+                {
+                    "title": "Linear recurrence relations"
+                },
+                {
+                    "title": "The tower of Hanoi"
+                },
+                {
+                    "title": "Regions of the plane"
+                },
+                {
+                    "title": "Derangements"
+                },
+                {
+                    "title": "The Catalan numbers"
+                }
+            ]
+        },
+        {
+            "title": "Generating functions",
+            "sections": [
+                {
+                    "title": "Making change"
+                },
+                {
+                    "title": "Generating functions"
+                },
+                {
+                    "title": "Operations on generating functions"
+                },
+                {
+                    "title": "Solving recurrences with generating functions"
+                },
+                {
+                    "title": "Generating functions and linear recurrences"
+                },
+                {
+                    "title": "The Catalan numbers"
+                },
+                {
+                    "title": "Additional problems for Chapter 7"
+                },
+                {
+                    "title": "Investigation: Partitions and their generating functions"
+                }
+            ]
+        },
+        {
+            "title": "Graph theory basics",
+            "sections": [
+                {
+                    "title": "Graphs in combinatorics"
+                },
+                {
+                    "title": "Everyday graphs"
+                },
+                {
+                    "title": "The degree of a vertex"
+                },
+                {
+                    "title": "Subgraphs"
+                },
+                {
+                    "title": "Walks and connected graphs"
+                },
+                {
+                    "title": "Graph complements"
+                },
+                {
+                    "title": "Storage structures for graphs"
+                },
+                {
+                    "title": "Eulerian walks and Hamiltonian cycles"
+                },
+                {
+                    "title": "Investigation: The number of walks"
+                }
+            ]
+        },
+        {
+            "title": "Trees",
+            "sections": [
+                {
+                    "title": "The language of trees"
+                },
+                {
+                    "title": "The number of edges in a tree"
+                },
+                {
+                    "title": "Labeled trees: Cayley's theorem"
+                },
+                {
+                    "title": "Binary trees"
+                }
+            ]
+        },
+        {
+            "title": "Graph optimization",
+            "sections": [
+                {
+                    "title": "Minimal spanning trees"
+                },
+                {
+                    "title": "Traveling salesperson problem"
+                },
+                {
+                    "title": "Matchings"
+                },
+                {
+                    "title": "Ramsey theory"
+                }
+            ]
+        },
+        {
+            "title": "Planar graphs",
+            "sections": [
+                {
+                    "title": "Planar graphs"
+                },
+                {
+                    "title": "Euler's formula for planar graphs"
+                },
+                {
+                    "title": "Graphs that are not planar"
+                },
+                {
+                    "title": "Euler's formula for polyhedra"
+                },
+                {
+                    "title": "Investigation: Graphs on other surfaces"
+                }
+            ]
+        },
+        {
+            "title": "Graph coloring",
+            "sections": [
+                {
+                    "title": "The chromatic number of a graph"
+                },
+                {
+                    "title": "What graphs are 2-colorable?"
+                },
+                {
+                    "title": "Bounds on chromatic numbers"
+                },
+                {
+                    "title": "Brooks' Theorem"
+                },
+                {
+                    "title": "The chromatic polynomial"
+                },
+                {
+                    "title": "Coloring regions with two colors"
+                },
+                {
+                    "title": "The four color theorem"
+                }
+            ]
+        }
+    ]
+}

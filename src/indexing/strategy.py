@@ -6,12 +6,12 @@ from src.preprocessing.textbook import PreprocessedTextbook
 IndexNameTextbookDict = Dict[str, List[PreprocessedTextbook]]
 
 
-def _group_textbooks_by_subject(
+def _group_textbooks_by_subfield(
     textbooks: List[PreprocessedTextbook]
 ) -> Dict[str, List[PreprocessedTextbook]]:
     grouped_textbooks = defaultdict(list)
     for textbook in textbooks:
-        grouped_textbooks[textbook.identifier.subject].append(textbook)
+        grouped_textbooks[textbook.identifier.subfield].append(textbook)
     return grouped_textbooks
 
 
@@ -27,7 +27,7 @@ def _group_by_textbook_name(
 def get_index_textbook_groupings(
     strategy: IndexingStrategy, textbooks: List[PreprocessedTextbook]
 ) -> IndexNameTextbookDict:
-    if strategy == IndexingStrategy.Subject:
-        return _group_textbooks_by_subject(textbooks)
+    if strategy == IndexingStrategy.Subfield:
+        return _group_textbooks_by_subfield(textbooks)
     else:
         return _group_by_textbook_name(textbooks)

@@ -1,0 +1,137 @@
+{
+    "startpage": 19,
+    "endpage": 507,
+    "chapters": [
+        {
+            "title": "Systems of equations",
+            "sections": [
+                {
+                    "title": "What can we expect"
+                },
+                {
+                    "title": "Finding solutions to linear systems"
+                },
+                {
+                    "title": "Computation with Sage"
+                },
+                {
+                    "title": "Pivots and their influence on solution spaces"
+                }
+            ]
+        },
+        {
+            "title": "Vectors, matrices, and linear combinations",
+            "sections": [
+                {
+                    "title": "Vectors and linear combinations"
+                },
+                {
+                    "title": "Matrix multiplication and linear combinations"
+                },
+                {
+                    "title": "The span of a set of vectors"
+                },
+                {
+                    "title": "Linear independence"
+                },
+                {
+                    "title": "Matrix transformations"
+                },
+                {
+                    "title": "The geometry of matrix transformations"
+                }
+            ]
+        },
+        {
+            "title": "Invertibility, bases, and coordinate systems",
+            "sections": [
+                {
+                    "title": "Invertibility"
+                },
+                {
+                    "title": "Bases and coordinate systems"
+                },
+                {
+                    "title": "Image compression"
+                },
+                {
+                    "title": "Determinants"
+                },
+                {
+                    "title": "Subspaces"
+                }
+            ]
+        },
+        {
+            "title": "Eigenvalues and eigenvectors",
+            "sections": [
+                {
+                    "title": "An introduction to eigenvalues and eigenvectors"
+                },
+                {
+                    "title": "Finding eigenvalues and eigenvectors"
+                },
+                {
+                    "title": "Diagonalization, similarity, and powers of a matrix"
+                },
+                {
+                    "title": "Dynamical systems"
+                },
+                {
+                    "title": "Markov chains and Google's PageRank algorithm"
+                }
+            ]
+        },
+        {
+            "title": "Linear algebra and computing",
+            "sections": [
+                {
+                    "title": "Gaussian elimination revisited"
+                },
+                {
+                    "title": "Finding eigenvectors numerically"
+                }
+            ]
+        },
+        {
+            "title": "Orthogonality and Least Squares",
+            "sections": [
+                {
+                    "title": "The dot product"
+                },
+                {
+                    "title": "Orthogonal complements and the matrix transpose"
+                },
+                {
+                    "title": "Orthogonal bases and projections"
+                },
+                {
+                    "title": "Finding orthogonal bases"
+                },
+                {
+                    "title": "Orthogonal least squares"
+                }
+            ]
+        },
+        {
+            "title": "Singular value decompositions",
+            "sections": [
+                {
+                    "title": "Symmetric matrices and variance"
+                },
+                {
+                    "title": "Quadratic forms"
+                },
+                {
+                    "title": "Principal Component Analysis"
+                },
+                {
+                    "title": "Singular Value Decompositions"
+                },
+                {
+                    "title": "Using Singular Value Decompositions"
+                }
+            ]
+        }
+    ]
+}
